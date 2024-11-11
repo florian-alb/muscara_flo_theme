@@ -170,6 +170,61 @@
         "padding_bottom": 60
       }
     },
+    "section_text_RmKN9V": {
+      "type": "section-text",
+      "blocks": {
+        "subheading_eMPHaD": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Subheading</p>",
+            "size": 100,
+            "margin_bottom": 16
+          }
+        },
+        "heading_YLTKUM": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Our Story</p>",
+            "size": 100,
+            "heading_highlight_type": "italics",
+            "highlight_color": "#D43747",
+            "highlight_text_color": "#000"
+          }
+        },
+        "text_HNdeQ4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "size": 100
+          }
+        },
+        "button_aXRhtP": {
+          "type": "button",
+          "settings": {
+            "button_text": "Read More",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--solid",
+            "button_size": "btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_eMPHaD",
+        "heading_YLTKUM",
+        "text_HNdeQ4",
+        "button_aXRhtP"
+      ],
+      "settings": {
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "section_icons_row_iqEVKD": {
       "type": "section-icons-row",
       "blocks": {
@@ -214,7 +269,7 @@
         "icons_width_mobile": 40,
         "heading": "",
         "subheading": "",
-        "bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
+        "bg_color": "rgba(0,0,0,0)",
         "text_color": "#333333",
         "box_color": "",
         "button_text": "",
@@ -426,6 +481,7 @@
     "main",
     "section_text_qUhc6r",
     "section_product_UrgKy3",
+    "section_text_RmKN9V",
     "section_icons_row_iqEVKD",
     "section_collection_qiULjf",
     "section_text_qJcfCM",
