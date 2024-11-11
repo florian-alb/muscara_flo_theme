@@ -82,7 +82,7 @@
       ],
       "settings": {
         "text_position": "center",
-        "bg_color_secondary": true,
+        "bg_color_secondary": false,
         "flo_bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "text_color": "text-dark",
         "width": "wrapper--narrow",
