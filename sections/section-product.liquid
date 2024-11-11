@@ -16,7 +16,6 @@
 <section
   id="FeaturedProduct--{{ section.id }}"
   class="section-padding featured-product{% if product == blank %} featured-product--onboarding{% endif %} product--{{ section.id }} product-single{% if bg_color_secondary %} bg-secondary{% endif %}{%- render 'button-fallback-classes', primary_color: settings.atc_button_color, secondary_color: settings.buynow_btn_color, bg_color_secondary: bg_color_secondary -%}"
-  {{ flo_bg_color }}
   {% if flo_bg_color != blank %}
     style="border-color: {{ flo_bg_color }};"
   {% endif %}
@@ -26,7 +25,7 @@
   data-sticky-enabled="{{ section.settings.product_sticky_enable }}"
   data-tall-layout="{% if section.settings.image_layout == 'carousel' %}false{% else %}true{% endif %}"
 >
-  caca
+  {{ flo_bg_color }}
   <div class="{{ section_width }}">
     {%- render 'product', product: product, unique: section.id, section: section, section_type: 'featured' -%}
   </div>
