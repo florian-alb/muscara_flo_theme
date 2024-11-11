@@ -272,7 +272,7 @@
         "button_style": "btn--text",
         "button_size": "btn--large",
         "bg_color_secondary": false,
-        "flo_bg_color": "",
+        "flo_bg_color": "{{ section.settings.collection.metafields.custom.collection_bg_color.value }}",
         "enable_slider_mobile": true,
         "width": "wrapper--full-padded",
         "padding_top": 60,
@@ -307,7 +307,7 @@
       "settings": {
         "text_position": "center",
         "bg_color_secondary": false,
-        "flo_bg_color": "",
+        "flo_bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "text_color": "text-dark",
         "width": "wrapper--narrow",
         "padding_top": 60,
