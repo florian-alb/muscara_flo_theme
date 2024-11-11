@@ -202,6 +202,9 @@
         "text_8KUbcL",
         "text_pkMm9c"
       ],
+      "custom_css": [
+        ".product-single__wrapper{background: white;}"
+      ],
       "settings": {
         "alignment": "center",
         "columns": 3,
