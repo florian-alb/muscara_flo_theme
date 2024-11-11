@@ -1,1 +1,429 @@
-{"sections":{"hero":{"type":"collection-image-with-title","disabled":true,"settings":{"banner_height":"three-fifty-height","text_position":"middle-center","show_image":true,"text_color":"text-light","overlay_opacity":10,"bg_color_secondary":false,"padding_top":0,"padding_bottom":0}},"subcollections":{"type":"subcollections","disabled":true,"settings":{"subcollections":[],"limit":8,"layout":"grid","image_source":"collection","image_aspect_ratio":0.6,"image_overlay_opacity":10,"bg_color":"","text_color":"text-light","padding_top":60,"padding_bottom":0}},"main":{"type":"collection","disabled":true,"settings":{"show_breadcrumbs":false,"enable_sorting":false,"enable_filters":false,"filters_layout":"open","show_more":true,"filter_mode":"default","heading_style":"body","bg_color":"{{ collection.metafields.custom.collection_bg_color.value }}","padding_top":30,"padding_bottom":60}},"section_text_qUhc6r":{"type":"section-text","blocks":{"heading_MQeC4q":{"type":"heading","settings":{"text":"<p>{{ collection.title }}<\/p>","size":100,"heading_highlight_type":"italics","highlight_color":"#d43747","highlight_text_color":"#000000"}},"text_KiBQhJ":{"type":"text","settings":{"text":"{{ collection.metafields.custom.description | metafield_tag }}","size":100}}},"block_order":["heading_MQeC4q","text_KiBQhJ"],"settings":{"text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":60}},"section_product_UrgKy3":{"type":"section-product","blocks":{"title_C4NVUP":{"type":"title","settings":{"subheading":"none","show_rating":true,"show_rating_count":false,"padding_bottom":10}},"text_fGBFmV":{"type":"text","settings":{"title":"{{ section.settings.product.metafields.custom.bundle_product_list | metafield_tag }}","padding_bottom":20}},"price_gmrFrr":{"type":"price","settings":{}},"form_VFhYCa":{"type":"form","settings":{"info_page":"","show_labels":false,"show_quantity":false,"show_payment_button":false,"enable_subscriptions_selectors":true,"padding_bottom":20}},"icon_X949Hx":{"type":"icon","settings":{"icon_name":"package","icon_color":"{{ shop.brand.colors.primary[0].background }}","icon_width":20,"icon_text":"Livraison en 2-3 jours ouvrés","text_size":90,"width":"full","text_alignment":"center","bg_color":"","padding_bottom":20}}},"block_order":["title_C4NVUP","text_fGBFmV","price_gmrFrr","form_VFhYCa","icon_X949Hx"],"custom_css":[".product__price-and-rating {justify-content: center;}",".product-single__details {display: flex; align-items: center; justify-content: center;}",".form__wrapper {display: flex; flex-direction: column; align-items: center;}"],"settings":{"product":"{{ collection.metafields.custom.bundle_product.value }}","product_sticky_enable":false,"image_layout":"carousel","image_width":"standard","hide_product_thumbnails":false,"product_image_aspect_ratio":false,"enable_zoom":false,"enable_video_looping":false,"bg_color_secondary":false,"enable_border":true,"border_color":"{{ collection.metafields.custom.collection_color.value }}","width":"wrapper--full-padded","padding_top":60,"padding_bottom":60}},"section_icons_row_iqEVKD":{"type":"section-icons-row","blocks":{"text_DbJpxP":{"type":"text","settings":{"icon_name":"truck","title":"Free Shipping","text":"<p>on all order over $99<\/p>"}},"text_8KUbcL":{"type":"text","settings":{"icon_name":"check","title":"Free Returns","text":"<p>within 30 days of purchase<\/p>"}},"text_pkMm9c":{"type":"text","settings":{"icon_name":"eco-friendly","title":"1% Donated Annually","text":"<p>to forest conservation<\/p>"}}},"block_order":["text_DbJpxP","text_8KUbcL","text_pkMm9c"],"settings":{"alignment":"center","columns":3,"icons_width":100,"icons_width_mobile":40,"heading":"","subheading":"","bg_color":"","text_color":"#333333","box_color":"","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--solid","button_size":"btn--small","enable_slider_mobile":false,"padding_top":60,"padding_bottom":60}},"section_collection_qiULjf":{"type":"section-collection","blocks":{"promo_jqAHtp":{"type":"promo","settings":{"position":1,"width":"auto","title":"","heading_highlight_type":"circle","highlight_color":"#d43747","highlight_text_color":"#000000","heading_size":100,"content":"","text_size":100,"text_color":"text-light","text_position":"center","layout":"stacked","overlay_opacity":0,"bg_color":"#d3d3d3","button_text":"","button_link":"","button_color":"btn--white","button_style":"btn--solid-border","button_size":"btn--small"}}},"block_order":["promo_jqAHtp"],"settings":{"collection":"{{ collection }}","products_layout":"grid","number_of_products":3,"products_per_row_on_desktop":4,"columns_mobile":"2","text_alignment":"text-left","title":"","heading_highlight_type":"circle","highlight_color":"#d43747","highlight_text_color":"#000000","heading_size":100,"text":"","text_size":100,"button_text":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--large","bg_color_secondary":false,"enable_slider_mobile":true,"width":"wrapper--full-padded","padding_top":60,"padding_bottom":60}},"section_text_qJcfCM":{"type":"section-text","blocks":{"heading_d7dij3":{"type":"heading","settings":{"text":"<p>5 raisons de choisir Muscara<\/p>","size":100,"heading_highlight_type":"italics","highlight_color":"#d43747","highlight_text_color":"#000000"}},"text_YrL8tX":{"type":"text","settings":{"text":"<p>Onze producten zijn ontworpen om vrouwen te helpen zich zelfverzekerder te voelen en hun intieme welzijn te verbeteren.<\/p>","size":100}}},"block_order":["heading_d7dij3","text_YrL8tX"],"settings":{"text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":60}},"section_columns_FJbMem":{"type":"section-columns","blocks":{"text_block_Gc8qpa":{"type":"text_block","settings":{"title":"1 - Des cosmétiques naturels, vegan et testés dermatologiquement","text":"<p>Fabriqués à Grasse, en France, avec des ingrédients clean, 100% safe pour ton corps et de haute qualité pour une hygiène intime respectueuse du corps des femmes et de l’environnement. <\/p>","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--small","video_link_popup":"","video_link_color":"text-dark"}},"text_block_DnHnRR":{"type":"text_block","settings":{"title":"2 - Plus de 50.000 femmes conquises ⭐⭐⭐⭐⭐","text":"<p>Des dizaines de milliers de femmes à travers le monde ont craqué pour le gel n°1 aux Pays-Bas. Unique, ultra frais, il ne colle pas la peau et parfume délicieusement les zones chaudes.<\/p>","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--small","video_link_popup":"","video_link_color":"text-dark"}},"text_block_GrYTYw":{"type":"text_block","settings":{"title":"3 - Un parfum envoutant, subtil, léger et longue durée","text":"<p>Des fragrances délicates qui captivent tout en douceur, enveloppant votre peau d’une aura raffinée pour une expérience sensorielle inoubliable tout au long de la journée.<\/p>","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--small","video_link_popup":"","video_link_color":"text-dark"}},"text_block_emxwPf":{"type":"text_block","settings":{"title":"4 - Ne laisse pas les mauvaises odeurs te gâcher la vie","text":"<p>Nos gels, déos et brumes parfumées neutralisent les mauvaises odeurs et parfument délicatement, pour une sensation de propreté et de fraicheur qui dure jusqu’à 48h. 💧<\/p>","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--small","video_link_popup":"","video_link_color":"text-dark"}},"text_block_UAHUkE":{"type":"text_block","settings":{"title":"5. Avec Muscara, pas le temps de s’ennuyer !","text":"<p>Tu as le choix parmi 5 délicieuses fragrances selon ton mood et tes envies ! Une chose est sure, tu vas rendre fous tous ceux qui t’entourent 😍 Alors, pour quel parfum vas-tu succomber ?<\/p>","button_text":"","button_link":"","button_color":"btn--black","button_style":"btn--text","button_size":"btn--small","video_link_popup":"","video_link_color":"text-dark"}}},"block_order":["text_block_Gc8qpa","text_block_DnHnRR","text_block_GrYTYw","text_block_emxwPf","text_block_UAHUkE"],"settings":{"title":"","align_text":"text-left","columns":3,"show_images":true,"show_borders":false,"equalize_height":true,"desktop_aspect_ratio":0.8,"mobile_aspect_ratio":0.8,"heading_size":120,"text_size":100,"bg_color_secondary":false,"color_borders":"#000000","layout_mobile":"carousel","width":"wrapper","padding_top":60,"padding_bottom":60}}},"order":["hero","subcollections","main","section_text_qUhc6r","section_product_UrgKy3","section_icons_row_iqEVKD","section_collection_qiULjf","section_text_qJcfCM","section_columns_FJbMem"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "disabled": true,
+      "settings": {
+        "banner_height": "three-fifty-height",
+        "text_position": "middle-center",
+        "show_image": true,
+        "text_color": "text-light",
+        "overlay_opacity": 10,
+        "bg_color_secondary": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "disabled": true,
+      "settings": {
+        "subcollections": [],
+        "limit": 8,
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "collection",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": false,
+        "enable_sorting": false,
+        "enable_filters": false,
+        "filters_layout": "open",
+        "show_more": true,
+        "filter_mode": "default",
+        "heading_style": "body",
+        "bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
+        "padding_top": 30,
+        "padding_bottom": 60
+      }
+    },
+    "section_text_qUhc6r": {
+      "type": "section-text",
+      "blocks": {
+        "heading_MQeC4q": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>{{ collection.title }}</p>",
+            "size": 100,
+            "heading_highlight_type": "italics",
+            "highlight_color": "#d43747",
+            "highlight_text_color": "#000000"
+          }
+        },
+        "text_KiBQhJ": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.custom.description | metafield_tag }}",
+            "size": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_MQeC4q",
+        "text_KiBQhJ"
+      ],
+      "settings": {
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "flo_bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_product_UrgKy3": {
+      "type": "section-product",
+      "blocks": {
+        "title_C4NVUP": {
+          "type": "title",
+          "settings": {
+            "subheading": "none",
+            "show_rating": true,
+            "show_rating_count": false,
+            "padding_bottom": 10
+          }
+        },
+        "text_fGBFmV": {
+          "type": "text",
+          "settings": {
+            "title": "{{ section.settings.product.metafields.custom.bundle_product_list | metafield_tag }}",
+            "padding_bottom": 20
+          }
+        },
+        "price_gmrFrr": {
+          "type": "price",
+          "settings": {}
+        },
+        "form_VFhYCa": {
+          "type": "form",
+          "settings": {
+            "info_page": "",
+            "show_labels": false,
+            "show_quantity": false,
+            "show_payment_button": false,
+            "enable_subscriptions_selectors": true,
+            "padding_bottom": 20
+          }
+        },
+        "icon_X949Hx": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "package",
+            "icon_color": "{{ shop.brand.colors.primary[0].background }}",
+            "icon_width": 20,
+            "icon_text": "Livraison en 2-3 jours ouvrés",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "center",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title_C4NVUP",
+        "text_fGBFmV",
+        "price_gmrFrr",
+        "form_VFhYCa",
+        "icon_X949Hx"
+      ],
+      "custom_css": [
+        ".product__price-and-rating {justify-content: center;}",
+        ".product-single__details {display: flex; align-items: center; justify-content: center;}",
+        ".form__wrapper {display: flex; flex-direction: column; align-items: center;}"
+      ],
+      "settings": {
+        "product": "{{ collection.metafields.custom.bundle_product.value }}",
+        "product_sticky_enable": false,
+        "image_layout": "carousel",
+        "image_width": "standard",
+        "hide_product_thumbnails": false,
+        "product_image_aspect_ratio": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "enable_border": true,
+        "border_color": "{{ collection.metafields.custom.collection_color.value }}",
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_icons_row_iqEVKD": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_DbJpxP": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "title": "Free Shipping",
+            "text": "<p>on all order over $99</p>"
+          }
+        },
+        "text_8KUbcL": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "title": "Free Returns",
+            "text": "<p>within 30 days of purchase</p>"
+          }
+        },
+        "text_pkMm9c": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "title": "1% Donated Annually",
+            "text": "<p>to forest conservation</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_DbJpxP",
+        "text_8KUbcL",
+        "text_pkMm9c"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 100,
+        "icons_width_mobile": 40,
+        "heading": "",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#333333",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_collection_qiULjf": {
+      "type": "section-collection",
+      "blocks": {
+        "promo_jqAHtp": {
+          "type": "promo",
+          "settings": {
+            "position": 1,
+            "width": "auto",
+            "title": "",
+            "heading_highlight_type": "circle",
+            "highlight_color": "#d43747",
+            "highlight_text_color": "#000000",
+            "heading_size": 100,
+            "content": "",
+            "text_size": 100,
+            "text_color": "text-light",
+            "text_position": "center",
+            "layout": "stacked",
+            "overlay_opacity": 0,
+            "bg_color": "#d3d3d3",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "promo_jqAHtp"
+      ],
+      "settings": {
+        "collection": "{{ collection }}",
+        "products_layout": "grid",
+        "number_of_products": 3,
+        "products_per_row_on_desktop": 4,
+        "columns_mobile": "2",
+        "text_alignment": "text-left",
+        "title": "",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 100,
+        "text": "",
+        "text_size": 100,
+        "button_text": "",
+        "button_color": "btn--black",
+        "button_style": "btn--text",
+        "button_size": "btn--large",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "enable_slider_mobile": true,
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_text_qJcfCM": {
+      "type": "section-text",
+      "blocks": {
+        "heading_d7dij3": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>5 raisons de choisir Muscara</p>",
+            "size": 100,
+            "heading_highlight_type": "italics",
+            "highlight_color": "#d43747",
+            "highlight_text_color": "#000000"
+          }
+        },
+        "text_YrL8tX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Onze producten zijn ontworpen om vrouwen te helpen zich zelfverzekerder te voelen en hun intieme welzijn te verbeteren.</p>",
+            "size": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_d7dij3",
+        "text_YrL8tX"
+      ],
+      "settings": {
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_columns_FJbMem": {
+      "type": "section-columns",
+      "blocks": {
+        "text_block_Gc8qpa": {
+          "type": "text_block",
+          "settings": {
+            "title": "1 - Des cosmétiques naturels, vegan et testés dermatologiquement",
+            "text": "<p>Fabriqués à Grasse, en France, avec des ingrédients clean, 100% safe pour ton corps et de haute qualité pour une hygiène intime respectueuse du corps des femmes et de l’environnement. </p>",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--text",
+            "button_size": "btn--small",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_DnHnRR": {
+          "type": "text_block",
+          "settings": {
+            "title": "2 - Plus de 50.000 femmes conquises ⭐⭐⭐⭐⭐",
+            "text": "<p>Des dizaines de milliers de femmes à travers le monde ont craqué pour le gel n°1 aux Pays-Bas. Unique, ultra frais, il ne colle pas la peau et parfume délicieusement les zones chaudes.</p>",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--text",
+            "button_size": "btn--small",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_GrYTYw": {
+          "type": "text_block",
+          "settings": {
+            "title": "3 - Un parfum envoutant, subtil, léger et longue durée",
+            "text": "<p>Des fragrances délicates qui captivent tout en douceur, enveloppant votre peau d’une aura raffinée pour une expérience sensorielle inoubliable tout au long de la journée.</p>",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--text",
+            "button_size": "btn--small",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_emxwPf": {
+          "type": "text_block",
+          "settings": {
+            "title": "4 - Ne laisse pas les mauvaises odeurs te gâcher la vie",
+            "text": "<p>Nos gels, déos et brumes parfumées neutralisent les mauvaises odeurs et parfument délicatement, pour une sensation de propreté et de fraicheur qui dure jusqu’à 48h. 💧</p>",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--text",
+            "button_size": "btn--small",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_UAHUkE": {
+          "type": "text_block",
+          "settings": {
+            "title": "5. Avec Muscara, pas le temps de s’ennuyer !",
+            "text": "<p>Tu as le choix parmi 5 délicieuses fragrances selon ton mood et tes envies ! Une chose est sure, tu vas rendre fous tous ceux qui t’entourent 😍 Alors, pour quel parfum vas-tu succomber ?</p>",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--text",
+            "button_size": "btn--small",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Gc8qpa",
+        "text_block_DnHnRR",
+        "text_block_GrYTYw",
+        "text_block_emxwPf",
+        "text_block_UAHUkE"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "text-left",
+        "columns": 3,
+        "show_images": true,
+        "show_borders": false,
+        "equalize_height": true,
+        "desktop_aspect_ratio": 0.8,
+        "mobile_aspect_ratio": 0.8,
+        "heading_size": 120,
+        "text_size": 100,
+        "bg_color_secondary": false,
+        "color_borders": "#000000",
+        "layout_mobile": "carousel",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "subcollections",
+    "main",
+    "section_text_qUhc6r",
+    "section_product_UrgKy3",
+    "section_icons_row_iqEVKD",
+    "section_collection_qiULjf",
+    "section_text_qJcfCM",
+    "section_columns_FJbMem"
+  ]
+}
