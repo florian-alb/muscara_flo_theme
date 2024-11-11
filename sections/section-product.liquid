@@ -2,7 +2,7 @@
 {%- liquid
   assign product = all_products[section.settings.product]
   assign bg_color_secondary = section.settings.bg_color_secondary
-assign flo_bg_color = section.settings.flo_bg_color
+  assign flo_bg_color = section.settings.flo_bg_color
   assign section_width = section.settings.width
 -%}
 
@@ -16,7 +16,7 @@ assign flo_bg_color = section.settings.flo_bg_color
 <section
   id="FeaturedProduct--{{ section.id }}"
   class="section-padding featured-product{% if product == blank %} featured-product--onboarding{% endif %} product--{{ section.id }} product-single{% if bg_color_secondary %} bg-secondary{% endif %}{%- render 'button-fallback-classes', primary_color: settings.atc_button_color, secondary_color: settings.buynow_btn_color, bg_color_secondary: bg_color_secondary -%}"
-  {% if enable_border %}
+  {% if flo_bg_color != blank %}
     style="border-color: {{ flo_bg_color }};"
   {% endif %}
   data-enable-history-state="false"
