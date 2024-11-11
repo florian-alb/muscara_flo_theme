@@ -324,6 +324,7 @@
         "text_block_GrYTYw": {
           "type": "text_block",
           "settings": {
+            "image": "shopify://shop_images/gird-5-no-prod.jpg",
             "title": "3 - Un parfum envoutant, subtil, léger et longue durée",
             "text": "<p>Des fragrances délicates qui captivent tout en douceur, enveloppant votre peau d’une aura raffinée pour une expérience sensorielle inoubliable tout au long de la journée.</p>",
             "button_text": "",
