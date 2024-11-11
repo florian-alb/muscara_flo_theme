@@ -69,15 +69,13 @@
 <section
   id="TabCollections--{{ section.id }}"
   class="section-padding tab-collections{% if bg_color_secondary %} bg-secondary{% endif %}{%- render 'button-fallback-classes', primary_color: collection_button_color, bg_color_secondary: bg_color_secondary -%}"
-  {% unless flo_bg_color == blank %}
-    style="background-color: {{ flo_bg_color }};"
-  {% endunless %}
+  {% if enable_border %}
+    style="border-color: {{ flo_bg_color }};"
+  {% endif %}
   data-section-id="{{ section.id }}"
   data-section-type="tab-collections"
   data-columns="{{ columns }}"
 >
-  caca
-
   <div class="{{ section_width }}">
     {%- if section.settings.title != empty -%}
       <div class="section__header">
