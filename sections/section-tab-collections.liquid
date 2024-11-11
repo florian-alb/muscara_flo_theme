@@ -12,7 +12,7 @@
   assign collection_button_color = section.settings.collection_button_color
   assign collection_button_size = section.settings.collection_button_size
   assign bg_color_secondary = section.settings.bg_color_secondary
-assign flo_bg_color = section.settings.flo_bg_color
+  assign flo_bg_color = section.settings.flo_bg_color
   assign animations_enabled = settings.animations_enabled
   assign animation_anchor = '#TabCollections--' | append: section.id
   assign animation_delay = 150
@@ -74,39 +74,51 @@ assign flo_bg_color = section.settings.flo_bg_color
   {% endunless %}
   data-section-id="{{ section.id }}"
   data-section-type="tab-collections"
-  data-columns="{{ columns }}">
+  data-columns="{{ columns }}"
+>
+  caca
 
   <div class="{{ section_width }}">
     {%- if section.settings.title != empty -%}
       <div class="section__header">
-        <h2 class="h2 {{ text_alignment }}"
+        <h2
+          class="h2 {{ text_alignment }}"
           {% if animations_enabled %}
             data-aos="fade-up"
             data-aos-anchor="{{ animation_anchor }}"
             data-aos-delay="{{ animation_delay }}"
             {%- assign animation_delay = animation_delay | plus: 150 -%}
-          {% endif %}>{{ section.settings.title }}</h2>
+          {% endif %}
+        >
+          {{ section.settings.title }}
+        </h2>
 
         {%- if settings.show_spacer_lines -%}
-          <hr class="section__heading-line"
-          {% if animations_enabled %}
-            data-aos="fade-up"
-            data-aos-delay="{{ animation_delay }}"
-            data-aos-anchor="{{ animation_anchor }}"
-          {% endif %}>
+          <hr
+            class="section__heading-line"
+            {% if animations_enabled %}
+              data-aos="fade-up"
+              data-aos-delay="{{ animation_delay }}"
+              data-aos-anchor="{{ animation_anchor }}"
+            {% endif %}
+          >
           {%- assign animation_delay = animation_delay | plus: 150 -%}
         {%- endif -%}
       </div>
     {%- endif -%}
 
     {%- if section.settings.text != empty -%}
-      <p class="{{ text_alignment }} tab-collections__text"
+      <p
+        class="{{ text_alignment }} tab-collections__text"
         {% if animations_enabled %}
           data-aos="fade-up"
           data-aos-anchor="{{ animation_anchor }}"
           data-aos-delay="{{ animation_delay }}"
           {%- assign animation_delay = animation_delay | plus: 150 -%}
-        {% endif %}>{{ section.settings.text }}</p>
+        {% endif %}
+      >
+        {{ section.settings.text }}
+      </p>
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
@@ -311,13 +323,15 @@ assign flo_bg_color = section.settings.flo_bg_color
         {%- endfor -%}
 
         {%- if tabs_navigation != '' and section.blocks.size > 1 or show_buttons -%}
-          <div class="tabs__head tab-collections__head{% if show_buttons and collection_buttons != blank %} tab-collections__head--has-button{% endif %} {{ text_alignment }}"
+          <div
+            class="tabs__head tab-collections__head{% if show_buttons and collection_buttons != blank %} tab-collections__head--has-button{% endif %} {{ text_alignment }}"
             {% if animations_enabled %}
               data-aos="fade-up"
               data-aos-anchor="{{ animation_anchor }}"
               data-aos-delay="{{ animation_delay }}"
               {%- assign animation_delay = animation_delay | plus: 150 -%}
-            {% endif %}>
+            {% endif %}
+          >
             <div class="tabs-scrollbar {{ text_alignment }}" data-custom-scrollbar-parent>
               <div class="tabs-scrollbar__holder" data-custom-scrollbar-holder>
                 <ul class="tabs__nav" data-custom-scrollbar-items>
