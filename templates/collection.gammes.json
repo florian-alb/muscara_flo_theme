@@ -161,7 +161,7 @@
         "enable_zoom": false,
         "enable_video_looping": false,
         "bg_color_secondary": false,
-        "flo_bg_color": "",
+        "flo_bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "enable_border": true,
         "border_color": "{{ collection.metafields.custom.collection_color.value }}",
         "width": "wrapper--full-padded",
