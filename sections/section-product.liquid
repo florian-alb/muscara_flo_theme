@@ -16,7 +16,9 @@
 <section
   id="FeaturedProduct--{{ section.id }}"
   class="section-padding featured-product{% if product == blank %} featured-product--onboarding{% endif %} product--{{ section.id }} product-single{% if bg_color_secondary %} bg-secondary{% endif %}{%- render 'button-fallback-classes', primary_color: settings.atc_button_color, secondary_color: settings.buynow_btn_color, bg_color_secondary: bg_color_secondary -%}"
-  style="background-color: {{ flo_bg_color }};"
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
   data-enable-history-state="false"
   data-section-id="{{ section.id }}"
   data-section-type="featured-product"
