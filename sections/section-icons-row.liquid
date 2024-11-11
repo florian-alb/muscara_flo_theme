@@ -94,35 +94,43 @@
   }
 {%- endstyle -%}
 
-<section id="IconsRow--{{ section.id }}" class="section-padding icons-row{%- render 'button-fallback-classes', primary_color: button_color, section_bg_color: bg_color -%}" data-section-id="{{ section.id }}" data-section-type="icons-row"
-{% unless flo_bg_color == blank %}
-  style="background-color: {{ flo_bg_color }};"
-{% endunless %}
+<section
+  id="IconsRow--{{ section.id }}"
+  class="section-padding icons-row{%- render 'button-fallback-classes', primary_color: button_color, section_bg_color: bg_color -%}"
+  data-section-id="{{ section.id }}"
+  data-section-type="icons-row"
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
 >
   <div class="wrapper">
     <div class="icons-row__wrapper{% if single_block %} icons-row__wrapper--single-block-center{% endif %} text-{{ alignment }}">
       {%- if heading != blank or subheading != blank -%}
         <div class="icons-row__headings">
           {%- if heading != blank -%}
-            <h2 class="icons-row__heading"
+            <h2
+              class="icons-row__heading"
               {% if animations_enabled %}
                 data-aos="fade-up"
                 data-aos-anchor="{{ animation_anchor }}"
                 data-aos-delay="{{ animation_delay }}"
                 {%- assign animation_delay = animation_delay | plus: 150 -%}
-              {% endif %}>
+              {% endif %}
+            >
               {{- heading | escape -}}
             </h2>
           {%- endif -%}
 
           {%- if subheading != blank -%}
-            <div class="icons-row__subheading"
-            {% if animations_enabled %}
-              data-aos="fade-up"
-              data-aos-anchor="{{ animation_anchor }}"
-              data-aos-delay="{{ animation_delay }}"
-              {%- assign animation_delay = animation_delay | plus: 150 -%}
-            {% endif %}>
+            <div
+              class="icons-row__subheading"
+              {% if animations_enabled %}
+                data-aos="fade-up"
+                data-aos-anchor="{{ animation_anchor }}"
+                data-aos-delay="{{ animation_delay }}"
+                {%- assign animation_delay = animation_delay | plus: 150 -%}
+              {% endif %}
+            >
               {{- subheading -}}
             </div>
           {%- endif -%}
@@ -130,7 +138,10 @@
       {%- endif -%}
 
       {%- if blocks_size > 0 -%}
-        <div class="icons-row__slider{{ mobile_class }} text-{{ alignment }}{% if flex %} icons-row__slider--flex{% endif %} items--{{ columns }}" data-slider>
+        <div
+          class="icons-row__slider{{ mobile_class }} text-{{ alignment }}{% if flex %} icons-row__slider--flex{% endif %} items--{{ columns }}"
+          data-slider
+        >
           {%- for block in section.blocks -%}
             {%- liquid
               assign title = block.settings.title
@@ -142,15 +153,16 @@
               assign sizes = icons_width | append: 'px'
             -%}
 
-            <div class="icons-row__item{{ mobile_item_class }}{% if boxes %} icons-row__item--box{% endif %}{% if has_subheading %} icons-row__item--center{% endif %}"
+            <div
+              class="icons-row__item{{ mobile_item_class }}{% if boxes %} icons-row__item--box{% endif %}{% if has_subheading %} icons-row__item--center{% endif %}"
               {{ block.shopify_attributes }}
               {% if animations_enabled %}
                 data-aos="fade-up"
                 data-aos-anchor="{{ animation_anchor }}"
                 data-aos-delay="{{ animation_delay }}"
                 {%- assign animation_delay = animation_delay | plus: 150 -%}
-              {% endif %}>
-
+              {% endif %}
+            >
               {%- if image != blank or icon != 'none' -%}
                 <div class="icons-row__icon icon-stroke">
                   {%- liquid
@@ -182,13 +194,18 @@
       {%- endif -%}
 
       {%- if button_text != blank -%}
-        <div class="icons-row__actions" {{ block.shopify_attributes }}
+        <div
+          class="icons-row__actions"
+          {{ block.shopify_attributes }}
           {% if animations_enabled %}
             data-aos="fade-up"
             data-aos-anchor="{{ animation_anchor }}"
             data-aos-delay="{{ animation_delay }}"
-          {% endif %}>
-          <a class="btn {{ button_style }} {{ button_size }} {{ button_color }}" href="{{ button_link }}">{{ button_text }}</a>
+          {% endif %}
+        >
+          <a class="btn {{ button_style }} {{ button_size }} {{ button_color }}" href="{{ button_link }}">
+            {{- button_text -}}
+          </a>
         </div>
       {%- endif -%}
     </div>
@@ -233,9 +250,9 @@
       "max": 200,
       "step": 5,
       "unit": "px",
-      "default": 100,
+      "default": 100
     },
-        {
+    {
       "type": "range",
       "id": "icons_width_mobile",
       "label": "Icons width mobile",
@@ -243,7 +260,7 @@
       "max": 200,
       "step": 5,
       "unit": "px",
-      "default": 40,
+      "default": 40
     },
     {
       "type": "header",
@@ -362,6 +379,15 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "flo_bg_color",
+      "label": "Background color"
     }
   ],
   "blocks": [
@@ -477,7 +503,7 @@
         {
           "type": "text",
           "settings": {
-          "icon_name": "eco-friendly",
+            "icon_name": "eco-friendly",
             "title": "1% Donated Annually",
             "text": "<p>to forest conservation</p>"
           }
@@ -486,7 +512,7 @@
     }
   ],
   "disabled_on": {
-    "groups": ["header","aside"]
+    "groups": ["header", "aside"]
   }
 }
 {% endschema %}
