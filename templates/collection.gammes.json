@@ -219,7 +219,8 @@
         "button_size": "btn--small",
         "enable_slider_mobile": false,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "flo_bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}"
       }
     },
     "section_collection_qiULjf": {
