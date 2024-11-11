@@ -69,9 +69,9 @@ assign flo_bg_color = section.settings.flo_bg_color
 <section
   id="TabCollections--{{ section.id }}"
   class="section-padding tab-collections{% if bg_color_secondary %} bg-secondary{% endif %}{%- render 'button-fallback-classes', primary_color: collection_button_color, bg_color_secondary: bg_color_secondary -%}"
-  {% if enable_border %}
-    style="border-color: {{ flo_bg_color }};"
-  {% endif %}
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
   data-section-id="{{ section.id }}"
   data-section-type="tab-collections"
   data-columns="{{ columns }}">

@@ -67,9 +67,9 @@ assign flo_bg_color = section.settings.flo_bg_color
   data-section-id="{{ section.id }}"
   data-section-type="look"
   class="look section-padding{% if bg_color_secondary %} bg-secondary{% endif %}"
-  {% if enable_border %}
-    style="border-color: {{ flo_bg_color }};"
-  {% endif %}
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
   >
   <div class="{{ section_width }}">
     <div class="look__wrapper">

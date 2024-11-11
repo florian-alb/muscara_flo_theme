@@ -38,9 +38,9 @@ assign flo_bg_color = section.settings.flo_bg_color
 <section
   id="ShoppableBlog--{{ section.id }}"
   class="section-padding shoppable-blog{% if bg_color_secondary %} bg-secondary{% endif %}"
-  {% if enable_border %}
-    style="border-color: {{ flo_bg_color }};"
-  {% endif %}
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
   data-section-type="shoppable-blog"
   data-section-id="{{ section.id }}">
 
