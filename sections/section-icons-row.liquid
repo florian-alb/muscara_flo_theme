@@ -94,7 +94,11 @@
   }
 {%- endstyle -%}
 
-<section id="IconsRow--{{ section.id }}" class="section-padding icons-row{%- render 'button-fallback-classes', primary_color: button_color, section_bg_color: bg_color -%}" data-section-id="{{ section.id }}" data-section-type="icons-row">
+<section id="IconsRow--{{ section.id }}" class="section-padding icons-row{%- render 'button-fallback-classes', primary_color: button_color, section_bg_color: bg_color -%}" data-section-id="{{ section.id }}" data-section-type="icons-row"
+{% unless flo_bg_color == blank %}
+  style="background-color: {{ flo_bg_color }};"
+{% endunless %}
+>
   <div class="wrapper">
     <div class="icons-row__wrapper{% if single_block %} icons-row__wrapper--single-block-center{% endif %} text-{{ alignment }}">
       {%- if heading != blank or subheading != blank -%}
