@@ -1200,7 +1200,11 @@ assign flo_bg_color = section.settings.flo_bg_color
   class="{{ section_classes }}"
   data-section-id="{{ section.id }}"
   data-section-type="featured-collection"
-  data-columns="{{ columns }}">
+  data-columns="{{ columns }}"
+  {% unless flo_bg_color == blank %}
+    style="background-color: {{ flo_bg_color }};"
+  {% endunless %}
+  >
   <div class="{{ section_width }}">
     {%- if is_split -%}
       <div class="featured-collection__inner{% if layout == 'split-right' %} featured-collection__inner--splitright{% endif %}">
