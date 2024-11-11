@@ -202,6 +202,7 @@
         "text_8KUbcL",
         "text_pkMm9c"
       ],
+      "custom_css": [],
       "settings": {
         "alignment": "center",
         "columns": 3,
@@ -209,7 +210,7 @@
         "icons_width_mobile": 40,
         "heading": "",
         "subheading": "",
-        "bg_color": "",
+        "bg_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "text_color": "#333333",
         "box_color": "",
         "button_text": "",
@@ -219,7 +220,8 @@
         "button_size": "btn--small",
         "enable_slider_mobile": false,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "flo_bg_color": "rgba(0,0,0,0)"
       }
     },
     "section_collection_qiULjf": {
