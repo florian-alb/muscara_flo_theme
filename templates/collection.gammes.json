@@ -71,7 +71,7 @@
         "text_KiBQhJ": {
           "type": "text",
           "settings": {
-            "text": "{{ collection.metafields.custom.description | metafield_tag }}",
+            "text": "<p>{{ collection.metafields.custom.description | metafield_tag }}</p>",
             "size": 100
           }
         }
@@ -394,16 +394,17 @@
     "flo_reviews_6yBLcd": {
       "type": "flo-reviews",
       "blocks": {
-        "text_dCgfGX": {
+        "text_QHj6R6": {
           "type": "text",
           "settings": {
-            "name": "",
-            "review": ""
+            "name": "florian",
+            "rating": 5,
+            "review": "<p>super produit</p>"
           }
         }
       },
       "block_order": [
-        "text_dCgfGX"
+        "text_QHj6R6"
       ],
       "settings": {
         "heading": "",
