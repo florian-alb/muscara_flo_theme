@@ -296,6 +296,7 @@
         "text_block_Gc8qpa": {
           "type": "text_block",
           "settings": {
+            "image": "shopify://shop_images/serum.jpg",
             "title": "1 - Des cosmétiques naturels, vegan et testés dermatologiquement",
             "text": "<p>Fabriqués à Grasse, en France, avec des ingrédients clean, 100% safe pour ton corps et de haute qualité pour une hygiène intime respectueuse du corps des femmes et de l’environnement. </p>",
             "button_text": "",
@@ -614,7 +615,7 @@
         "text_24"
       ],
       "settings": {
-        "heading": "Onze klanten waarderen het en dat is te merken",
+        "heading": "Onze klanten waarderen het",
         "subheading": "",
         "bg_color": "",
         "text_color": "#000000",
