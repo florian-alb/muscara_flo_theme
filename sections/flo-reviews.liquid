@@ -18,32 +18,31 @@
           {% for block in section.blocks %}
             {% assign even = forloop.index | modulo: 2 %}
             {% if even == 0 %}
-              oui
-            {% endif %}
-
-            <div class="reviews_item">
-              <div class="item_wrap">
-                <div class="item_wrap-icon">
-                  <div class="item_wrap-icon__icon"></div>
-                  <div class="item_icon-review">
-                    <span>{{ block.settings.rating }}</span>
-                    <img
-                      style="width:9px"
-                      src="https://cdn.shopify.com/s/files/1/0581/1306/5129/t/1/assets/review-star.svg?v=8681932030933659819"
-                      alt=""
-                    >
+              <div class="reviews_item">
+                <div class="item_wrap">
+                  <div class="item_wrap-icon">
+                    <div class="item_wrap-icon__icon"></div>
+                    <div class="item_icon-review">
+                      <span>{{ block.settings.rating }}</span>
+                      <img
+                        style="width:9px"
+                        src="https://cdn.shopify.com/s/files/1/0581/1306/5129/t/1/assets/review-star.svg?v=8681932030933659819"
+                        alt=""
+                      >
+                    </div>
+                  </div>
+                  <div class="item_wrap-text">
+                    <p class="review-pseudo">{{ block.settings.name }}</p>
+                    <p class="review-text-flo">{{ block.settings.review }}</p>
                   </div>
                 </div>
-                <div class="item_wrap-text">
-                  <p class="review-pseudo">{{ block.settings.name }}</p>
-                  <p class="review-text-flo">{{ block.settings.review }}</p>
-                </div>
               </div>
-            </div>
+            {% endif %}
           {% endfor %}
         </div>
         <div class="reviews_block-bottom">
           {% for block in section.blocks %}
+            {% assign even = forloop.index | modulo: 2 %}
             <div class="reviews_item">
               <div class="item_wrap">
                 <div class="item_wrap-icon">
