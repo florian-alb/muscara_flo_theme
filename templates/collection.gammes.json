@@ -468,6 +468,18 @@
     },
     "flo_reviews_6yBLcd": {
       "type": "flo-reviews",
+      "blocks": {
+        "text_bY9zrM": {
+          "type": "text",
+          "settings": {
+            "name": "",
+            "review": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bY9zrM"
+      ],
       "settings": {
         "heading": "",
         "subheading": "",
