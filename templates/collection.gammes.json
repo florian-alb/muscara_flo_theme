@@ -615,11 +615,13 @@
         "text_24"
       ],
       "settings": {
-        "heading": "Onze klanten waarderen het",
+        "heading": "Onze klanten <span>waarderen het</span> en dat is te merken",
         "subheading": "",
         "bg_color": "",
+        "span_color": "{{ collection.metafields.custom.collection_color.value }}",
         "text_color": "#000000",
-        "box_color": "{{ collection.metafields.custom.collection_bg_color.value }}"
+        "box_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
+        "rating_color": "{{ collection.metafields.custom.collection_color.value }}"
       }
     },
     "section_icons_row_FzJKXn": {
