@@ -14,7 +14,7 @@
       style="position: relative; height: 220px;"
     >
       <div class="parer">
-        <div class="reviews_block-bottom">
+        <div class="reviews_block">
           {% for block in section.blocks %}
             <div class="reviews_item">
               <div class="item_wrap">
@@ -36,7 +36,8 @@
               </div>
             </div>
           {% endfor %}
-
+        </div>
+        <div class="reviews_block-bottom">
           {% for block in section.blocks %}
             <div class="reviews_item">
               <div class="item_wrap">
