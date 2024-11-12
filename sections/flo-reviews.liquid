@@ -1,3 +1,12 @@
+<section
+  id="FloReviews--{{ section.id }}"
+  class="section-padding"
+  data-section-id="{{ section.id }}"
+  data-section-type="flo-reviews"
+>
+  flo reviews
+</section>
+
 {% schema %}
 {
   "name": "Flo Reviews",
@@ -35,6 +44,33 @@
       "type": "color",
       "id": "box_color",
       "label": "Boxes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
     }
   ]
 }
