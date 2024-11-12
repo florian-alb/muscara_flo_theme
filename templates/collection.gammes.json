@@ -76,7 +76,10 @@
           }
         }
       },
-      "block_order": ["heading_MQeC4q", "text_KiBQhJ"],
+      "block_order": [
+        "heading_MQeC4q",
+        "text_KiBQhJ"
+      ],
       "settings": {
         "text_position": "center",
         "bg_color_secondary": false,
@@ -198,7 +201,11 @@
           }
         }
       },
-      "block_order": ["text_DbJpxP", "text_8KUbcL", "text_pkMm9c"],
+      "block_order": [
+        "text_DbJpxP",
+        "text_8KUbcL",
+        "text_pkMm9c"
+      ],
       "custom_css": [],
       "settings": {
         "alignment": "center",
@@ -269,7 +276,10 @@
           }
         }
       },
-      "block_order": ["heading_d7dij3", "text_YrL8tX"],
+      "block_order": [
+        "heading_d7dij3",
+        "text_YrL8tX"
+      ],
       "settings": {
         "text_position": "center",
         "bg_color_secondary": false,
@@ -604,7 +614,7 @@
         "text_24"
       ],
       "settings": {
-        "heading": "",
+        "heading": "Onze klanten waarderen het en dat is te merken",
         "subheading": "",
         "bg_color": "",
         "text_color": "#333333",
