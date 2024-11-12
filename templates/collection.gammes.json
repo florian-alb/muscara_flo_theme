@@ -617,8 +617,8 @@
         "heading": "Onze klanten waarderen het en dat is te merken",
         "subheading": "",
         "bg_color": "",
-        "text_color": "#333333",
-        "box_color": ""
+        "text_color": "#000000",
+        "box_color": "{{ collection.metafields.custom.collection_bg_color.value }}"
       }
     },
     "section_icons_row_FzJKXn": {
