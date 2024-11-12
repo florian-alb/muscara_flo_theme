@@ -17,7 +17,9 @@
         <div class="reviews_block">
           {% for block in section.blocks %}
             {% assign even = forloop.index | modulo: 2 %}
-            {{ even }}
+            {% if even == 0 %}
+              oui
+            {% endif %}
 
             <div class="reviews_item">
               <div class="item_wrap">
