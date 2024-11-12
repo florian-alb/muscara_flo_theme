@@ -454,7 +454,7 @@
         "heading": "Waarom zul je verliefd worden op Muscara-geurgel?",
         "subheading": "",
         "bg_color": "",
-        "text_color": "#333",
+        "text_color": "#333333",
         "box_color": "",
         "button_text": "",
         "button_link": "",
@@ -464,6 +464,16 @@
         "enable_slider_mobile": false,
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "flo_reviews_6yBLcd": {
+      "type": "flo-reviews",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#333",
+        "box_color": ""
       }
     }
   },
@@ -478,6 +488,7 @@
     "section_text_qJcfCM",
     "section_columns_FJbMem",
     "section_custom_html_pVj7Bq",
-    "section_icons_row_FzJKXn"
+    "section_icons_row_FzJKXn",
+    "flo_reviews_6yBLcd"
   ]
 }
