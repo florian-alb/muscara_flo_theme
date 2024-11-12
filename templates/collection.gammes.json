@@ -394,49 +394,7 @@
     "flo_reviews_6yBLcd": {
       "type": "flo-reviews",
       "blocks": {
-        "text_bY9zrM": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
-        "text_GQpKxK": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
-        "text_ixzgG4": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
         "text_dCgfGX": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
-        "text_HHfkfG": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
-        "text_cfCiry": {
-          "type": "text",
-          "settings": {
-            "name": "",
-            "review": ""
-          }
-        },
-        "text_8kcKYK": {
           "type": "text",
           "settings": {
             "name": "",
@@ -445,19 +403,13 @@
         }
       },
       "block_order": [
-        "text_bY9zrM",
-        "text_GQpKxK",
-        "text_ixzgG4",
-        "text_dCgfGX",
-        "text_HHfkfG",
-        "text_cfCiry",
-        "text_8kcKYK"
+        "text_dCgfGX"
       ],
       "settings": {
         "heading": "",
         "subheading": "",
         "bg_color": "",
-        "text_color": "#333",
+        "text_color": "#333333",
         "box_color": ""
       }
     },
