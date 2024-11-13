@@ -212,12 +212,12 @@
 
             {%  if block.settings.show_pills %}
             {% style %}
-                .flo-pill-{{block.id}} span{
+                .flo-pill-{{block.id}}.active span{
                   background: {{block.settings.pill_color}};
-                      border-radius: 50px;
-    padding: 5px 15px;
-    font-size: 14px;
-    color: #FFFFFF;
+                  border-radius: 50px;
+                  padding: 5px 15px;
+                  font-size: 14px;
+                  color: #FFFFFF;
                 }
             {% endstyle %}
             {% endif %}
