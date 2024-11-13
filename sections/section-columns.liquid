@@ -56,14 +56,12 @@
     }
     #SectionColumns--{{ unique }} .column-item__text p { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size }}); }
 
+  {% if section.settings.bg_color_cards != blank %}
   #SectionColumns--{{ unique }} .column-item__inner {
         padding: 10px !important;
         background: {{ section.settings.bg_color_cards }};
         border-radius: 18px;
       }
-
-      {% if section.settings.bg_color_cards != blank %}
-
     {% endif %}
 {%- endstyle -%}
 
