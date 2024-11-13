@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "text": "<p>Ontdek Muscara, jouw geheim voor altijd frisse intimiteit</p>",
-            "size": 150,
+            "size": 115,
             "heading_highlight_type": "italics",
             "highlight_color": "#d43747",
             "highlight_text_color": "#000000"
@@ -51,14 +51,16 @@
         "button_76AmVE"
       ],
       "settings": {
-        "height": "six-fifty-height",
-        "enable_mobile_height": false,
-        "mobile_height": "four-fifty-height-mobile",
+        "height": "original-height",
+        "enable_mobile_height": true,
+        "mobile_height": "original-height-mobile",
+        "image": "shopify://shop_images/hero-d-shoot-1.jpg",
+        "image_mobile": "shopify://shop_images/hero-m-shoot-1.jpg",
         "overlay_opacity": 10,
         "enable_zoom_animation": true,
         "text_width": "normal",
         "text_position": "left",
-        "text_color": "text-light"
+        "text_color": "text-dark"
       }
     },
     "section_tab_collections_czJVe9": {
