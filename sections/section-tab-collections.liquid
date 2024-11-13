@@ -357,11 +357,11 @@
                   {{ tabs_navigation }}
                 </ul>
 
-                {% unless section.settings.show_scrollbar %}
+                {% if section.settings.show_scrollbar %}
                   <div class="custom-scrollbar" data-custom-scrollbar>
                     <div class="custom-scrollbar__thumb" data-custom-scrollbar-thumb></div>
                   </div>
-                {% endunless %}
+                {% endif %}
               </div>
             </div>
 
@@ -428,6 +428,12 @@
       "max": 200,
       "step": 5,
       "unit": "%"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scrollbar",
+      "label": "Show scrollbar",
+      "default": true
     },
     {
       "type": "header",
