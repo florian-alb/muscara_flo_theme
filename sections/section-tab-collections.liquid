@@ -208,13 +208,17 @@
               tabindex="0"
               {{ block.shopify_attributes }}>
               <span
-              style="
-              {% if forloop.first %} 
-               background:{{ block.setting.pill_color}}
-              {% endif %}
-               "
               >{{ tab_collection_title }}</span>
             </li>
+
+            {% style %}
+              {% if forloop.first %} 
+                .tabs__link span{
+                  background: {{block.settings.pill_color}}
+                }
+               background:{{ block.setting.pill_color}}
+              {% endif %}
+            {% endstyle %}
           {%- endcapture -%}
 
           {%- capture tabs -%}
