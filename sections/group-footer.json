@@ -77,7 +77,16 @@
             "image": "shopify://shop_images/logo-blanc-min.svg",
             "logo_width": 250,
             "show_shop_name": false,
-            "text": "<p>info@muscara.co</p><p>31-75 Shelton Street Covent Garden London United Kingdom</p>",
+            "text": "",
+            "column_width": "100"
+          }
+        },
+        "text_7njDT9": {
+          "type": "text",
+          "settings": {
+            "alignment": "text-left",
+            "title": "Contactgegevens",
+            "footer_text": "<p>info@muscara.co</p><p>31-75 Shelton Street Covent Garden London United Kingdom</p>",
             "column_width": "25"
           }
         },
@@ -86,16 +95,16 @@
           "settings": {
             "alignment": "text-left",
             "menu": "main-menu",
-            "title": "Mehr Infos",
+            "title": "Shop",
             "column_width": "25"
           }
         },
-        "15738c03-7e95-49ce-966c-11bb61651388": {
+        "link_GFteJX": {
           "type": "link",
           "settings": {
             "alignment": "text-left",
-            "menu": "footer",
-            "title": "Rechtliches",
+            "menu": "informatie",
+            "title": "Informatie",
             "column_width": "25"
           }
         },
@@ -111,8 +120,9 @@
       },
       "block_order": [
         "logo_xGjFgn",
+        "text_7njDT9",
         "footer-block-0",
-        "15738c03-7e95-49ce-966c-11bb61651388",
+        "link_GFteJX",
         "1df827ca-4f18-4717-b2f5-b6e1a07aa29e"
       ],
       "settings": {
