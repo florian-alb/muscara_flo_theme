@@ -285,24 +285,6 @@
         "padding_bottom": 60
       }
     },
-    "1b0c19a5-2771-4781-b737-93232dca0592": {
-      "type": "section-newsletter",
-      "settings": {
-        "flex_align": "align--middle-center",
-        "text_color": "text-dark",
-        "title": "Ontvang je welkomstgeschenk",
-        "text": "<p>Schrijf je in om schoonheidsgeheimen en je eerste cadeau te ontvangen!</p>",
-        "extra_fields": "",
-        "button_text": "",
-        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
-        "image": "shopify://shop_images/bg.jpg",
-        "image_height": "two-fifty-height",
-        "overlay_opacity": 10,
-        "width": "wrapper--full-padded",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "flo_reviews_KM3FRK": {
       "type": "flo-reviews",
       "blocks": {
@@ -533,6 +515,24 @@
         "text_color": "#000000",
         "box_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "rating_color": "{{ collection.metafields.custom.collection_color.value }}"
+      }
+    },
+    "1b0c19a5-2771-4781-b737-93232dca0592": {
+      "type": "section-newsletter",
+      "settings": {
+        "flex_align": "align--middle-center",
+        "text_color": "text-dark",
+        "title": "Ontvang je welkomstgeschenk",
+        "text": "<p>Schrijf je in om schoonheidsgeheimen en je eerste cadeau te ontvangen!</p>",
+        "extra_fields": "",
+        "button_text": "",
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "image": "shopify://shop_images/bg.jpg",
+        "image_height": "two-fifty-height",
+        "overlay_opacity": 10,
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
