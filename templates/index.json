@@ -204,8 +204,8 @@
         "subheading": "",
         "title": "<p>Blijf kalm, zelfs als je je inspant</p>",
         "heading_highlight_type": "circle",
-        "highlight_color": "#D43747",
-        "highlight_text_color": "#000",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
         "heading_size": 130,
         "content": "<p>Muscara houdt je fris door geurtjes zachtjes te neutraliseren en je te hullen in een lichte, langdurige geur. Een vleugje van onze muskus en je bent klaar voor twee dagen comfort.</p>",
         "text_alignment": "left",
@@ -223,17 +223,84 @@
         "padding_bottom": 60
       }
     },
+    "section_icons_row_pHWX6q": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_xN73Xa": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/madeInFrance_097db484-2af5-4bea-bfa7-6019aae77c1d.svg",
+            "title": "",
+            "text": "<p>Gemaakt in Frankrijk in ons kleine familielaboratorium</p>"
+          }
+        },
+        "text_arYbdR": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
+            "title": "",
+            "text": "<p>Een betoverende geur die de hele dag blijft hangen</p>"
+          }
+        },
+        "text_fyCJj6": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
+            "title": "",
+            "text": "<p>Muscara intieme muskus is 100% veilig voor de huid.</p>"
+          }
+        },
+        "text_7pBe4w": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "icon_image": "shopify://shop_images/safe_ff1821fc-970c-46fe-8d92-ce4a01cde188.svg",
+            "title": "",
+            "text": "<p>Muscara is dermatologisch getest</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xN73Xa",
+        "text_arYbdR",
+        "text_fyCJj6",
+        "text_7pBe4w"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 4,
+        "icons_width": 170,
+        "icons_width_mobile": 130,
+        "heading": "Waarom zul je verliefd worden op Muscara?",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#000000",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "1b0c19a5-2771-4781-b737-93232dca0592": {
       "type": "section-newsletter",
       "settings": {
         "flex_align": "align--middle-center",
         "text_color": "text-dark",
-        "title": "Newsletter",
-        "text": "<p>Abonniere unseren Newsletter, um unsere exklusiven Angebote zu erhalten und frühzeitig über Produktneuheiten informiert zu werden.</p>",
-        "extra_fields": "name",
+        "title": "Ontvang je welkomstgeschenk",
+        "text": "<p>Schrijf je in om schoonheidsgeheimen en je eerste cadeau te ontvangen!</p>",
+        "extra_fields": "",
         "button_text": "",
-        "bg_color": "",
-        "image_height": "three-fifty-height",
+        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "image": "shopify://shop_images/bg.jpg",
+        "image_height": "two-fifty-height",
         "overlay_opacity": 10,
         "width": "wrapper--full-padded",
         "padding_top": 60,
@@ -245,6 +312,7 @@
     "section_banner_image_b9JWTj",
     "section_tab_collections_czJVe9",
     "section_image_with_text_te4C3P",
+    "section_icons_row_pHWX6q",
     "1b0c19a5-2771-4781-b737-93232dca0592"
   ]
 }
