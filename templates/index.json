@@ -579,11 +579,11 @@
         "text_block_9tPNfT"
       ],
       "custom_css": [
-        ".column-item__inner {padding: 10px !important; background: #f7e2ed; border-radius: 18px}"
+        ".column-item__inner {padding: 10px !important; background: #f7e2ed; border-radius: 18px;}"
       ],
       "settings": {
         "title": "",
-        "align_text": "text-left",
+        "align_text": "text-center",
         "columns": 3,
         "show_images": true,
         "show_borders": false,
