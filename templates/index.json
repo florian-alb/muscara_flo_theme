@@ -99,7 +99,7 @@
             "tab_collection": "collection-the-midnight-mirage-rose-night",
             "number_of_products": 4,
             "show_pills": false,
-            "pill_color": "",
+            "pill_color": "{{ block.settings.tab_collection.metafields.custom.collection_color.value }}",
             "show_image": false,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
