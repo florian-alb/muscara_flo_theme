@@ -511,9 +511,7 @@
         "text_23",
         "text_24"
       ],
-      "custom_css": [
-        ".review-text-flo {display: -webkit-box; /* Utilisé pour créer un conteneur flexible */ -webkit-line-clamp: 2; /* Spécifie le nombre de lignes maximum */ -webkit-box-orient: vertical; /* Définit l'orientation de la boîte */ overflow: hidden; /* Cache le texte qui dépasse */ text-overflow: ellipsis; /* Ajoute \"...\" à la fin du texte troncqué */}"
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "Onze klanten waarderen het en dat is te merken",
         "subheading": "",
