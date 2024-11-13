@@ -207,7 +207,13 @@
               data-block-id="{{ block.id }}"
               tabindex="0"
               {{ block.shopify_attributes }}>
-              <span>{{ tab_collection_title }}</span>
+              <span
+              style="
+              {% if forloop.first %} 
+               background:{{ block.setting.pill_color}}
+              {% endif %}
+               "
+              >{{ tab_collection_title }}</span>
             </li>
           {%- endcapture -%}
 
@@ -548,23 +554,8 @@
         },
         {
           "type": "color",
-          "id": "pill_bg_selected",
-          "label": "Selected pill background"
-        },
-        {
-          "type": "color",
-          "id": "pill_bg_not_selected",
-          "label": "Not selected pill background"
-        },
-        {
-          "type": "color",
-          "id": "pill_border_selected",
-          "label": "Selected pill border"
-        },
-        {
-          "type": "color",
-          "id": "pill_border_not_selected",
-          "label": "Not selected pill border"
+          "id": "pill_color",
+          "label": "Pill color"
         },
         {
           "type": "header",
