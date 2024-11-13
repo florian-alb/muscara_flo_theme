@@ -202,7 +202,7 @@
           {%- capture tabs_navigation -%}
             {{ tabs_navigation }}
 
-            <li class="tabs__link{% if forloop.first %} current{% endif %}"
+            <li class="tabs__link{% if forloop.first %} current active-{{block.id}}{% endif %}"
               data-tabs-link="{{ forloop.index0 }}"
               data-block-id="{{ block.id }}"
               tabindex="0"
@@ -213,7 +213,7 @@
 
             {% style %}
               {% if forloop.first %} 
-                .tabs__link .current span{
+                .tabs__link.active-{{block.id}} span{
                   background: {{block.settings.pill_color}}
                 }
                background:{{ block.setting.pill_color}}
