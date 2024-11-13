@@ -357,9 +357,11 @@
                   {{ tabs_navigation }}
                 </ul>
 
-                <div class="custom-scrollbar" data-custom-scrollbar>
-                  <div class="custom-scrollbar__thumb" data-custom-scrollbar-thumb></div>
-                </div>
+                {% unless section.settings.show_scrollbar %}
+                  <div class="custom-scrollbar" data-custom-scrollbar>
+                    <div class="custom-scrollbar__thumb" data-custom-scrollbar-thumb></div>
+                  </div>
+                {% endunless %}
               </div>
             </div>
 
