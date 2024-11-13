@@ -306,6 +306,18 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "flo_reviews_KM3FRK": {
+      "type": "flo-reviews",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "bg_color": "",
+        "span_color": "#000",
+        "text_color": "#000",
+        "box_color": "",
+        "rating_color": ""
+      }
     }
   },
   "order": [
@@ -313,6 +325,7 @@
     "section_tab_collections_czJVe9",
     "section_image_with_text_te4C3P",
     "section_icons_row_pHWX6q",
+    "flo_reviews_KM3FRK",
     "1b0c19a5-2771-4781-b737-93232dca0592"
   ]
 }
