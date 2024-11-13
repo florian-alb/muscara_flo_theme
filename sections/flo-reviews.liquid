@@ -103,7 +103,16 @@
   })();
 </script>
 
-<style>
+{% style %}
+  #FloReviews--{{ section.id }} {
+    --PT: {{ section.settings.padding_top }}px;
+    --PB: {{ section.settings.padding_bottom }}px;
+    {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+      --bg: {{ bg_color }};
+      background: {{ bg_color }};
+    {%- endif -%}
+  }
+
   .review-pseudo {
     font-weight: bold;
     font-size: 18px;
@@ -270,7 +279,7 @@
   .custom__item {
     padding-left: 0;
   }
-</style>
+{% endstyle %}
 
 {% schema %}
 {
@@ -320,6 +329,30 @@
       "type": "color",
       "id": "rating_color",
       "label": "Rating color"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
     }
   ],
   "blocks": [
