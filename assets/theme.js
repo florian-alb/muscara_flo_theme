@@ -3743,6 +3743,7 @@
     }
     handleActiveTabClasses(t, e) {
       var i;
+      console.log("💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩")
       const s = this.container.querySelector(`${So}.${Mo}`),
         o = this.container.querySelector(`${Eo}.${Mo}`);
       null == s || s.classList.remove(Mo),
