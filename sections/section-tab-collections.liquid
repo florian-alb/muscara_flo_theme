@@ -202,7 +202,7 @@
           {%- capture tabs_navigation -%}
             {{ tabs_navigation }}
 
-            <li class="tabs__link{% if forloop.first %} current active{% endif %} flo-pill-{{block.id}}"
+            <li class="tabs__link{% if forloop.first %} current{% else %} inactive{% endif %} flo-pill-{{block.id}}"
               data-tabs-link="{{ forloop.index0 }}"
               data-block-id="{{ block.id }}"
               tabindex="0"
@@ -212,14 +212,14 @@
 
             {%  if block.settings.show_pills %}
             {% style %}
-                .flo-pill-{{block.id}}.active span{
+                .flo-pill-{{block.id}}.current span{
                   background: {{block.settings.pill_color}};
                   border-radius: 100px;
                   padding: 5px 15px;
                   font-size: 14px;
                   color: #FFFFFF;
                 }
-                .flo-pill-{{block.id}} span{
+                .flo-pill-{{block.id}}.inactive span{
                   border-radius: 100px;
                   padding: 5px 15px;
                   font-size: 14px;
