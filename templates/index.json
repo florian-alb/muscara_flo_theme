@@ -524,6 +524,79 @@
         "padding_bottom": 60
       }
     },
+    "section_columns_VL44NE": {
+      "type": "section-columns",
+      "blocks": {
+        "text_block_D8AjJX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/11_ab47a6a4-38e9-44b5-b822-0d6a0b327919.jpg",
+            "title": "Langdurige frisheid 💖",
+            "text": "<h3>Intieme muskus</h3><p>❤︎ Absorbeert onaangename geurtjes<br/>❤︎ Kleeft niet aan de huid<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
+            "button_text": "Bekijk de producten",
+            "button_link": "shopify://collections/frontpage",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--large",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_3ARE9U": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0009_Groupe2_a59e7ee8-ed28-4ef9-a515-f047d8aeea2d.jpg",
+            "title": "Langdurige fixatie - Zonder alcohol 🌞",
+            "text": "<h3>Alcoholvrije bodymist</h3><p>❤︎ Lichte, fascinerende geur<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
+            "button_text": "Bekijk de producten",
+            "button_link": "shopify://collections/onze-lichaamsnevels",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--large",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        },
+        "text_block_9tPNfT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0010_Groupe1_a8b08983-2460-4e76-a99d-1bd9ec4f9c62.jpg",
+            "title": "98% ingrediënten van natuurlijke oorsprong 🌱",
+            "text": "<h3>Vaste deodorants</h3><p>❤︎ Zeg vaarwel tegen vochtige oksels<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
+            "button_text": "Bekijk de producten",
+            "button_link": "shopify://collections/onze-deodorants",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--large",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_D8AjJX",
+        "text_block_3ARE9U",
+        "text_block_9tPNfT"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "text-left",
+        "columns": 3,
+        "show_images": true,
+        "show_borders": false,
+        "equalize_height": true,
+        "desktop_aspect_ratio": 1,
+        "mobile_aspect_ratio": 1,
+        "heading_size": 120,
+        "text_size": 100,
+        "bg_color_secondary": false,
+        "color_borders": "#000",
+        "layout_mobile": "carousel",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "1b0c19a5-2771-4781-b737-93232dca0592": {
       "type": "section-newsletter",
       "settings": {
@@ -549,6 +622,7 @@
     "section_image_with_text_te4C3P",
     "section_icons_row_pHWX6q",
     "flo_reviews_KM3FRK",
+    "section_columns_VL44NE",
     "1b0c19a5-2771-4781-b737-93232dca0592"
   ]
 }
