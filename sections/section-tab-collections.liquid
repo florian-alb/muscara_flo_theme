@@ -210,11 +210,14 @@
               <span>{{ tab_collection_title }}</span>
             </li>
 
+            {%  if block.settings.show_pills %}
             {% style %}
                 .flo-pill-{{block.id}} span{
-                  background: {{block.settings.pill_color}}
+                  background: {{block.settings.pill_color}};
+                  border-radius: 50px;
                 }
             {% endstyle %}
+            {% endif %}
           {%- endcapture -%}
 
           {%- capture tabs -%}
