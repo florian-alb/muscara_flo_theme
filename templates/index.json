@@ -511,14 +511,19 @@
         "text_23",
         "text_24"
       ],
+      "custom_css": [
+        ".review-text-flo {display: -webkit-box; /* Utilisé pour créer un conteneur flexible */ -webkit-line-clamp: 2; /* Spécifie le nombre de lignes maximum */ -webkit-box-orient: vertical; /* Définit l'orientation de la boîte */ overflow: hidden; /* Cache le texte qui dépasse */ text-overflow: ellipsis; /* Ajoute \"...\" à la fin du texte troncqué */}"
+      ],
       "settings": {
-        "heading": "Onze klanten <span>waarderen het</span> en dat is te merken",
+        "heading": "Onze klanten waarderen het en dat is te merken",
         "subheading": "",
         "bg_color": "",
         "span_color": "{{ shop.brand.colors.primary[0].background }}",
         "text_color": "#000000",
         "box_color": "{{ shop.brand.colors.secondary[0].background }}",
-        "rating_color": "{{ shop.brand.colors.primary[0].background }}"
+        "rating_color": "{{ shop.brand.colors.primary[0].background }}",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "1b0c19a5-2771-4781-b737-93232dca0592": {
