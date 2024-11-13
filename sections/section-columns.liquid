@@ -41,28 +41,28 @@
 -%}
 
 {%- style -%}
-      #SectionColumns--{{ unique }} {
-        --PT: {{ section.settings.padding_top }}px;
-        --PB: {{ section.settings.padding_bottom }}px;
-        --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }});
+  #SectionColumns--{{ unique }} {
+    --PT: {{ section.settings.padding_top }}px;
+    --PB: {{ section.settings.padding_bottom }}px;
+    --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }});
 
-        {%- if color_borders != 'rgba(0,0,0,0)' and color_borders != '' -%}
-          --border: {{ color_borders }};
-        {%- endif -%}
+    {%- if color_borders != 'rgba(0,0,0,0)' and color_borders != '' -%}
+      --border: {{ color_borders }};
+    {%- endif -%}
 
-        {% unless columns == 3 %}
-          --grid-tablet: repeat(2, minmax(0, 1fr));
-        {% endunless %}
-      }
-      #SectionColumns--{{ unique }} .column-item__text p { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size }}); }
-
-      {% if settings.color_cards != blank %}
-        .column-item__inner {
-      padding: 10px !important;
-      background: settings.color_cards;
-      border-radius: 18px;
+    {% unless columns == 3 %}
+      --grid-tablet: repeat(2, minmax(0, 1fr));
+    {% endunless %}
   }
-      {% endif %}
+  #SectionColumns--{{ unique }} .column-item__text p { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size }}); }
+
+  {% if settings.color_cards != blank %}
+    .column-item__inner {
+      padding: 10px !important;
+      background: {{settings.color_cards}};
+      border-radius: 18px;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div
