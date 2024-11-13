@@ -58,11 +58,11 @@
 
   .column-item__inner {
         padding: 10px !important;
-        background: {{settings.color_cards}};
+        background: {{ section.settings.bg_color_cards }};
         border-radius: 18px;
       }
 
-      {% if section.settings.color_cards != blank %}
+      {% if section.settings.bg_color_cards != blank %}
 
     {% endif %}
 {%- endstyle -%}
@@ -426,9 +426,8 @@
     },
     {
       "type": "color",
-      "id": "color_cards",
+      "id": "bg_color_cards",
       "label": "Cards background",
-      "default": "#000"
     },
     {
       "type": "header",
