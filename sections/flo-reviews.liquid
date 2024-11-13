@@ -90,17 +90,6 @@
     window.addEventListener('resize', setHeight);
     document.addEventListener('shopify:section:load', setHeight);
   })();
-
-  (function shortenReviews() {
-    const reviewsTextBlocks = document.querySelectorAll('.review-text-flo');
-    reviewsTextBlocks.forEach((textBlock) => {
-      const letters = textBlock.textContent.length;
-
-      if (letters > 50) {
-        textBlock.textContent = textBlock.textContent.substring(0, 138) + '...';
-      }
-    });
-  })();
 </script>
 
 {% style %}
@@ -118,7 +107,12 @@
     font-size: 18px;
   }
 
-  .review-text-flo{
+  .review-text-flo {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: {{section.settings.text_color}}
   }
 
