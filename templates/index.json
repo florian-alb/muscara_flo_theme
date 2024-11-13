@@ -12,18 +12,11 @@
     "section_banner_image_b9JWTj": {
       "type": "section-banner-image",
       "blocks": {
-        "subheading_TxnwUn": {
-          "type": "subheading",
-          "settings": {
-            "text": "<p>Welcome to</p>",
-            "size": 100
-          }
-        },
         "heading_HMdUEL": {
           "type": "heading",
           "settings": {
-            "text": "<p>Flo dev theme</p>",
-            "size": 180,
+            "text": "<p>Ontdek Muscara, jouw geheim voor altijd frisse intimiteit</p>",
+            "size": 150,
             "heading_highlight_type": "italics",
             "highlight_color": "#d43747",
             "highlight_text_color": "#000000"
@@ -32,15 +25,15 @@
         "text_BgHpX7": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand, describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Onthul je vrouwelijkheid en zelfvertrouwen. Met een geheime, sterk geurende routine die een blijvende indruk achterlaat.</p>",
             "size": 100
           }
         },
         "button_76AmVE": {
           "type": "button",
           "settings": {
-            "button_1_text": "Shop All",
-            "button_1_link": "shopify://collections/all",
+            "button_1_text": "Nu Kopen",
+            "button_1_link": "shopify://collections/nos-collections",
             "button_1_color": "btn--white",
             "button_1_style": "btn--solid-border",
             "button_1_size": "btn--small",
@@ -53,7 +46,6 @@
         }
       },
       "block_order": [
-        "subheading_TxnwUn",
         "heading_HMdUEL",
         "text_BgHpX7",
         "button_76AmVE"
