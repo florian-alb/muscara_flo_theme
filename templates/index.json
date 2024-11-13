@@ -9,6 +9,144 @@
  */
 {
   "sections": {
+    "section_banner_image_b9JWTj": {
+      "type": "section-banner-image",
+      "blocks": {
+        "subheading_TxnwUn": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Welcome to</p>",
+            "size": 100
+          }
+        },
+        "heading_HMdUEL": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Flo dev theme</p>",
+            "size": 180,
+            "heading_highlight_type": "italics",
+            "highlight_color": "#D43747",
+            "highlight_text_color": "#000"
+          }
+        },
+        "text_BgHpX7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand, describe a product, share announcements, or welcome customers to your store.</p>",
+            "size": 100
+          }
+        },
+        "button_76AmVE": {
+          "type": "button",
+          "settings": {
+            "button_1_text": "Shop All",
+            "button_1_link": "shopify://collections/all",
+            "button_1_color": "btn--white",
+            "button_1_style": "btn--solid-border",
+            "button_1_size": "btn--small",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_color": "btn--black",
+            "button_2_style": "btn--solid",
+            "button_2_size": "btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_TxnwUn",
+        "heading_HMdUEL",
+        "text_BgHpX7",
+        "button_76AmVE"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "enable_mobile_height": false,
+        "mobile_height": "four-fifty-height-mobile",
+        "overlay_opacity": 10,
+        "enable_zoom_animation": true,
+        "text_width": "normal",
+        "text_position": "left",
+        "text_color": "text-light"
+      }
+    },
+    "section_tab_collections_czJVe9": {
+      "type": "section-tab-collections",
+      "blocks": {
+        "collection_a8NLaP": {
+          "type": "collection",
+          "settings": {
+            "title": "Sale",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_aND7br": {
+          "type": "collection",
+          "settings": {
+            "title": "New Arrivals",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_i7f79T": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "collection_a8NLaP",
+        "collection_aND7br",
+        "collection_i7f79T"
+      ],
+      "settings": {
+        "image_aspect_ratio": 1.3,
+        "text_alignment": "text-center",
+        "title": "Best Sellers",
+        "text": "Our favorite picks for the season",
+        "tab_heading_size": 120,
+        "show_buttons": true,
+        "collection_button_text": "Shop Now",
+        "collection_button_color": "btn--black",
+        "collection_button_style": "btn--solid",
+        "collection_button_size": "btn--small",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "1b0c19a5-2771-4781-b737-93232dca0592": {
       "type": "section-newsletter",
       "settings": {
@@ -28,6 +166,8 @@
     }
   },
   "order": [
+    "section_banner_image_b9JWTj",
+    "section_tab_collections_czJVe9",
     "1b0c19a5-2771-4781-b737-93232dca0592"
   ]
 }
