@@ -186,6 +186,7 @@
         "title": "Explore ta personnalité à travers nos gammes parfumées",
         "text": "",
         "tab_heading_size": 120,
+        "show_scrollbar": false,
         "show_buttons": false,
         "collection_button_text": "",
         "collection_button_color": "btn--black",
