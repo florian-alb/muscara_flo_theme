@@ -75,10 +75,11 @@
         "collection_i7f79T": {
           "type": "collection",
           "settings": {
-            "title": "",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
+            "title": "The Irresistible",
+            "tab_collection": "the-irresistible",
+            "number_of_products": 4,
+            "show_image": true,
+            "image": "shopify://shop_images/Mystik-lingettes_90ad1308-d6e0-4399-9f88-05c6c25df85e.webp",
             "overlay_opacity": 10,
             "heading": "",
             "text_color": "text-light",
@@ -92,8 +93,8 @@
         "collection_maMKRa": {
           "type": "collection",
           "settings": {
-            "title": "",
-            "tab_collection": "",
+            "title": "The Midnight Mirage",
+            "tab_collection": "collection-the-midnight-mirage-rose-night",
             "number_of_products": 6,
             "show_image": false,
             "overlay_opacity": 10,
@@ -168,11 +169,11 @@
       "settings": {
         "image_aspect_ratio": 1.3,
         "text_alignment": "text-center",
-        "title": "Best Sellers",
-        "text": "Our favorite picks for the season",
+        "title": "Explore ta personnalité à travers nos gammes parfumées",
+        "text": "",
         "tab_heading_size": 120,
-        "show_buttons": true,
-        "collection_button_text": "Shop Now",
+        "show_buttons": false,
+        "collection_button_text": "",
         "collection_button_color": "btn--black",
         "collection_button_style": "btn--solid",
         "collection_button_size": "btn--small",
