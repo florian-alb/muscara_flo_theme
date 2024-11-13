@@ -25,8 +25,8 @@
             "text": "<p>Flo dev theme</p>",
             "size": 180,
             "heading_highlight_type": "italics",
-            "highlight_color": "#D43747",
-            "highlight_text_color": "#000"
+            "highlight_color": "#d43747",
+            "highlight_text_color": "#000000"
           }
         },
         "text_BgHpX7": {
@@ -72,41 +72,75 @@
     "section_tab_collections_czJVe9": {
       "type": "section-tab-collections",
       "blocks": {
-        "collection_a8NLaP": {
-          "type": "collection",
-          "settings": {
-            "title": "Sale",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
-            "overlay_opacity": 10,
-            "heading": "",
-            "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
-          }
-        },
-        "collection_aND7br": {
-          "type": "collection",
-          "settings": {
-            "title": "New Arrivals",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
-            "overlay_opacity": 10,
-            "heading": "",
-            "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
-          }
-        },
         "collection_i7f79T": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_maMKRa": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_83wgkX": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_WH3Dta": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "tab_collection": "",
+            "number_of_products": 6,
+            "show_image": false,
+            "overlay_opacity": 10,
+            "heading": "",
+            "text_color": "text-light",
+            "button_text": "View All",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        },
+        "collection_pXh8pk": {
           "type": "collection",
           "settings": {
             "title": "",
@@ -125,9 +159,11 @@
         }
       },
       "block_order": [
-        "collection_a8NLaP",
-        "collection_aND7br",
-        "collection_i7f79T"
+        "collection_i7f79T",
+        "collection_maMKRa",
+        "collection_83wgkX",
+        "collection_WH3Dta",
+        "collection_pXh8pk"
       ],
       "settings": {
         "image_aspect_ratio": 1.3,
