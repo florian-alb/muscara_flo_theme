@@ -79,7 +79,7 @@
             "tab_collection": "the-irresistible",
             "number_of_products": 4,
             "show_image": true,
-            "image": "shopify://shop_images/Mystik-lingettes_90ad1308-d6e0-4399-9f88-05c6c25df85e.webp",
+            "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
             "heading": "",
             "text_color": "text-light",
