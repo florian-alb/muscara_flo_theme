@@ -578,9 +578,7 @@
         "text_block_3ARE9U",
         "text_block_9tPNfT"
       ],
-      "custom_css": [
-        ".column-item__inner {padding: 10px !important; background: #f7e2ed; border-radius: 18px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "title": "",
         "align_text": "text-center",
@@ -593,7 +591,8 @@
         "heading_size": 120,
         "text_size": 100,
         "bg_color_secondary": false,
-        "color_borders": "#000",
+        "color_borders": "#000000",
+        "color_cards": "{{ shop.brand.colors.secondary[0].background }}",
         "layout_mobile": "carousel",
         "width": "wrapper",
         "padding_top": 60,
@@ -611,8 +610,8 @@
         "subheading": "",
         "title": "<p>Onze Missie</p>",
         "heading_highlight_type": "circle",
-        "highlight_color": "#D43747",
-        "highlight_text_color": "#000",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
         "heading_size": 130,
         "content": "<p>Bij Muscara is het onze ambitie om vrouwelijke hygiënerituelen te veranderen in een natuurlijke, geurige ervaring, door vrouwen verzorgende producten te geven waarmee ze zichzelf dagelijks kunnen verwennen. Geworteld in de parfumtraditie van Grasse, is onze aanpak gebaseerd op de ontwikkeling van exclusieve muskusgeuren die plantaardig zijn en zacht voor de huid. We brengen vertrouwen en rust in de intieme routines van vrouwen en dragen zo bij aan een positieve verandering in de cosmeticawereld. Onze innovatieve producten zijn een viering van vrouwelijkheid en combineren schoonheid en welzijn in perfecte harmonie.</p>",
         "text_alignment": "left",
