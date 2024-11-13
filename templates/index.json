@@ -135,8 +135,8 @@
         "collection_m7x369": {
           "type": "collection",
           "settings": {
-            "title": "The Midnight Mirage",
-            "tab_collection": "collection-the-midnight-mirage-rose-night",
+            "title": "Sweet Candy",
+            "tab_collection": "collection-sweet-candy-caramel-vanille",
             "number_of_products": 4,
             "show_pills": true,
             "pill_color": "{{ block.settings.tab_collection.metafields.custom.collection_color.value }}",
