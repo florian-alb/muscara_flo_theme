@@ -95,59 +95,9 @@
           "settings": {
             "title": "The Midnight Mirage",
             "tab_collection": "collection-the-midnight-mirage-rose-night",
-            "number_of_products": 6,
+            "number_of_products": 4,
             "show_image": false,
-            "overlay_opacity": 10,
-            "heading": "",
-            "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
-          }
-        },
-        "collection_83wgkX": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
-            "overlay_opacity": 10,
-            "heading": "",
-            "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
-          }
-        },
-        "collection_WH3Dta": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
-            "overlay_opacity": 10,
-            "heading": "",
-            "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
-          }
-        },
-        "collection_pXh8pk": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "tab_collection": "",
-            "number_of_products": 6,
-            "show_image": false,
+            "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
             "heading": "",
             "text_color": "text-light",
@@ -161,10 +111,7 @@
       },
       "block_order": [
         "collection_i7f79T",
-        "collection_maMKRa",
-        "collection_83wgkX",
-        "collection_WH3Dta",
-        "collection_pXh8pk"
+        "collection_maMKRa"
       ],
       "settings": {
         "image_aspect_ratio": 1,
