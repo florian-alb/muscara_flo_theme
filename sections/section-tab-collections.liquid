@@ -214,10 +214,17 @@
             {% style %}
                 .flo-pill-{{block.id}}.active span{
                   background: {{block.settings.pill_color}};
-                  border-radius: 50px;
+                  border-radius: 100px;
                   padding: 5px 15px;
                   font-size: 14px;
                   color: #FFFFFF;
+                }
+                .flo-pill-{{block.id}} span{
+                  border-radius: 100px;
+                  padding: 5px 15px;
+                  font-size: 14px;
+                  color: {{block.settings.pill_color}};
+                  border: 2px solid {{block.settings.pill_color}};
                 }
             {% endstyle %}
             {% endif %}
