@@ -202,7 +202,7 @@
           {%- capture tabs_navigation -%}
             {{ tabs_navigation }}
 
-            <li class="tabs__link{% if forloop.first %} current{% else %} inactive{% endif %} flo-pill-{{block.id}}"
+            <li class="tabs__link{% if forloop.first %} current{% endif %}flo-pill-{{block.id}}"
               data-tabs-link="{{ forloop.index0 }}"
               data-block-id="{{ block.id }}"
               tabindex="0"
