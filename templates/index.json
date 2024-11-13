@@ -115,8 +115,8 @@
         "collection_YNfUpb": {
           "type": "collection",
           "settings": {
-            "title": "The Midnight Mirage",
-            "tab_collection": "collection-the-midnight-mirage-rose-night",
+            "title": "Midnight Delight",
+            "tab_collection": "collection-midnight-delight-barbe-a-papa",
             "number_of_products": 4,
             "show_pills": true,
             "pill_color": "{{ block.settings.tab_collection.metafields.custom.collection_color.value }}",
