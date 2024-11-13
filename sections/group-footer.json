@@ -18,37 +18,40 @@
           "type": "text",
           "settings": {
             "icon_name": "eco-friendly",
-            "title": "Umweltfreundlicher Versand",
-            "text": "<p>Zum nachhaltigen Versand deiner Artikel arbeiten wir mit DHL zusammen.</p>"
-          }
-        },
-        "text_zUmykc": {
-          "type": "text",
-          "settings": {
-            "icon_name": "support",
-            "title": "Kundenservice",
-            "text": "<p>Unser Kundendienst ist montags bis freitags von 10:00 bis 18:00 Uhr per E-Mail erreichbar. </p>"
+            "icon_image": "shopify://shop_images/Group_4839.svg",
+            "title": "Gemaakt in Frankrijk",
+            "text": "<p>Geuren ontworpen en geproduceerd in ons laboratorium.</p>"
           }
         },
         "text_zhVgp8": {
           "type": "text",
           "settings": {
             "icon_name": "shield",
-            "title": "Sichere Bezahlung",
-            "text": "<p>Für maximale Sicherheit verwendet unser Shop die SSL-Verschlüsselungstechnologie.</p>"
+            "icon_image": "shopify://shop_images/icone-secure_1d9b3acf-feac-4832-bbed-c46c3185c5d4.svg",
+            "title": "100% veilig",
+            "text": "<p>Betaling mogelijk met Mastercard, Apple pay, Visa, Paypal en Klarna.</p>"
+          }
+        },
+        "text_DTqrAK": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "icon_image": "shopify://shop_images/icone-sav_e445e82e-9ba5-4b6e-b581-d4a979a2502a.svg",
+            "title": "Klantenservice",
+            "text": "<p>Onze teams staan klaar om je vragen te beantwoorden.</p>"
           }
         }
       },
       "block_order": [
         "text_Tmm8aF",
-        "text_zUmykc",
-        "text_zhVgp8"
+        "text_zhVgp8",
+        "text_DTqrAK"
       ],
       "settings": {
         "alignment": "inline-left",
         "columns": 3,
-        "icons_width": 20,
-        "icons_width_mobile": 40,
+        "icons_width": 100,
+        "icons_width_mobile": 100,
         "heading": "",
         "subheading": "",
         "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
@@ -71,9 +74,10 @@
           "type": "logo",
           "settings": {
             "alignment": "text-left",
+            "image": "shopify://shop_images/logo-blanc-min.svg",
             "logo_width": 250,
             "show_shop_name": false,
-            "text": "",
+            "text": "<p>info@muscara.co</p><p>31-75 Shelton Street Covent Garden London United Kingdom</p>",
             "column_width": "25"
           }
         },
@@ -119,7 +123,7 @@
         "show_payment_icons": true,
         "bottom_menu": "footer",
         "color_text": "#ffffff",
-        "color_bg": "#000000",
+        "color_bg": "{{ shop.brand.colors.primary[0].background }}",
         "color_border": "#ffffff",
         "show_locale_selector": true,
         "show_country_selector": false,
