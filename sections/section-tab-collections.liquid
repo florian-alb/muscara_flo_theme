@@ -205,28 +205,15 @@
             <li class="tabs__link{% if forloop.first %} current active-{{block.id}}{% endif %}"
               data-tabs-link="{{ forloop.index0 }}"
               data-block-id="{{ block.id }}"
-              onclick="updateStyle({{ block.id }})"
               tabindex="0"
               {{ block.shopify_attributes }}>
               <span>{{ tab_collection_title }}</span>
             </li>
 
-            {% javascript %}
-              function updateStyle(blockId) {
-                const class = document.querySelector(`.active-${blockId}`);
-                if (class){
-                  class.style.border="1px solid";
-                }
-              }
-            {% endjavascript %}
-
             {% style %}
-              {% if forloop.first %} 
-                .tabs__link.active-{{block.id}} span{
+                .tabs__link span{
                   background: {{block.settings.pill_color}}
                 }
-               background:{{ block.setting.pill_color}}
-              {% endif %}
             {% endstyle %}
           {%- endcapture -%}
 
