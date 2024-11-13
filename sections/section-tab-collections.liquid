@@ -45,34 +45,38 @@
 -%}
 
 {%- style -%}
-    {% unless section.settings.show_scrollbar %}
-      ul.tabs__nav {
+  {% unless section.settings.show_scrollbar %}
+    ul.tabs__nav {
       display: flex;
       justify-content: space-evenly;
       width: 100%;
       gap: 20px;
+    }
+
+    .tabs__nav {
+      margin: 10px 0;
+    }
+  {% endunless %}
+
+  #TabCollections--{{ section.id }} {
+    --product-media-padding-top: {{ image_aspect_ratio | times: 100 | append: '%' }};
+    --PT: {{ section.settings.padding_top }}px;
+    --PB: {{ section.settings.padding_bottom }}px;
   }
-    {% endunless %}
 
+  @media screen and (min-width: 1024px) {
     #TabCollections--{{ section.id }} {
-      --product-media-padding-top: {{ image_aspect_ratio | times: 100 | append: '%' }};
-      --PT: {{ section.settings.padding_top }}px;
-      --PB: {{ section.settings.padding_bottom }}px;
+      --grid: repeat({{ columns }}, minmax(0, 1fr));
     }
+  }
 
-    @media screen and (min-width: 1024px) {
-      #TabCollections--{{ section.id }} {
-        --grid: repeat({{ columns }}, minmax(0, 1fr));
-      }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    #TabCollections--{{ section.id }} {
+      --grid: repeat({{ columns_small }}, minmax(0, 1fr));
     }
+  }
 
-    @media screen and (min-width: 480px) and (max-width: 1023px) {
-      #TabCollections--{{ section.id }} {
-        --grid: repeat({{ columns_small }}, minmax(0, 1fr));
-      }
-    }
-
-    #TabCollections--{{ section.id }} .tabs__link { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ tab_heading_size }}); }
+  #TabCollections--{{ section.id }} .tabs__link { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ tab_heading_size }}); }
 {%- endstyle -%}
 
 <section
