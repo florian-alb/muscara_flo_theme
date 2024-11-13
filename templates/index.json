@@ -155,8 +155,8 @@
         "collection_NDzGeR": {
           "type": "collection",
           "settings": {
-            "title": "The Midnight Mirage",
-            "tab_collection": "collection-the-midnight-mirage-rose-night",
+            "title": "Timeless Allure",
+            "tab_collection": "collection-timeless-allure-monoi",
             "number_of_products": 4,
             "show_pills": true,
             "pill_color": "{{ block.settings.tab_collection.metafields.custom.collection_color.value }}",
