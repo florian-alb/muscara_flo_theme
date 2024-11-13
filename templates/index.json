@@ -600,6 +600,35 @@
         "padding_bottom": 60
       }
     },
+    "section_image_with_text_XP3z6J": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "left",
+        "image_width": "standard",
+        "subheading": "",
+        "title": "<p>Onze Missie</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#D43747",
+        "highlight_text_color": "#000",
+        "heading_size": 130,
+        "content": "<p>Bij Muscara is het onze ambitie om vrouwelijke hygiënerituelen te veranderen in een natuurlijke, geurige ervaring, door vrouwen verzorgende producten te geven waarmee ze zichzelf dagelijks kunnen verwennen. Geworteld in de parfumtraditie van Grasse, is onze aanpak gebaseerd op de ontwikkeling van exclusieve muskusgeuren die plantaardig zijn en zacht voor de huid. We brengen vertrouwen en rust in de intieme routines van vrouwen en dragen zo bij aan een positieve verandering in de cosmeticawereld. Onze innovatieve producten zijn een viering van vrouwelijkheid en combineren schoonheid en welzijn in perfecte harmonie.</p>",
+        "text_alignment": "left",
+        "button_text": "BEKIJK DE PRODUCTEN",
+        "button_link": "shopify://collections/nos-collections",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "1b0c19a5-2771-4781-b737-93232dca0592": {
       "type": "section-newsletter",
       "settings": {
@@ -626,6 +655,7 @@
     "section_icons_row_pHWX6q",
     "flo_reviews_KM3FRK",
     "section_columns_VL44NE",
+    "section_image_with_text_XP3z6J",
     "1b0c19a5-2771-4781-b737-93232dca0592"
   ]
 }
