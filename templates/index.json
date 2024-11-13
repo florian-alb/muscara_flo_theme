@@ -592,7 +592,7 @@
         "text_size": 100,
         "bg_color_secondary": false,
         "color_borders": "#000000",
-        "color_cards": "{{ shop.brand.colors.secondary[0].background }}",
+        "bg_color_cards": "{{ shop.brand.colors.secondary[0].background }}",
         "layout_mobile": "carousel",
         "width": "wrapper",
         "padding_top": 60,
