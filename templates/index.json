@@ -578,6 +578,9 @@
         "text_block_3ARE9U",
         "text_block_9tPNfT"
       ],
+      "custom_css": [
+        ".column-item__inner {padding: 10px !important; background: #f7e2ed; border-radius: 18px}"
+      ],
       "settings": {
         "title": "",
         "align_text": "text-left",
