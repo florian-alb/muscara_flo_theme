@@ -45,11 +45,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_HMdUEL",
-        "text_BgHpX7",
-        "button_76AmVE"
-      ],
+      "block_order": ["heading_HMdUEL", "text_BgHpX7", "button_76AmVE"],
       "settings": {
         "height": "original-height",
         "enable_mobile_height": true,
@@ -309,14 +305,234 @@
     },
     "flo_reviews_KM3FRK": {
       "type": "flo-reviews",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "name": "Emma",
+            "rating": 5,
+            "review": "<p>De producten zijn ongelooflijk</p>"
+          }
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "name": "Sophie",
+            "rating": 5,
+            "review": "<p>Perfect, houdt de geur de hele dag</p>"
+          }
+        },
+        "text_3": {
+          "type": "text",
+          "settings": {
+            "name": "Anna",
+            "rating": 5,
+            "review": "<p>Mijn allereerste bestelling was zeer tevreden met alles.</p>"
+          }
+        },
+        "text_4": {
+          "type": "text",
+          "settings": {
+            "name": "Noa",
+            "rating": 5,
+            "review": "<p>Vroeger zweette ik veel, maar Muscara heeft mijn leven veranderd.</p>"
+          }
+        },
+        "text_5": {
+          "type": "text",
+          "settings": {
+            "name": "Julia",
+            "rating": 5,
+            "review": "<p>Een witte muskusgeur die schoon en fris ruikt. Een zeer aangename sensatie.</p>"
+          }
+        },
+        "text_6": {
+          "type": "text",
+          "settings": {
+            "name": "Lisa",
+            "rating": 5,
+            "review": "<p>Ik ben nog steeds even tevreden over de producten van Muscara.</p>"
+          }
+        },
+        "text_7": {
+          "type": "text",
+          "settings": {
+            "name": "Eva",
+            "rating": 5,
+            "review": "<p>Ik ben er dol op en vertel het iedereen, de beste muskus van mijn leven, geen geurtjes meer!</p>"
+          }
+        },
+        "text_8": {
+          "type": "text",
+          "settings": {
+            "name": "Tess",
+            "rating": 5,
+            "review": "<p>Helemaal blij om dit sublieme merk te ontdekken, de geur is heerlijk en de producten gaan lang mee.</p>"
+          }
+        },
+        "text_9": {
+          "type": "text",
+          "settings": {
+            "name": "Sarah",
+            "rating": 5,
+            "review": "<p>Nu voel ik me goed over mezelf, ik had transpiratieproblemen door de menopauze, dankzij Muscara kan ik uitgaan en mensen ontmoeten zonder de geur van transpiratie.</p>"
+          }
+        },
+        "text_10": {
+          "type": "text",
+          "settings": {
+            "name": "Mia",
+            "rating": 5,
+            "review": "<p>Heerlijk ruikende producten, een must-have voor de toilettas van elke vrouw</p>"
+          }
+        },
+        "text_11": {
+          "type": "text",
+          "settings": {
+            "name": "Lotte",
+            "rating": 5,
+            "review": "<p>Zeer goed product, ongelooflijke geur</p>"
+          }
+        },
+        "text_12": {
+          "type": "text",
+          "settings": {
+            "name": "Mila",
+            "rating": 5,
+            "review": "<p>Proberen is adopteren</p>"
+          }
+        },
+        "text_13": {
+          "type": "text",
+          "settings": {
+            "name": "Nora",
+            "rating": 5,
+            "review": "<p>Helemaal blij om dit sublieme merk te ontdekken, de geur is heerlijk en de producten gaan lang mee.</p>"
+          }
+        },
+        "text_14": {
+          "type": "text",
+          "settings": {
+            "name": "Fleur",
+            "rating": 5,
+            "review": "<p>Dit is de tweede keer dat ik bestel en ik ben altijd tevreden, of het nu gaat om de levering of het product.</p>"
+          }
+        },
+        "text_15": {
+          "type": "text",
+          "settings": {
+            "name": "Liv",
+            "rating": 5,
+            "review": "<p>Ik heb al 4 keer bij jullie site besteld en ben nog nooit teleurgesteld. Ik raad het niet alleen aan, maar ik zal ook blijven bestellen bij jullie site.</p>"
+          }
+        },
+        "text_16": {
+          "type": "text",
+          "settings": {
+            "name": "Lynn",
+            "rating": 5,
+            "review": "<p>Dit merk is ongelooflijk. Hun producten zijn echt van goede kwaliteit en je wordt nooit teleurgesteld.</p>"
+          }
+        },
+        "text_17": {
+          "type": "text",
+          "settings": {
+            "name": "Roos",
+            "rating": 5,
+            "review": "<p>De geur is heerlijk en de producten zijn effectief. Nu moet ik alleen nog de nieuwe producten proberen :)</p>"
+          }
+        },
+        "text_18": {
+          "type": "text",
+          "settings": {
+            "name": "Isabel",
+            "rating": 5,
+            "review": "<p>Een zinnenprikkelende ervaring, een adembenemende textuur en een langdurige houdbaarheid. Ik raad deze muskus die de plaats inneemt van een parfum echt aan.</p>"
+          }
+        },
+        "text_19": {
+          "type": "text",
+          "settings": {
+            "name": "Elin",
+            "rating": 5,
+            "review": "<p>Ik ben fan 🥰 Testen is adopteren ❤️</p>"
+          }
+        },
+        "text_20": {
+          "type": "text",
+          "settings": {
+            "name": "Lara",
+            "rating": 5,
+            "review": "<p>Ik heb een topgamma ontdekt! Ik zweet niet veel maar de muskusgeur alleen al is het waard!</p>"
+          }
+        },
+        "text_21": {
+          "type": "text",
+          "settings": {
+            "name": "Zoë",
+            "rating": 5,
+            "review": "<p>Eerlijk gezegd vind ik de producten echt top het is al meer dan een jaar en niet teleurgesteld dank u zeer Muscara ik wens u een goede voortzetting</p>"
+          }
+        },
+        "text_22": {
+          "type": "text",
+          "settings": {
+            "name": "Lieve",
+            "rating": 5,
+            "review": "<p>Ik gebruik ze vandaag voor het eerst, ik ben erg tevreden over het product, de geur is echt perfect, verschillende mensen hebben me verteld dat ik lekker ruik en de effectiviteit geen zweten de hele dag.</p>"
+          }
+        },
+        "text_23": {
+          "type": "text",
+          "settings": {
+            "name": "Yara",
+            "rating": 5,
+            "review": "<p>Eerlijk waar, dit assortiment is topklasse, met een uitzonderlijke geur. 🤗</p>"
+          }
+        },
+        "text_24": {
+          "type": "text",
+          "settings": {
+            "name": "Femke",
+            "rating": 5,
+            "review": "<p>Ik ben blij dat ik dit damesmerk heb ontdekt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1",
+        "text_2",
+        "text_3",
+        "text_4",
+        "text_5",
+        "text_6",
+        "text_7",
+        "text_8",
+        "text_9",
+        "text_10",
+        "text_11",
+        "text_12",
+        "text_13",
+        "text_14",
+        "text_15",
+        "text_16",
+        "text_17",
+        "text_18",
+        "text_19",
+        "text_20",
+        "text_21",
+        "text_22",
+        "text_23",
+        "text_24"
+      ],
       "settings": {
-        "heading": "",
+        "heading": "Onze klanten <span>waarderen het</span> en dat is te merken",
         "subheading": "",
         "bg_color": "",
-        "span_color": "#000",
-        "text_color": "#000",
-        "box_color": "",
-        "rating_color": ""
+        "span_color": "{{ collection.metafields.custom.collection_color.value }}",
+        "text_color": "#000000",
+        "box_color": "{{ collection.metafields.custom.collection_bg_color.value }}",
+        "rating_color": "{{ collection.metafields.custom.collection_color.value }}"
       }
     }
   },
