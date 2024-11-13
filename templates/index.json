@@ -542,21 +542,6 @@
             "video_link_color": "text-dark"
           }
         },
-        "text_block_3ARE9U": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0009_Groupe2_a59e7ee8-ed28-4ef9-a515-f047d8aeea2d.jpg",
-            "title": "Langdurige fixatie - Zonder alcohol 🌞",
-            "text": "<h3>Alcoholvrije bodymist</h3><p>❤︎ Lichte, fascinerende geur<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
-            "button_text": "Bekijk de producten",
-            "button_link": "shopify://collections/onze-lichaamsnevels",
-            "button_color": "btn--primary",
-            "button_style": "btn--solid",
-            "button_size": "btn--large",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
         "text_block_9tPNfT": {
           "type": "text_block",
           "settings": {
@@ -571,12 +556,27 @@
             "video_link_popup": "",
             "video_link_color": "text-dark"
           }
+        },
+        "text_block_3ARE9U": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0009_Groupe2_a59e7ee8-ed28-4ef9-a515-f047d8aeea2d.jpg",
+            "title": "Langdurige fixatie - Zonder alcohol 🌞",
+            "text": "<h3>Alcoholvrije bodymist</h3><p>❤︎ Lichte, fascinerende geur<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
+            "button_text": "Bekijk de producten",
+            "button_link": "shopify://collections/onze-lichaamsnevels",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--large",
+            "video_link_popup": "",
+            "video_link_color": "text-dark"
+          }
         }
       },
       "block_order": [
         "text_block_D8AjJX",
-        "text_block_3ARE9U",
-        "text_block_9tPNfT"
+        "text_block_9tPNfT",
+        "text_block_3ARE9U"
       ],
       "custom_css": [],
       "settings": {
