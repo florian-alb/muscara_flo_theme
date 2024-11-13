@@ -386,6 +386,7 @@
         "text_size": 100,
         "bg_color_secondary": false,
         "color_borders": "#000000",
+        "bg_color_cards": "{{ collection.metafields.custom.collection_bg_color.value }}",
         "layout_mobile": "carousel",
         "width": "wrapper",
         "padding_top": 40,
