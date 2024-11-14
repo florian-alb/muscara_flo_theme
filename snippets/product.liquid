@@ -383,11 +383,7 @@
                 id="ProductFloCountdown--{{ section.id }}-{{ block.id }}"
                 {{ block_style }}
               >
-                {%
-                  render 'flo-product-timer'
-                  section: {{ section }},
-                  block: {{ block }},
-                %}
+                {% render 'flo-product-timer', section: section, block: block %}
               </div>
 
             {% when 'price' %}
