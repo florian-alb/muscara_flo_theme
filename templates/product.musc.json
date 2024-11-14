@@ -176,24 +176,27 @@
           "type": "text",
           "settings": {
             "icon_name": "truck",
-            "title": "Free Shipping",
-            "text": "<p>on all order over $99</p>"
+            "icon_image": "{{ product.metafields.custom.product_scent_1.value.scent_image.value }}",
+            "title": "Topnoten",
+            "text": "<p>{{ product.metafields.custom.product_scent_1.value.scent_title.value }}</p>"
           }
         },
         "text_LFweLH": {
           "type": "text",
           "settings": {
             "icon_name": "check",
-            "title": "Free Returns",
-            "text": "<p>within 30 days of purchase</p>"
+            "icon_image": "{{ product.metafields.custom.product_scent_2.value.scent_image.value }}",
+            "title": "Aantekeningen",
+            "text": "<p>{{ product.metafields.custom.product_scent_2.value.scent_title.value }}</p>"
           }
         },
         "text_XjRXC8": {
           "type": "text",
           "settings": {
             "icon_name": "eco-friendly",
-            "title": "1% Donated Annually",
-            "text": "<p>to forest conservation</p>"
+            "icon_image": "{{ product.metafields.custom.product_scent_3.value.scent_image.value }}",
+            "title": "Basisnoten",
+            "text": "<p>{{ product.metafields.custom.product_scent_3.value.scent_title.value }}</p>"
           }
         }
       },
