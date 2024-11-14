@@ -169,6 +169,59 @@
         "padding_bottom": 0
       }
     },
+    "section_icons_row_FLKCNP": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_xbmmYF": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "title": "Free Shipping",
+            "text": "<p>on all order over $99</p>"
+          }
+        },
+        "text_LFweLH": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "title": "Free Returns",
+            "text": "<p>within 30 days of purchase</p>"
+          }
+        },
+        "text_XjRXC8": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "title": "1% Donated Annually",
+            "text": "<p>to forest conservation</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xbmmYF",
+        "text_LFweLH",
+        "text_XjRXC8"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 100,
+        "icons_width_mobile": 40,
+        "heading": "De hele dag door een betoverende geur",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#333",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "related": {
       "type": "related-products",
       "disabled": true,
@@ -184,6 +237,7 @@
   },
   "order": [
     "main",
+    "section_icons_row_FLKCNP",
     "related"
   ]
 }
