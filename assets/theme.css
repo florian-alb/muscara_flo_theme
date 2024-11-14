@@ -29664,3 +29664,17 @@ search-form mark {
         }
     }
 /*----- End ProductFloScarcity  ------*/
+
+/*----- ProductFloCountdown  ------*/
+      .timer_flo{
+        font-size:13px;
+        text-align:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        margin: 10px 0;
+        border-radius: 100px;
+        width: 100%;
+    }
+/*----- End ProductFloCountdown  ------*/
