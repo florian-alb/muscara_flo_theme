@@ -77,6 +77,18 @@
             "padding_bottom": 10
           }
         },
+        "flo_product_countdown_ybrwMt": {
+          "type": "flo-product-countdown",
+          "settings": {
+            "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+            "text_before": "Nog maar",
+            "text_after": "om van de aanbieding te profiteren!",
+            "timer_number": 3,
+            "hours": "u",
+            "minutes": "m",
+            "seconds": "s"
+          }
+        },
         "form": {
           "type": "form",
           "settings": {
@@ -92,7 +104,8 @@
           "settings": {
             "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
             "icon_color": "#d43747",
-            "text": "Beperkt op voorraad  Koop nu de jouwe!"
+            "text": "Beperkt op voorraad  Koop nu de jouwe!",
+            "padding_bottom": 20
           }
         },
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
@@ -133,6 +146,7 @@
         "icon_6P4Fbg",
         "icon_8PdQjF",
         "icon_nYCiTL",
+        "flo_product_countdown_ybrwMt",
         "form",
         "flo_stock_scarcity_Mj4TRX",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
