@@ -29593,3 +29593,11 @@ search-form mark {
   border-radius: 18px;
   padding: 10px;
 }
+
+.column-item.carousel__item.one-third.mobile--one-whole.column-item--image.aos-init.is-selected.aos-animate {
+    height: 100%;
+}
+
+.column-item__inner {
+    height: 100%;
+}
