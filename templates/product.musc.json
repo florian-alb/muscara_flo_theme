@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading": "none",
+            "show_rating": true,
+            "show_rating_count": false,
+            "padding_bottom": 20
+          }
+        },
+        "inventory_countdown_iY4TeX": {
+          "type": "inventory_countdown",
+          "settings": {
+            "max_inventory": 10,
+            "hide_inventory_count": true,
+            "padding_bottom": 20
+          }
+        },
+        "text_8Nkzpf": {
+          "type": "text",
+          "settings": {
+            "title": "<p>Mit der Full Stimul Body EMS-Technologie maximierst du deine  Muskelmasse und verbrennst mühelos Fettreserven. In nur 20 Minuten pro Tag erhältst du straffe Muskeln und eine schlanke Figur - ganz bequem bei dir zu Hause.</p>",
+            "text_alignment": "left",
+            "padding_bottom": 10
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_labels": true,
+            "show_quantity": false,
+            "show_payment_button": true,
+            "enable_subscriptions_selectors": true,
+            "padding_bottom": 20
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "padding_bottom": 20
+          }
+        },
+        "icon_6P4Fbg": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "check",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Stimuliert die Tiefenmuskulatur",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "icon_8PdQjF": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "check",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Regt die Fettverbrennung an",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "icon_aanjeK": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "check",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Löst Muskelverspannungen",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "icon_nYCiTL": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "check",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Sichtbare Ergebnisse in nur 20 min pro Tag",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Muscle en profondeur",
+            "heading_style": "font-body",
+            "accordion_text": "<p>La nouvelle technologie EMS 2.0 (Electrical Muscle Stimulation) de nos électrostimulateurs vous permet de contracter vos muscles involontairement.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "e50c5bee-4feb-45c5-b222-cf535a25401d": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Brûle les graisses",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Une stimulation électrique de 20 Hz qui entraîne vos muscles et brûle efficacement vos graisses. Éprouvée et pratiquée en médecine.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_6PRWiY": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Soulage les tensions musculaires",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Grâce à la stimulation électrique de nos appareils, vos muscles se détendent rapidement. Elle soulage les tensions corporelles.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_Q3fiyD": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Des résultats rapides et rapidement",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Vous n'avez besoin que de 24 minutes par jour pour obtenir les meilleurs résultats.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "inventory_countdown_iY4TeX",
+        "text_8Nkzpf",
+        "form",
+        "description",
+        "icon_6P4Fbg",
+        "icon_8PdQjF",
+        "icon_aanjeK",
+        "icon_nYCiTL",
+        "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
+        "e50c5bee-4feb-45c5-b222-cf535a25401d",
+        "product_accordion_6PRWiY",
+        "product_accordion_Q3fiyD"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "image_layout": "carousel",
+        "image_width": "standard",
+        "product_image_aspect_ratio": false,
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "bg_color": "",
+        "enable_border": false,
+        "border_color": "",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "limit": 4,
+        "product_recommendations_heading": "You May Also Like",
+        "bg_color": "",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related"
+  ]
+}
