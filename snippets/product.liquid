@@ -352,6 +352,31 @@
                 </div>
               {%- endif -%}
 
+            {% when 'flo-stock-scarcity' %}
+              <div
+                class="product__block product__flo-scarcity"
+                id="ProductFloScarcity--{{ section.id }}-{{ block.id }}"
+                {{ block_style }}
+              >
+                <div class="stock-section maison_test">
+                  <span class="pulse-icon"></span>
+                  <span class="stock-section-content">{{ block.settings.text }}</span>
+                </div>
+              </div>
+              {% style %}
+                #ProductFloScarcity--{{ section.id }}-{{ block.id }}.stock-section{
+                  background-color: {{ block.settings.bg_color }}
+                }
+
+                #ProductFloScarcity--{{ section.id }}-{{ block.id }}.pulse-icon:after{
+                  background: {{ block.settings.icon_color }}
+                }
+
+                #ProductFloScarcity--{{ section.id }}-{{ block.id }}.pulse-icon:before{
+                  background: {{ block.settings.icon_color }}
+                }
+              {% endstyle %}
+
             {% when 'price' %}
               <!-- start flo price modif -->
               <div
