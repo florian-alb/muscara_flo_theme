@@ -28,9 +28,23 @@
         "text_8Nkzpf": {
           "type": "text",
           "settings": {
-            "title": "<p>Mit der Full Stimul Body EMS-Technologie maximierst du deine  Muskelmasse und verbrennst mühelos Fettreserven. In nur 20 Minuten pro Tag erhältst du straffe Muskeln und eine schlanke Figur - ganz bequem bei dir zu Hause.</p>",
+            "title": "<p>Verrijk je intimiteit met een frisheid die tot 48 uur aanhoudt met onze Muscara intieme musk.</p>",
             "text_alignment": "left",
             "padding_bottom": 10
+          }
+        },
+        "icon_6P4Fbg": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#0c0c0f",
+            "icon_width": 20,
+            "icon_text": "Absorbeert onaangename geurtjes",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
           }
         },
         "form": {
@@ -46,20 +60,6 @@
         "description": {
           "type": "description",
           "settings": {
-            "padding_bottom": 20
-          }
-        },
-        "icon_6P4Fbg": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "check",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Stimuliert die Tiefenmuskulatur",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
             "padding_bottom": 20
           }
         },
@@ -150,9 +150,9 @@
         "title",
         "price_HxrNeJ",
         "text_8Nkzpf",
+        "icon_6P4Fbg",
         "form",
         "description",
-        "icon_6P4Fbg",
         "icon_8PdQjF",
         "icon_aanjeK",
         "icon_nYCiTL",
