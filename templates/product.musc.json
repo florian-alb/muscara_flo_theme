@@ -94,9 +94,9 @@
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Muscle en profondeur",
+            "accordion_heading": "Samenstelling",
             "heading_style": "font-body",
-            "accordion_text": "<p>La nouvelle technologie EMS 2.0 (Electrical Muscle Stimulation) de nos électrostimulateurs vous permet de contracter vos muscles involontairement.</p>",
+            "accordion_text": "<p>Parfum, tricyclodecaan-4,8-dimethanol, glycerine, benzylsalicylaat, alfa-Isomethylionon, geraniol, cumarine, hydroxycitronellal, water</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -104,9 +104,9 @@
         "e50c5bee-4feb-45c5-b222-cf535a25401d": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Brûle les graisses",
+            "accordion_heading": "Belangrijke veiligheidsaanwijzingen",
             "heading_style": "font-body",
-            "accordion_text": "<p>Une stimulation électrique de 20 Hz qui entraîne vos muscles et brûle efficacement vos graisses. Éprouvée et pratiquée en médecine.</p>",
+            "accordion_text": "<p>Vraag uw arts om advies (zwangere vrouwen of vrouwen die zwanger willen worden - vrouwen die borstvoeding geven - vrouwen in de menopauze).</p><p>Niet aanbrengen op of aan de binnenkant van slijmvliezen, maar rond warme lichaamsdelen.</p><p>Zoals met alle cosmetische producten moet je het product voor elk gebruik op je pols testen om te controleren of er geen reacties zijn.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -114,19 +114,9 @@
         "product_accordion_6PRWiY": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Soulage les tensions musculaires",
+            "accordion_heading": "Levering",
             "heading_style": "font-body",
-            "accordion_text": "<p>Grâce à la stimulation électrique de nos appareils, vos muscles se détendent rapidement. Elle soulage les tensions corporelles.</p>",
-            "accordion_page": "",
-            "padding_bottom": 20
-          }
-        },
-        "product_accordion_Q3fiyD": {
-          "type": "product_accordion",
-          "settings": {
-            "accordion_heading": "Des résultats rapides et rapidement",
-            "heading_style": "font-body",
-            "accordion_text": "<p>Vous n'avez besoin que de 24 minutes par jour pour obtenir les meilleurs résultats.</p>",
+            "accordion_text": "<p>De verzending is volledig gratis voor alle bestellingen die in het Verenigd Koninkrijk of Europa worden verzonden.</p><p>Het duurt 1-3 werkdagen voordat bestellingen worden verwerkt en verzonden.</p><p>Zodra uw artikel(en) zijn verzonden, is de geschatte levertijd:</p><p>- USA: 5-10 Werkdagen<br/>- UK: 5-10 Werkdagen<br/>- Australië: 5-10 werkdagen<br/>- Canada: 7-10 werkdagen<br/>- Europa: 2-4 werkdagen<br/>- Rest van de wereld: 14-2 werkdagen</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -143,8 +133,7 @@
         "description",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
         "e50c5bee-4feb-45c5-b222-cf535a25401d",
-        "product_accordion_6PRWiY",
-        "product_accordion_Q3fiyD"
+        "product_accordion_6PRWiY"
       ],
       "settings": {
         "product_sticky_enable": true,
