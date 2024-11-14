@@ -18,16 +18,12 @@
             "subheading": "none",
             "show_rating": true,
             "show_rating_count": false,
-            "padding_bottom": 20
+            "padding_bottom": 10
           }
         },
-        "inventory_countdown_iY4TeX": {
-          "type": "inventory_countdown",
-          "settings": {
-            "max_inventory": 10,
-            "hide_inventory_count": true,
-            "padding_bottom": 20
-          }
+        "price_HxrNeJ": {
+          "type": "price",
+          "settings": {}
         },
         "text_8Nkzpf": {
           "type": "text",
@@ -152,7 +148,7 @@
       },
       "block_order": [
         "title",
-        "inventory_countdown_iY4TeX",
+        "price_HxrNeJ",
         "text_8Nkzpf",
         "form",
         "description",
