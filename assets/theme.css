@@ -29603,3 +29603,64 @@ search-form mark {
 .column-item__inner {
     height: 100%;
 }
+
+/*----- ProductFloScarcity  ------*/
+
+.stock-section {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        border-radius: 100px;
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .stock-section-content,
+    .people-section-content {
+        font-size: 12px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .pulse-icon {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    .pulse-icon:after {
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        margin: 8px;
+    }
+
+    .pulse-icon:before {
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        margin: 8px;
+        animation: inventory-pulse 2s linear infinite;
+    }
+
+    @keyframes inventory-pulse {
+        0% {
+            opacity: 0.5;
+        }
+
+        to {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+/*----- End ProductFloScarcity  ------*/
