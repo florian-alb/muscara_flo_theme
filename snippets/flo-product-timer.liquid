@@ -28,6 +28,7 @@
             if (!endTime) setEndTime();
 
             const x = setInterval(function () {
+              console.log("countdownTime", countdownTime)
               const now = new Date().getTime();
               const distance = endTime - now;
 
