@@ -120,7 +120,7 @@
         "flo_stock_scarcity_Mj4TRX": {
           "type": "flo-stock-scarcity",
           "settings": {
-            "bg_color": "",
+            "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
             "icon_color": "#d43747",
             "text": "Beperkt op voorraad  Koop nu de jouwe!"
           }
