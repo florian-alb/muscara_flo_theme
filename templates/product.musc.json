@@ -23,7 +23,9 @@
         },
         "price_HxrNeJ": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "padding_bottom": 20
+          }
         },
         "text_8Nkzpf": {
           "type": "text",
@@ -138,7 +140,7 @@
       "settings": {
         "product_sticky_enable": true,
         "image_layout": "carousel",
-        "image_width": "standard",
+        "image_width": "large",
         "product_image_aspect_ratio": false,
         "enable_zoom": true,
         "enable_video_looping": false,
