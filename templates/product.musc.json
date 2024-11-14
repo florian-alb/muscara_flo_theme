@@ -80,7 +80,7 @@
         "flo_product_countdown_ybrwMt": {
           "type": "flo-product-countdown",
           "settings": {
-            "bg_color": "{{ product.metafields.custom.product_primary_color.value }}",
+            "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
             "text_before": "Nog maar",
             "text_after": "om van de aanbieding te profiteren!",
             "timer_duration": 3,
@@ -103,7 +103,7 @@
         "flo_stock_scarcity_Mj4TRX": {
           "type": "flo-stock-scarcity",
           "settings": {
-            "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
+            "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
             "icon_color": "#d43747",
             "text": "Beperkt op voorraad  Koop nu de jouwe!",
             "padding_bottom": 20
