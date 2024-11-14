@@ -58,7 +58,6 @@
           "settings": {
             "icon_name": "check",
             "icon_color": "",
-            "icon_image": "shopify://shop_images/2282762.png",
             "icon_width": 20,
             "icon_text": "Stimuliert die Tiefenmuskulatur",
             "text_size": 90,
@@ -73,7 +72,6 @@
           "settings": {
             "icon_name": "check",
             "icon_color": "",
-            "icon_image": "shopify://shop_images/483675.png",
             "icon_width": 20,
             "icon_text": "Regt die Fettverbrennung an",
             "text_size": 90,
@@ -88,7 +86,6 @@
           "settings": {
             "icon_name": "check",
             "icon_color": "",
-            "icon_image": "shopify://shop_images/2682835.png",
             "icon_width": 20,
             "icon_text": "Löst Muskelverspannungen",
             "text_size": 90,
@@ -103,7 +100,6 @@
           "settings": {
             "icon_name": "check",
             "icon_color": "",
-            "icon_image": "shopify://shop_images/6046416.png",
             "icon_width": 20,
             "icon_text": "Sichtbare Ergebnisse in nur 20 min pro Tag",
             "text_size": 90,
@@ -115,7 +111,6 @@
         },
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
           "type": "product_accordion",
-          "disabled": true,
           "settings": {
             "accordion_heading": "Muscle en profondeur",
             "heading_style": "font-body",
@@ -126,7 +121,6 @@
         },
         "e50c5bee-4feb-45c5-b222-cf535a25401d": {
           "type": "product_accordion",
-          "disabled": true,
           "settings": {
             "accordion_heading": "Brûle les graisses",
             "heading_style": "font-body",
@@ -137,7 +131,6 @@
         },
         "product_accordion_6PRWiY": {
           "type": "product_accordion",
-          "disabled": true,
           "settings": {
             "accordion_heading": "Soulage les tensions musculaires",
             "heading_style": "font-body",
@@ -148,7 +141,6 @@
         },
         "product_accordion_Q3fiyD": {
           "type": "product_accordion",
-          "disabled": true,
           "settings": {
             "accordion_heading": "Des résultats rapides et rapidement",
             "heading_style": "font-body",
@@ -181,519 +173,11 @@
         "enable_zoom": true,
         "enable_video_looping": false,
         "bg_color": "",
+        "enable_border": false,
+        "border_color": "",
         "width": "wrapper",
         "padding_top": 60,
         "padding_bottom": 0
-      }
-    },
-    "section_accordions_KemaP7": {
-      "type": "section-accordions",
-      "blocks": {
-        "text_F7LWEG": {
-          "type": "text",
-          "settings": {
-            "title": "Stimulation der Tiefenmuskulatur",
-            "text": "<p>Dank der neuen EMS 2.0 Technologie (Elektrische Muskelstimulation) unserer Elektrostimulatoren werden deine Muskeln von allein kontrahiert.</p>"
-          }
-        },
-        "text_rV9fV4": {
-          "type": "text",
-          "settings": {
-            "title": "Regt die Fettverbrennung an",
-            "text": "<p>Die elektrische Stimulation mit 20 Hz trainiert deine Muskeln und regt die Fettverbrennung an. Bewährtes und medizinisch getestetes Verfahren.</p>"
-          }
-        },
-        "text_6dEerh": {
-          "type": "text",
-          "settings": {
-            "title": "Löst Muskelverspannungen",
-            "text": "<p>Die elektrische Stimulation mit unseren Geräten entspannt deine Muskeln und löst Körperverspannungen.</p>"
-          }
-        },
-        "text_pVgQ9f": {
-          "type": "text",
-          "settings": {
-            "title": "Schnelle Ergebnisse bei geringem Zeitaufwand",
-            "text": "<p>Du brauchst die Geräte nur 24 Minuten pro Tag verwenden, um schnell tolle Ergebnisse zu erzielen.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_F7LWEG",
-        "text_rV9fV4",
-        "text_6dEerh",
-        "text_pVgQ9f"
-      ],
-      "settings": {
-        "layout": "two-columns",
-        "show_accordion_divider": false,
-        "title": "Dieses Produkt ist der Geheimtipp für eine schöne Figur",
-        "subheading": "",
-        "text": "<p>- Willst du deine Figur straffen und mehr Muskeln bekommen?</p><p>- Willst du dein Figur- und Muskeltraining bequem und schnell bei dir zu Hause durchführen?</p><p><em><strong>Dann sichere dir jetzt unseren Geheimtipp: </strong></em>{{ product.title }}</p>",
-        "tabs_bg_color": "#fafafa",
-        "bg_color_secondary": false,
-        "text_color": "text-dark",
-        "width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 20
-      }
-    },
-    "section_columns_qa84Ki": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_WNV4Ge": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/glutes.jpg",
-            "title": "Camille - 2 Monate",
-            "text": "<p>Fokus auf Po und Oberschenkel - mehr Muskeln und weniger Fettpölsterchen</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_3YqcRG": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/IMG_2689.png",
-            "title": "Chloe - 6 Wochen",
-            "text": "<p>Fokus auf Bauch, Arme und Po - mehr Muskeln und weniger Fettpölsterchen</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_awi4mU": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/IMG_2688.png",
-            "title": "Thomas - 2 Monate",
-            "text": "<p>Fokus auf Bauch und Arme - mehr Muskeln</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_yUcmpL": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/IMG_2693.png",
-            "title": "Cheryl - 3 Wochen",
-            "text": "<p>Fokus auf Bauch und Po - mehr Muskeln und weniger Fettpölsterchen</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_fDH8gW": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/IMG_2687.png",
-            "title": "Dana - 1 Monat",
-            "text": "<p>Fokus auf Bauch - Mehr Muskeln und weniger Fettpölsterchen</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_WNV4Ge",
-        "text_block_3YqcRG",
-        "text_block_awi4mU",
-        "text_block_yUcmpL",
-        "text_block_fDH8gW"
-      ],
-      "settings": {
-        "title": "Sichtbare Ergebnisse ab dem ersten Monat",
-        "align_text": "text-left",
-        "columns": 2,
-        "show_images": true,
-        "show_borders": false,
-        "equalize_height": true,
-        "desktop_aspect_ratio": 0.8,
-        "mobile_aspect_ratio": 0.8,
-        "heading_size": 120,
-        "text_size": 100,
-        "bg_color_secondary": false,
-        "color_borders": "#000000",
-        "layout_mobile": "carousel",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 60
-      }
-    },
-    "section_icons_row_UqYrKi": {
-      "type": "section-icons-row",
-      "blocks": {
-        "text_JDE4Vp": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/87.png",
-            "title": "",
-            "text": "<p>der Anwender fühlen sich wohler in ihrem Körper und sind selbsbewusster</p>"
-          }
-        },
-        "text_EMApfj": {
-          "type": "text",
-          "settings": {
-            "icon_name": "check",
-            "icon_image": "shopify://shop_images/91.png",
-            "title": "",
-            "text": "<p>haben bemerkt, dass ihre Muskelverspannungen nachlassen</p>"
-          }
-        },
-        "text_8FDWie": {
-          "type": "text",
-          "settings": {
-            "icon_name": "eco-friendly",
-            "icon_image": "shopify://shop_images/97.png",
-            "title": "",
-            "text": "<p>der Personen fühlen sich durch die Anwendung deutlich fitter</p>"
-          }
-        },
-        "text_nQBpYG": {
-          "type": "text",
-          "settings": {
-            "icon_name": "clock",
-            "icon_image": "shopify://shop_images/89.png",
-            "title": "",
-            "text": "<p>der Anwender stellten fest, dass sich ihr Muskeltonus verbessert hat</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_JDE4Vp",
-        "text_EMApfj",
-        "text_8FDWie",
-        "text_nQBpYG"
-      ],
-      "settings": {
-        "alignment": "center",
-        "columns": 4,
-        "icons_width": 150,
-        "icons_width_mobile": 100,
-        "heading": "Mit Stimul Body führst du dein Workout bequem bei dir zu Hause durch: für mehr Muskeln und eine straffe Figur",
-        "subheading": "<p>Wissenschaftlich nachgewiesene Ergebnisse! Dank der Muskelstimulation durch elektrische Impulse baust du mit EMS Muskeln auf und straffst deine Figur - bequem und ohne Anstrengung!</p>",
-        "bg_color": "",
-        "text_color": "#000000",
-        "box_color": "",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "enable_slider_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "section_columns_zTgxCU": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_CDwFqR": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/1.jpg",
-            "title": "★★★★★",
-            "text": "<p>Mit dem Full Stimul Body Set trainiere ich jeden Tag ganz bequem meine Muskeln, ohne irgendetwas zu machen! Wie von Zauberhand!</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_UgQwqm": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/2.jpg",
-            "title": "★★★★★",
-            "text": "<p>Ich verwende das Full Stimul Body Set seit einem Monat. Es ist sehr effizient. Die Muskelanspannung erfolgt ganz ohne Anstrengung!</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_DW4bhV": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/3.jpg",
-            "title": "★★★★★",
-            "text": "<p>Praktisch, schnell und effizient! Ich bin total zufrieden mit meinem Set.</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_BbkFdy": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/4.jpg",
-            "title": "★★★★★",
-            "text": "<p>Die Bauchmuskeln werden von alleine angespannt. Ich nehme mein Stimul Body Gerät überallhin mit, so gut gefällt es mir. Ich empfehle es zu 100 %.</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_yiYqjH": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/5.jpg",
-            "title": "★★★★★",
-            "text": "<p>Das Full Stimul Body Set ist eine tolle Ergänzung zu meinen Trainingseinheiten. Es ist ganz einfach in der Anwendung und verfügt über mehrere Intensitätsstufen.</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        },
-        "text_block_cMDNz8": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify://shop_images/6.jpg",
-            "title": "★★★★★",
-            "text": "<p>Die Produkte sind angenehm und einfach in der Anwendung. So bekommt man auch zu Hause Muskeln. Einfach toll!</p>",
-            "button_text": "",
-            "button_link": "",
-            "button_color": "btn--black",
-            "button_style": "btn--text",
-            "button_size": "btn--small",
-            "video_link_popup": "",
-            "video_link_color": "text-dark"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_CDwFqR",
-        "text_block_UgQwqm",
-        "text_block_DW4bhV",
-        "text_block_BbkFdy",
-        "text_block_yiYqjH",
-        "text_block_cMDNz8"
-      ],
-      "settings": {
-        "title": "Hunderte zufriedene Kunden",
-        "align_text": "text-left",
-        "columns": 3,
-        "show_images": true,
-        "show_borders": false,
-        "equalize_height": false,
-        "desktop_aspect_ratio": 1,
-        "mobile_aspect_ratio": 0.8,
-        "heading_size": 120,
-        "text_size": 100,
-        "bg_color_secondary": true,
-        "color_borders": "#000000",
-        "layout_mobile": "carousel",
-        "width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "e2adf461-2c23-49f1-9c64-cc15ce28c5fe": {
-      "type": "section-overlapping-images",
-      "settings": {
-        "text_position": "left",
-        "text_alignment": "left",
-        "images_width": 750,
-        "images_offset": 60,
-        "image_1": "shopify://shop_images/grid-1.jpg",
-        "image_link_1": "",
-        "image_2": "shopify://shop_images/grid-homme.jpg",
-        "image_link_2": "",
-        "hide_image_2": false,
-        "title": "<p>Was ist EMS?</p>",
-        "heading_highlight_type": "stroke",
-        "highlight_color": "{{ shop.brand.colors.primary[0].background }}",
-        "highlight_text_color": "#000000",
-        "description": "<p>Bei der elektrischen Muskelstimulation (EMS)  werden niederfrequente Stromimpulse durch den Körper geleitet. Diese Impulse stimulieren die Bewegungsnerven, was Muskelkontraktionen auslöst.</p><p>Wenn sich deine Muskeln anspannen, verbraucht dein Körper Energie. Er greift auf seine Energiereserven zurück, um Muskeln aufzubauen. Seit über 50 Jahren wird die EMS-Technologie eingesetzt, um Muskeln oder Muskelgruppen gezielt anzusprechen und zu stärken.</p>",
-        "heading_size": 100,
-        "button_text": "",
-        "button_link": "shopify://pages/about-us",
-        "button_color": "btn--black",
-        "button_style": "btn--primary btn--small",
-        "button_size": "btn--small",
-        "video_text": "",
-        "video_link": "",
-        "bg_color_secondary": false,
-        "gradient": "",
-        "width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "section_icons_row_wBJ8tU": {
-      "type": "section-icons-row",
-      "blocks": {
-        "text_de7bQx": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/3883017.png",
-            "title": "Po",
-            "text": ""
-          }
-        },
-        "text_tKiFJz": {
-          "type": "text",
-          "settings": {
-            "icon_name": "check",
-            "icon_image": "shopify://shop_images/3466056.png",
-            "title": "Arme",
-            "text": ""
-          }
-        },
-        "text_Mpqtzj": {
-          "type": "text",
-          "settings": {
-            "icon_name": "eco-friendly",
-            "icon_image": "shopify://shop_images/7118257.png",
-            "title": "Bauch",
-            "text": ""
-          }
-        },
-        "text_mdLTPJ": {
-          "type": "text",
-          "settings": {
-            "icon_name": "clock",
-            "icon_image": "shopify://shop_images/30627.png",
-            "title": "Beine",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_de7bQx",
-        "text_tKiFJz",
-        "text_Mpqtzj",
-        "text_mdLTPJ"
-      ],
-      "settings": {
-        "alignment": "center",
-        "columns": 4,
-        "icons_width": 50,
-        "icons_width_mobile": 50,
-        "heading": "Muskeltraining für den ganzen Körper",
-        "subheading": "<p>Arme, Beine, Bauch und Po: Trainiere deinen ganzen Körper mit dem EMS Full Revolution System, das für ein ausgewogenes und effizientes Workout entwickelt wurde, bei dem alle Muskelgruppen beansprucht werden.</p>",
-        "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
-        "text_color": "#000000",
-        "box_color": "",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "enable_slider_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "60989128-6fe7-4b8a-b154-d4f87034f84f": {
-      "type": "section-accordions",
-      "blocks": {
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-0": {
-          "type": "text",
-          "settings": {
-            "title": "Welches Produkt ist am erfolgreichsten?",
-            "text": "<p>Unser Bestseller ist das FULL STIMUL BODY SET. Mit diesem Set trainierst du die Muskeln in allen Körperbereichen.</p>"
-          }
-        },
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-1": {
-          "type": "text",
-          "settings": {
-            "title": "Wie häufig sollte ich die Produkte verwenden?",
-            "text": "<p>Um die besten Ergebnisse zu erzielen, empfehlen wir, die Elektrostimulatoren 30 Tage lang 24 Minuten pro Tag zu verwenden.</p>"
-          }
-        },
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-2": {
-          "type": "text",
-          "settings": {
-            "title": "Ist STIMUL BODY für Männer und für Frauen geeignet?",
-            "text": "<p>Unsere Produkte sind 100 % für alle Geschlechter geeignet.</p>"
-          }
-        },
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-3": {
-          "type": "text",
-          "settings": {
-            "title": "Wer kann STIMUL BODY verwenden?",
-            "text": "<p>Unsere Produkte können von allen Personen verwendet werden. Wenn du Herzprobleme hast, raten wir dir jedoch dringend davon ab, unsere Elektrostimulatoren zu verwenden.</p>"
-          }
-        },
-        "text_Y7EFED": {
-          "type": "text",
-          "settings": {
-            "title": "Kann ich STIMUL BODY verwenden, wenn ich schwanger bin?",
-            "text": "<p>Nein, wir raten dringend davon ab, unsere Elektrostimulatoren in der Schwangerschaft zu verwenden.</p>"
-          }
-        },
-        "text_8Qt3XB": {
-          "type": "text",
-          "settings": {
-            "title": "Warum sollte ich mich für STIMUL BODY entscheiden?",
-            "text": "<p>STIMUL BODY ist ein innovatives Unternehmen, das sich auf Fitness, Muskeltraining und persönliches Wohlbefinden spezialisiert hat. Die Zufriedenheit unserer Kunden ist unser oberstes Ziel. Unsere hochwertigen Produkte und unsere Preise sind bei vergleichbarer Qualität unschlagbar.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-0",
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-1",
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-2",
-        "template--16761573179606__60989128-6fe7-4b8a-b154-d4f87034f84f-167049521539e9e40b-3",
-        "text_Y7EFED",
-        "text_8Qt3XB"
-      ],
-      "settings": {
-        "layout": "two-columns",
-        "show_accordion_divider": false,
-        "title": "Häufig gestellte Fragen",
-        "subheading": "",
-        "text": "",
-        "tabs_bg_color": "#fafafa",
-        "bg_color_secondary": false,
-        "text_color": "text-dark",
-        "width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "related": {
@@ -711,13 +195,6 @@
   },
   "order": [
     "main",
-    "section_accordions_KemaP7",
-    "section_columns_qa84Ki",
-    "section_icons_row_UqYrKi",
-    "section_columns_zTgxCU",
-    "e2adf461-2c23-49f1-9c64-cc15ce28c5fe",
-    "section_icons_row_wBJ8tU",
-    "60989128-6fe7-4b8a-b154-d4f87034f84f",
     "related"
   ]
 }
