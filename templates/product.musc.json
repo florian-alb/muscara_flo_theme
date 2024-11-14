@@ -37,9 +37,37 @@
           "type": "icon",
           "settings": {
             "icon_name": "heart",
-            "icon_color": "#0c0c0f",
+            "icon_color": "#000000",
             "icon_width": 20,
             "icon_text": "Absorbeert onaangename geurtjes",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "icon_8PdQjF": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#000000",
+            "icon_width": 20,
+            "icon_text": "Parfumeer je intimiteit",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 20
+          }
+        },
+        "icon_nYCiTL": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#000000",
+            "icon_width": 20,
+            "icon_text": "Getest in laboratorium",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -60,48 +88,6 @@
         "description": {
           "type": "description",
           "settings": {
-            "padding_bottom": 20
-          }
-        },
-        "icon_8PdQjF": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "check",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Regt die Fettverbrennung an",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 20
-          }
-        },
-        "icon_aanjeK": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "check",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Löst Muskelverspannungen",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 20
-          }
-        },
-        "icon_nYCiTL": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "check",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Sichtbare Ergebnisse in nur 20 min pro Tag",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
             "padding_bottom": 20
           }
         },
@@ -151,11 +137,10 @@
         "price_HxrNeJ",
         "text_8Nkzpf",
         "icon_6P4Fbg",
+        "icon_8PdQjF",
+        "icon_nYCiTL",
         "form",
         "description",
-        "icon_8PdQjF",
-        "icon_aanjeK",
-        "icon_nYCiTL",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
         "e50c5bee-4feb-45c5-b222-cf535a25401d",
         "product_accordion_6PRWiY",
