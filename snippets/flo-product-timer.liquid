@@ -3,7 +3,7 @@
     {{ block.settings.text_before }}
     &nbsp
     <strong>
-      <span id="timer_flo timer--{{ section.id }}-{{ block.id }}"></span>
+      <span id="timer_flo--{{ section.id }}-{{ block.id }}"></span>
     </strong>
     &nbsp
     {{ block.settings.text_after }}
@@ -28,7 +28,6 @@
             if (!endTime) setEndTime();
 
             const x = setInterval(function () {
-              console.log("countdownTime", countdownTime)
               const now = new Date().getTime();
               const distance = endTime - now;
 
