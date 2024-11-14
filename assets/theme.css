@@ -29594,7 +29594,9 @@ search-form mark {
   padding: 10px;
 }
 
-.column-item.carousel__item.one-third.mobile--one-whole.column-item--image.aos-init.is-selected.aos-animate {
+
+
+.column-item.carousel__item.one-third.mobile--one-whole.column-item--image.aos-init.aos-animate {
     height: 100%;
 }
 
