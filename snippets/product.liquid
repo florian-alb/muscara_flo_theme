@@ -383,49 +383,8 @@
                 id="ProductFloCountdown--{{ section.id }}-{{ block.id }}"
                 {{ block_style }}
               >
-                <div class="timer_flo--{{ section.id }}-{{ block.id }} timer_flo">
-                  <span>
-                    {{ block.settings.text_before }}
-                    &nbsp
-                    <strong>
-                      <span id="timer_flo timer--{{ section.id }}-{{ block.id }}"></span>
-                    </strong>
-                    &nbsp
-                    {{ block.settings.text_after }}
-                  </span>
-                </div>
+                {% render flo-product-timer %}
               </div>
-
-              {% style %}
-                .timer_flo--{{ section.id }}-{{ block.id }}{
-                  background-color: {{block.settings.bg_color}};
-                }
-              {% endstyle %}
-
-              <script defer="">
-                          function setEndTime() {
-                            const endTime = new Date().getTime() + countdownTime;
-                            localStorage.setItem('productcountdownEndTime', endTime);
-                          };
-
-                          const countdownTime = {{ block.settings.timer_number }} * 60 * 60 * 1000;
-                          const endTime = localStorage.getItem('productcountdownEndTime');
-
-                          if (!endTime) setEndTime();
-
-                          const x = setInterval(function () {
-                            const now = new Date().getTime();
-                            const distance = endTime - now;
-
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                        document.getElementById("timer_flo--{{ section.id }}-{{ block.id }}").innerHTML = hours + "{{ block.settings.hours}}&nbsp" + minutes + "{{ block.settings.minutes}}&nbsp" + seconds + "{{ block.settings.seconds}}";
-                    if (distance <= 0) {
-                        setEndTime();
-                    }
-                }, 1000);
-              </script>
 
             {% when 'price' %}
               <!-- start flo price modif -->
