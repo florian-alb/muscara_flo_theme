@@ -83,10 +83,11 @@
             "bg_color": "{{ shop.brand.colors.secondary[0].background }}",
             "text_before": "Nog maar",
             "text_after": "om van de aanbieding te profiteren!",
-            "timer_number": 3,
+            "timer_duration": 3,
             "hours": "u",
             "minutes": "m",
-            "seconds": "s"
+            "seconds": "s",
+            "padding_bottom": 0
           }
         },
         "form": {
