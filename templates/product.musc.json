@@ -84,13 +84,7 @@
             "show_quantity": false,
             "show_payment_button": false,
             "enable_subscriptions_selectors": true,
-            "padding_bottom": 20
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "padding_bottom": 20
+            "padding_bottom": 10
           }
         },
         "custom_code_UhNRfp": {
@@ -139,7 +133,6 @@
         "icon_8PdQjF",
         "icon_nYCiTL",
         "form",
-        "description",
         "custom_code_UhNRfp",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
         "e50c5bee-4feb-45c5-b222-cf535a25401d",
