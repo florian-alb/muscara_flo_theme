@@ -384,18 +384,20 @@
                 {{ block_style }}
               >
                 <div class="timer_flo--{{ section.id }}-{{ block.id }}">
-                  <span
-                    >c
-                    {{- block.settings.text_before }}&nbsp<strong
-                      ><span id="timer_flo timer--{{ section.id }}-{{ block.id }}"></span></strong
-                    >&nbsp
-                    {{- block.settings.text_after -}}
+                  <span>
+                    {{ block.settings.text_before }}
+                    &nbsp
+                    <strong>
+                      <span id="timer_flo timer--{{ section.id }}-{{ block.id }}"></span>
+                    </strong>
+                    &nbsp
+                    {{ block.settings.text_after }}
                   </span>
                 </div>
               </div>
 
               {% style %}
-                .timer--{{ section.id }}-{{ block.id }}{
+                .timer_flo--{{ section.id }}-{{ block.id }}{
                   background-color: {{block.settings.bg_color}};
                 }
               {% endstyle %}
