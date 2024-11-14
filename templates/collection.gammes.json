@@ -354,6 +354,7 @@
         "text_block_UAHUkE": {
           "type": "text_block",
           "settings": {
+            "image": "shopify://shop_images/10_5c3087fc-6052-46dc-94e8-e0a4d76f3800.jpg",
             "title": "5. Avec Muscara, pas le temps de s’ennuyer !",
             "text": "<p>Tu as le choix parmi 5 délicieuses fragrances selon ton mood et tes envies ! Une chose est sure, tu vas rendre fous tous ceux qui t’entourent 😍 Alors, pour quel parfum vas-tu succomber ?</p>",
             "button_text": "",
@@ -380,8 +381,8 @@
         "show_images": true,
         "show_borders": false,
         "equalize_height": true,
-        "desktop_aspect_ratio": 0.8,
-        "mobile_aspect_ratio": 0.8,
+        "desktop_aspect_ratio": 1,
+        "mobile_aspect_ratio": 1,
         "heading_size": 120,
         "text_size": 100,
         "bg_color_secondary": false,
