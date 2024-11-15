@@ -339,7 +339,7 @@
   {%- endif -%}
 
   <!-- flo modifs -->
-  {% for block in blocks %}
+  {% for block in section.blocks %}
   {%- when 'icon' -%}
     {%- liquid
       assign icon_width = block.settings.icon_width
