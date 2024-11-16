@@ -258,14 +258,44 @@
     },
     "section_image_with_text_EBF9Mp": {
       "type": "section-image-with-text",
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "layout": "inline",
+        "image_location": "left",
+        "image_width": "standard",
+        "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0002_Remplissagegeneratif3_263a71fc-5cf1-4850-bd2b-7495e518b36c.jpg",
+        "subheading": "",
+        "title": "<p>Gemaakt met 98% natuurlijke ingrediënten</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Muscarabiedt je 's werelds eerste roll-on deodorant met witte muskus.<br/><br/>Hij ruikt niet alleen de hele dag heerlijk, maar is ook ontworpen met bamboepoeder om geurtjes op natuurlijke wijze te neutraliseren, waardoor je huid droog, zacht en schoon blijft.</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_image_with_text_xH3z6V": {
+      "type": "section-image-with-text",
       "blocks": {
-        "icon_QNeFJB": {
+        "icon_z7tmLY": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
+            "icon_text": "Lichte, fascinerende geur",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -273,13 +303,13 @@
             "padding_bottom": 10
           }
         },
-        "icon_txf398": {
+        "icon_9Kf8xB": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Parfumeer je huid 48 uur non-stop",
+            "icon_text": "1 deodorant = 3 maanden gebruik",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -287,7 +317,35 @@
             "padding_bottom": 10
           }
         },
-        "icon_pgYFEb": {
+        "icon_mpdGpG": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Gemaakt van 98% natuurlijke ingrediënten",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_eLrtkD": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Sensuele geur voor 48 uur non-stop",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_exCWMf": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
@@ -301,13 +359,13 @@
             "padding_bottom": 10
           }
         },
-        "icon_bFwPkm": {
+        "icon_LHBbXL": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Free shipping over $99",
+            "icon_text": "Geen onaangename geurtjes meer",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -315,21 +373,7 @@
             "padding_bottom": 10
           }
         },
-        "icon_U7iqhe": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Hydrateert de huid",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
-        "icon_rEU37L": {
+        "icon_eag76r": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
@@ -340,31 +384,32 @@
             "width": "full",
             "text_alignment": "left",
             "bg_color": "",
-            "padding_bottom": 10
+            "padding_bottom": 20
           }
         }
       },
       "block_order": [
-        "icon_QNeFJB",
-        "icon_txf398",
-        "icon_pgYFEb",
-        "icon_bFwPkm",
-        "icon_U7iqhe",
-        "icon_rEU37L"
+        "icon_z7tmLY",
+        "icon_9Kf8xB",
+        "icon_mpdGpG",
+        "icon_eLrtkD",
+        "icon_exCWMf",
+        "icon_LHBbXL",
+        "icon_eag76r"
       ],
       "settings": {
-        "section_height": "six-fifty-height",
+        "section_height": "seven-fifty-height",
         "layout": "inline",
-        "image_location": "left",
+        "image_location": "right",
         "image_width": "standard",
-        "image": "shopify://shop_images/gird-4_4d9b1423-ad33-4717-a6e2-be6ac80bf04c.jpg",
+        "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0006_Muscarapardigitalabs_0001_DSC04368.jpg",
         "subheading": "",
-        "title": "<p>Gemaakt met 98% natuurlijke ingrediënten</p>",
+        "title": "<p>1 deodorant = 3 maanden gebruik</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Muscarabiedt je 's werelds eerste roll-on deodorant met witte muskus.<br/><br/>Hij ruikt niet alleen de hele dag heerlijk, maar is ook ontworpen met bamboepoeder om geurtjes op natuurlijke wijze te neutraliseren, waardoor je huid droog, zacht en schoon blijft.</p>",
+        "content": "<p>Elke stick van onze deodorant is goed voor drie maanden dagelijks gebruik, dus hij is zowel zuinig als effectief voor je welzijn.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -638,6 +683,7 @@
     "main",
     "section_icons_row_FLKCNP",
     "section_image_with_text_EBF9Mp",
+    "section_image_with_text_xH3z6V",
     "section_image_with_text_XK9Vib",
     "section_icons_row_tbFKHV",
     "section_image_with_text_zNp3JU",
