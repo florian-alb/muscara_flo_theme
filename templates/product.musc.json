@@ -634,7 +634,7 @@
       "settings": {
         "layout": "two-columns",
         "show_accordion_divider": false,
-        "title": "Frequently Asked Questions",
+        "title": "Twijfel je nog?",
         "subheading": "",
         "text": "",
         "tabs_bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
