@@ -30,7 +30,7 @@
         "text_8Nkzpf": {
           "type": "text",
           "settings": {
-            "title": "<p>Verrijk je intimiteit met een frisheid die tot 48 uur aanhoudt met onze Muscara intieme musk.</p>",
+            "title": "<p>Ontdek Muskat body mist, een subtiele mix van frisheid, vrouwelijkheid en een betoverende geur.</p>",
             "text_alignment": "left",
             "padding_bottom": 10
           }
@@ -41,7 +41,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
+            "icon_text": "Maskeert onaangename geurtjes",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -55,7 +55,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Parfumeer je intimiteit",
+            "icon_text": "Sensuele geur voor 48 uur",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -112,9 +112,19 @@
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
           "type": "product_accordion",
           "settings": {
+            "accordion_heading": "Een frisse, langdurige geur",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Chaque vaporisation de Muscara - Body Mist est une caresse d'élégance qui vous accompagne avec fraîcheur dans toutes vos activités, du matin au soir.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_XYAeWQ": {
+          "type": "product_accordion",
+          "settings": {
             "accordion_heading": "Samenstelling",
             "heading_style": "font-body",
-            "accordion_text": "<p>Parfum, tricyclodecaan-4,8-dimethanol, glycerine, benzylsalicylaat, alfa-Isomethylionon, geraniol, cumarine, hydroxycitronellal, water</p>",
+            "accordion_text": "<p>Tricyclodécane-4,8-Diméthanol, Parfum (Fragrance), Propanediol, Hydroxycitronellal, Linalool, Amyl Cinnamal, Glycérine, Benzyl Salicylate, Geraniol, Alpha-Isomethyl Ionone, Citronellol, Benzyl Alcohol, Amylcinnamyl Alcohol, Hexyl Cinnamal, Aqua (Water), Limonene, Citral<br/><br/>Om een allergische reactie op ons product te voorkomen, test je het eerst op de pols. Niet aanbrengen op slijmvliezen, geïrriteerde of ontstoken huid. Buiten bereik van kinderen houden. Vermijd contact met de ogen. Niet doorslikken. Alleen voor uitwendig gebruik.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -122,9 +132,19 @@
         "e50c5bee-4feb-45c5-b222-cf535a25401d": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Belangrijke veiligheidsaanwijzingen",
+            "accordion_heading": "Alcoholvrij, aluminiumvrij",
             "heading_style": "font-body",
-            "accordion_text": "<p>Vraag uw arts om advies (zwangere vrouwen of vrouwen die zwanger willen worden - vrouwen die borstvoeding geven - vrouwen in de menopauze).</p><p>Niet aanbrengen op of aan de binnenkant van slijmvliezen, maar rond warme lichaamsdelen.</p><p>Zoals met alle cosmetische producten moet je het product voor elk gebruik op je pols testen om te controleren of er geen reacties zijn.</p>",
+            "accordion_text": "<p>De veiligheid en het welzijn van onze klanten staan voorop. Daarom zijn onze geuren dermatologisch getest om er zeker van te zijn dat ze compatibel zijn met de gevoelige huid.</p><p>Het is belangrijk om te weten dat Muscara alleen mag worden aangebracht op de plooien en contouren van de bikinilijn en niet op intieme delen.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_jq6TUa": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "De kracht van aantrekking",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Ontdek de verleidelijke kracht van body mist: de betoverende geur trekt aan en betovert, waardoor er bij elke stap een magnetische aantrekkingskracht om je heen ontstaat.</p><p>Geef je over aan de onweerstaanbare aantrekkingskracht van Tahara body mist, een geur die betovert en betovert, waardoor elke stap een fascinerende en gedenkwaardige ervaring wordt.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -151,7 +171,9 @@
         "form",
         "flo_stock_scarcity_Mj4TRX",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
+        "product_accordion_XYAeWQ",
         "e50c5bee-4feb-45c5-b222-cf535a25401d",
+        "product_accordion_jq6TUa",
         "product_accordion_6PRWiY"
       ],
       "settings": {
@@ -225,156 +247,21 @@
         "padding_bottom": 60
       }
     },
-    "section_icons_row_cHh738": {
-      "type": "section-icons-row",
-      "blocks": {
-        "text_9jHJmF": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-1-muscara.png",
-            "title": "Open de doos en pak de muskus",
-            "text": "<p>Een kleine hoeveelheid is alles wat je nodig hebt om de hele dag de juiste geur te hebben.</p>"
-          }
-        },
-        "text_6dRMKi": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-2-muscara.png",
-            "title": "Breng de gel aan op je intieme plekken",
-            "text": "<p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>"
-          }
-        },
-        "text_NNi3Yw": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-3-muscara.png",
-            "title": "Voel je schoon, mooi en begeerlijk",
-            "text": "<p>Je kunt met een gerust hart naar buiten gaan, Muscara musk is ontworpen om 48 uur te blijven zitten.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_9jHJmF",
-        "text_6dRMKi",
-        "text_NNi3Yw"
-      ],
-      "settings": {
-        "alignment": "center",
-        "columns": 3,
-        "icons_width": 200,
-        "icons_width_mobile": 150,
-        "heading": "Drie eenvoudige stappen voor een frisse, geurige dag in de privacy van je eigen huis",
-        "subheading": "",
-        "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
-        "text_color": "#333333",
-        "box_color": "",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "enable_slider_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "section_image_with_text_EBF9Mp": {
       "type": "section-image-with-text",
-      "blocks": {
-        "icon_QNeFJB": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
-        "icon_txf398": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Parfumeer je huid 48 uur non-stop",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
-        "icon_pgYFEb": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Een onmiddellijk fris gevoel",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
-        "icon_U7iqhe": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Hydrateert de huid",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
-        "icon_rEU37L": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Geschikt voor alle huidtypes, zelfs de meest gevoelige",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "icon_QNeFJB",
-        "icon_txf398",
-        "icon_pgYFEb",
-        "icon_U7iqhe",
-        "icon_rEU37L"
-      ],
       "settings": {
-        "section_height": "six-fifty-height",
+        "section_height": "seven-fifty-height",
         "layout": "inline",
         "image_location": "left",
         "image_width": "standard",
-        "image": "shopify://shop_images/gird-4_4d9b1423-ad33-4717-a6e2-be6ac80bf04c.jpg",
+        "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0000_Muscarapardigitalabs_0007_Calque0_9bee232c-8e18-49c3-8789-966576ccb3ce.jpg",
         "subheading": "",
-        "title": "<p>De hele dag door een betoverende geur</p>",
+        "title": "<p>Aura van verleiding</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Onze beroemde intieme gel met witte muskus, een onweerstaanbare geur die je de hele dag een fris en schoon gevoel geeft.</p>",
+        "content": "<p>Ontdek de onweerstaanbare charme van onze body mist, een geur die is ontworpen om je zintuigen te betoveren en je de hele dag te omhullen in een aura van verleiding. Geïnspireerd door de puurheid en elegantie van witte muskus, creëert deze delicate maar krachtige mist een sluier van mysterie en vrouwelijkheid om je heen.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -397,14 +284,14 @@
         "layout": "inline",
         "image_location": "right",
         "image_width": "standard",
-        "image": "shopify://shop_images/gird-3.jpg",
+        "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0001_Remplissagegeneratif4_4fb7013c-4441-479e-a640-6f5346137620.jpg",
         "subheading": "",
-        "title": "<p>Geef uiting aan je sensualiteit</p>",
+        "title": "<p>Langdurige frisheid</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Krijg zelfvertrouwen met onze Muscara Musk. Gebruik onze geur als je geheim van verleiding en onthul je sensuele en aantrekkelijke kant.Assertief en vastberaden, La Sensuelle is niet bang om haar verlangens te laten gelden en blijft nooit onopgemerkt...</p>",
+        "content": "<p>De speciaal geformuleerde formule garandeert langdurig gebruik en houdt je fris en zelfverzekerd van 's ochtends vroeg tot 's avonds laat. Deze body mist is perfect voor dagelijks gebruik en laat een subtiel, betoverend spoor achter dat zeker de aandacht zal trekken.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -438,7 +325,7 @@
             "icon_name": "check",
             "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
             "title": "Langdurige Geur",
-            "text": "<p>Een betoverende geur die de hele dag blijft hangen</p>"
+            "text": "<p>Een betoverende geur die tot 48 uur blijft hangen</p>"
           }
         },
         "text_CX9jAE": {
@@ -486,42 +373,12 @@
         "padding_bottom": 60
       }
     },
-    "section_image_with_text_zNp3JU": {
-      "type": "section-image-with-text",
-      "settings": {
-        "section_height": "six-fifty-height",
-        "layout": "inline",
-        "image_location": "left",
-        "image_width": "standard",
-        "image": "shopify://shop_images/ou_utiliser_d3948dbe-ba65-4c98-b73a-d7dec6a07bd4.jpg",
-        "subheading": "",
-        "title": "<p>Of breng je Muscara muskus aan</p>",
-        "heading_highlight_type": "circle",
-        "highlight_color": "#d43747",
-        "highlight_text_color": "#000000",
-        "heading_size": 130,
-        "content": "<p>Breng de muskus aan op de warme delen van je lichaam om de hele dag een zachte, lichte geur te verspreiden.</p><p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>",
-        "text_alignment": "left",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "video_link": "",
-        "text_color": "text-dark",
-        "bg_color": "",
-        "gradient": "",
-        "section_width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "section_image_with_text_4FrxiU": {
       "type": "section-image-with-text",
       "settings": {
         "section_height": "six-fifty-height",
         "layout": "inline",
-        "image_location": "right",
+        "image_location": "left",
         "image_width": "standard",
         "image": "shopify://shop_images/gird-5_1dc3969c-9a77-4805-9dcd-0859e029d3bd.jpg",
         "subheading": "",
@@ -647,11 +504,9 @@
   "order": [
     "main",
     "section_icons_row_FLKCNP",
-    "section_icons_row_cHh738",
     "section_image_with_text_EBF9Mp",
     "section_image_with_text_XK9Vib",
     "section_icons_row_tbFKHV",
-    "section_image_with_text_zNp3JU",
     "section_image_with_text_4FrxiU",
     "section_accordions_WzFwpL",
     "related"
