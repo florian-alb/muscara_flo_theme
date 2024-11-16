@@ -77,13 +77,13 @@
             "show_image": true,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
-            "heading": "",
+            "heading": "<p>{{ block.settings.tab_collection.title }}</p>",
             "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
+            "button_text": "Alles bekijken",
+            "button_link": "{{ block.settings.tab_collection.url }}",
             "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
           }
         },
         "collection_maMKRa": {
@@ -97,13 +97,13 @@
             "show_image": true,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
-            "heading": "",
+            "heading": "<p>{{ block.settings.tab_collection.title }}</p>",
             "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
+            "button_text": "Alles bekijken",
+            "button_link": "{{ block.settings.tab_collection.url }}",
             "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
           }
         },
         "collection_YNfUpb": {
@@ -117,13 +117,13 @@
             "show_image": true,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
-            "heading": "",
+            "heading": "<p>{{ block.settings.tab_collection.title }}</p>",
             "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
+            "button_text": "Alles bekijken",
+            "button_link": "{{ block.settings.tab_collection.url }}",
             "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
           }
         },
         "collection_m7x369": {
@@ -137,13 +137,13 @@
             "show_image": true,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
-            "heading": "",
+            "heading": "<p>{{ block.settings.tab_collection.title }}</p>",
             "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
+            "button_text": "Alles bekijken",
+            "button_link": "{{ block.settings.tab_collection.url }}",
             "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
           }
         },
         "collection_NDzGeR": {
@@ -157,13 +157,13 @@
             "show_image": true,
             "image": "{{ block.settings.tab_collection.image }}",
             "overlay_opacity": 10,
-            "heading": "",
+            "heading": "<p>{{ block.settings.tab_collection.title }}</p>",
             "text_color": "text-light",
-            "button_text": "View All",
-            "button_link": "",
+            "button_text": "Alles bekijken",
+            "button_link": "{{ block.settings.tab_collection.url }}",
             "button_color": "btn--white",
-            "button_style": "btn--solid-border",
-            "button_size": "btn--small"
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
           }
         }
       },
