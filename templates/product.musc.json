@@ -581,8 +581,15 @@
         "text_4tzNEH": {
           "type": "text",
           "settings": {
-            "title": "Hoe wordt Musc intime (Tahara muskus) gebruikt?",
+            "title": "Hoe muskus aanbrengen?",
             "text": "<p>Met je vinger rechtstreeks op de huid aanbrengen, als een bodycrème. Het is zeer geconcentreerd, dus slechts één druppel musk is genoeg om je langdurig te parfumeren. Bovendien is het dankzij de unieke geltextuur makkelijk aan te brengen en blijft de muskus niet aan de huid plakken. Al met al zal je huid dankzij onze intieme musk de hele dag geuren!</p>"
+          }
+        },
+        "text_6NfPQV": {
+          "type": "text",
+          "settings": {
+            "title": "Is intieme muskus gevaarlijk voor de geslachtsdelen?",
+            "text": "<p>De <strong>intieme muskus </strong> is niet gevaarlijk voor de geslachtsdelen omdat het niet in contact komt met de slijmvliezen. Volg daarom het gebruiksadvies voor veilig gebruik.</p>"
           }
         },
         "text_XBJD73": {
@@ -618,6 +625,7 @@
         "text_CPTJ66",
         "text_RHXVRy",
         "text_4tzNEH",
+        "text_6NfPQV",
         "text_XBJD73",
         "text_Lz73Ec",
         "text_CKb4yM",
