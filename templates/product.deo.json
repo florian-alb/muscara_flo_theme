@@ -12,6 +12,14 @@
     "main": {
       "type": "product",
       "blocks": {
+        "text_fmhiPm": {
+          "type": "text",
+          "settings": {
+            "title": "<p><strong>Een dagelijkse bondgenoot voor vrouwelijke frisheid en een verleidelijk effect.</strong></p>",
+            "text_alignment": "left",
+            "padding_bottom": 20
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -141,6 +149,7 @@
         }
       },
       "block_order": [
+        "text_fmhiPm",
         "title",
         "price_HxrNeJ",
         "text_8Nkzpf",
