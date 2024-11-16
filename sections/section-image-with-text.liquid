@@ -340,6 +340,15 @@
 
   <!-- flo modifs -->
   {% for block in section.blocks %}
+    {%- liquid
+      assign padding_bottom = block.settings.padding_bottom
+
+      if padding_bottom != blank
+        capture block_style
+          echo 'style="--PBB:' | append: padding_bottom | append: 'px;"'
+        endcapture
+      endif
+    -%}
     {%- case block.type -%}
   {%- when 'icon' -%}
     {%- liquid
