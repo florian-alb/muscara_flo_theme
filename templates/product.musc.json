@@ -538,7 +538,7 @@
         "layout": "inline",
         "image_location": "right",
         "image_width": "standard",
-        "image": "shopify://shop_images/ou_utiliser_d3948dbe-ba65-4c98-b73a-d7dec6a07bd4.jpg",
+        "image": "shopify://shop_images/gird-5_1dc3969c-9a77-4805-9dcd-0859e029d3bd.jpg",
         "subheading": "",
         "title": "<p>30 dagen geld-terug-garantie</p>",
         "heading_highlight_type": "circle",
@@ -557,6 +557,59 @@
         "bg_color": "",
         "gradient": "",
         "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_accordions_WzFwpL": {
+      "type": "section-accordions",
+      "blocks": {
+        "text_CPTJ66": {
+          "type": "text",
+          "settings": {
+            "title": "How long does it take to get my products?",
+            "text": "<p>Domestic shipping can take up to 5 business days.<br/><br/>Foreign shipping could take up to 14 business days.<br/><br/>Due to global supply chain challenges, shipping times could be longer than usual.</p>"
+          }
+        },
+        "text_RHXVRy": {
+          "type": "text",
+          "settings": {
+            "title": "Do you offer warranty for your products?",
+            "text": "<p>All our products are subject to quality control.<br/><br/>Our warranty provides a guarantee against manufacturer defects.<br/><br/>The guarantee covers any manufacturing, design, or material defect. Please notify us within 2 months of noticing any defects.<br/><br/>It does not cover blows, improper use, or other issues that are not attributable to a manufacturer defects.</p>"
+          }
+        },
+        "text_4tzNEH": {
+          "type": "text",
+          "settings": {
+            "title": "Do you offer refunds?",
+            "text": "<p>Yes, we offer full and partial refunds.<br/><br/>Please enquire for more information about our Refund policy.</p>"
+          }
+        },
+        "text_XBJD73": {
+          "type": "text",
+          "settings": {
+            "title": "What shipping methods do you offer?",
+            "text": "<p>We use all major carriers, and local courier partners. Use the shipping estimator in the cart to check your shipping rates.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_CPTJ66",
+        "text_RHXVRy",
+        "text_4tzNEH",
+        "text_XBJD73"
+      ],
+      "settings": {
+        "layout": "two-columns",
+        "show_accordion_divider": false,
+        "title": "Frequently Asked Questions",
+        "subheading": "",
+        "text": "",
+        "tabs_bg_color": "#fafafa",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "text_color": "text-dark",
+        "width": "wrapper",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -583,6 +636,7 @@
     "section_icons_row_tbFKHV",
     "section_image_with_text_zNp3JU",
     "section_image_with_text_4FrxiU",
+    "section_accordions_WzFwpL",
     "related"
   ]
 }
