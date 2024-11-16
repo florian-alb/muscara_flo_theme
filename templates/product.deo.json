@@ -425,36 +425,6 @@
         "padding_bottom": 60
       }
     },
-    "section_image_with_text_XK9Vib": {
-      "type": "section-image-with-text",
-      "settings": {
-        "section_height": "six-fifty-height",
-        "layout": "inline",
-        "image_location": "right",
-        "image_width": "standard",
-        "image": "shopify://shop_images/gird-3.jpg",
-        "subheading": "",
-        "title": "<p>Geef uiting aan je sensualiteit</p>",
-        "heading_highlight_type": "circle",
-        "highlight_color": "#d43747",
-        "highlight_text_color": "#000000",
-        "heading_size": 130,
-        "content": "<p>Krijg zelfvertrouwen met onze Muscara Musk. Gebruik onze geur als je geheim van verleiding en onthul je sensuele en aantrekkelijke kant.Assertief en vastberaden, La Sensuelle is niet bang om haar verlangens te laten gelden en blijft nooit onopgemerkt...</p>",
-        "text_alignment": "left",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "video_link": "",
-        "text_color": "text-dark",
-        "bg_color": "",
-        "gradient": "",
-        "section_width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "section_icons_row_tbFKHV": {
       "type": "section-icons-row",
       "blocks": {
@@ -482,7 +452,7 @@
             "icon_name": "eco-friendly",
             "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
             "title": "Andocrien verstoringsmiddelvrij",
-            "text": "<p>Muscara intieme muskus is 100% veilig voor de huid.</p>"
+            "text": "<p>Muscara intieme producten zijn 100% veilig voor je huid.</p>"
           }
         },
         "text_bed4yH": {
@@ -521,36 +491,6 @@
         "padding_bottom": 60
       }
     },
-    "section_image_with_text_zNp3JU": {
-      "type": "section-image-with-text",
-      "settings": {
-        "section_height": "six-fifty-height",
-        "layout": "inline",
-        "image_location": "left",
-        "image_width": "standard",
-        "image": "shopify://shop_images/ou_utiliser_d3948dbe-ba65-4c98-b73a-d7dec6a07bd4.jpg",
-        "subheading": "",
-        "title": "<p>Of breng je Muscara muskus aan</p>",
-        "heading_highlight_type": "circle",
-        "highlight_color": "#d43747",
-        "highlight_text_color": "#000000",
-        "heading_size": 130,
-        "content": "<p>Breng de muskus aan op de warme delen van je lichaam om de hele dag een zachte, lichte geur te verspreiden.</p><p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>",
-        "text_alignment": "left",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "video_link": "",
-        "text_color": "text-dark",
-        "bg_color": "",
-        "gradient": "",
-        "section_width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "section_image_with_text_4FrxiU": {
       "type": "section-image-with-text",
       "settings": {
@@ -558,7 +498,7 @@
         "layout": "inline",
         "image_location": "right",
         "image_width": "standard",
-        "image": "shopify://shop_images/gird-5_1dc3969c-9a77-4805-9dcd-0859e029d3bd.jpg",
+        "image": "shopify://shop_images/gird-5-no-prod.jpg",
         "subheading": "",
         "title": "<p>30 dagen geld-terug-garantie</p>",
         "heading_highlight_type": "circle",
@@ -684,9 +624,7 @@
     "section_icons_row_FLKCNP",
     "section_image_with_text_EBF9Mp",
     "section_image_with_text_xH3z6V",
-    "section_image_with_text_XK9Vib",
     "section_icons_row_tbFKHV",
-    "section_image_with_text_zNp3JU",
     "section_image_with_text_4FrxiU",
     "section_accordions_WzFwpL",
     "related"
