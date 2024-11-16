@@ -1,0 +1,674 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading": "none",
+            "show_rating": true,
+            "show_rating_count": false,
+            "padding_bottom": 10
+          }
+        },
+        "price_HxrNeJ": {
+          "type": "price",
+          "settings": {
+            "padding_bottom": 20
+          }
+        },
+        "text_8Nkzpf": {
+          "type": "text",
+          "settings": {
+            "title": "<p>Verrijk je intimiteit met een frisheid die tot 48 uur aanhoudt met onze Muscara intieme musk.</p>",
+            "text_alignment": "left",
+            "padding_bottom": 10
+          }
+        },
+        "icon_6P4Fbg": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#000000",
+            "icon_width": 20,
+            "icon_text": "Absorbeert onaangename geurtjes",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_8PdQjF": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#000000",
+            "icon_width": 20,
+            "icon_text": "Parfumeer je intimiteit",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_nYCiTL": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#000000",
+            "icon_width": 20,
+            "icon_text": "Getest in laboratorium",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "flo_product_countdown_ybrwMt": {
+          "type": "flo-product-countdown",
+          "settings": {
+            "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
+            "text_before": "Nog maar",
+            "text_after": "om van de aanbieding te profiteren!",
+            "timer_duration": 3,
+            "hours": "u",
+            "minutes": "m",
+            "seconds": "s",
+            "padding_bottom": 0
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_labels": true,
+            "show_quantity": false,
+            "show_payment_button": false,
+            "enable_subscriptions_selectors": true,
+            "padding_bottom": 0
+          }
+        },
+        "flo_stock_scarcity_Mj4TRX": {
+          "type": "flo-stock-scarcity",
+          "settings": {
+            "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
+            "icon_color": "#d43747",
+            "text": "Beperkt op voorraad  Koop nu de jouwe!",
+            "padding_bottom": 20
+          }
+        },
+        "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Samenstelling",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Parfum, tricyclodecaan-4,8-dimethanol, glycerine, benzylsalicylaat, alfa-Isomethylionon, geraniol, cumarine, hydroxycitronellal, water</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "e50c5bee-4feb-45c5-b222-cf535a25401d": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Belangrijke veiligheidsaanwijzingen",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Vraag uw arts om advies (zwangere vrouwen of vrouwen die zwanger willen worden - vrouwen die borstvoeding geven - vrouwen in de menopauze).</p><p>Niet aanbrengen op of aan de binnenkant van slijmvliezen, maar rond warme lichaamsdelen.</p><p>Zoals met alle cosmetische producten moet je het product voor elk gebruik op je pols testen om te controleren of er geen reacties zijn.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_6PRWiY": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Levering",
+            "heading_style": "font-body",
+            "accordion_text": "<p>De verzending is volledig gratis voor alle bestellingen die in het Verenigd Koninkrijk of Europa worden verzonden.</p><p>Het duurt 1-3 werkdagen voordat bestellingen worden verwerkt en verzonden.</p><p>Zodra uw artikel(en) zijn verzonden, is de geschatte levertijd:</p><p>- USA: 5-10 Werkdagen<br/>- UK: 5-10 Werkdagen<br/>- Australië: 5-10 werkdagen<br/>- Canada: 7-10 werkdagen<br/>- Europa: 2-4 werkdagen<br/>- Rest van de wereld: 14-2 werkdagen</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price_HxrNeJ",
+        "text_8Nkzpf",
+        "icon_6P4Fbg",
+        "icon_8PdQjF",
+        "icon_nYCiTL",
+        "flo_product_countdown_ybrwMt",
+        "form",
+        "flo_stock_scarcity_Mj4TRX",
+        "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
+        "e50c5bee-4feb-45c5-b222-cf535a25401d",
+        "product_accordion_6PRWiY"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "image_layout": "carousel",
+        "image_width": "standard",
+        "product_image_aspect_ratio": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color": "",
+        "enable_border": false,
+        "border_color": "",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "section_icons_row_FLKCNP": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_xbmmYF": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "{{ product.metafields.custom.product_scent_1.value.scent_image.value }}",
+            "title": "Topnoten",
+            "text": "<p>{{ product.metafields.custom.product_scent_1.value.scent_title.value }}</p>"
+          }
+        },
+        "text_LFweLH": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "icon_image": "{{ product.metafields.custom.product_scent_2.value.scent_image.value }}",
+            "title": "Aantekeningen",
+            "text": "<p>{{ product.metafields.custom.product_scent_2.value.scent_title.value }}</p>"
+          }
+        },
+        "text_XjRXC8": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "icon_image": "{{ product.metafields.custom.product_scent_3.value.scent_image.value }}",
+            "title": "Basisnoten",
+            "text": "<p>{{ product.metafields.custom.product_scent_3.value.scent_title.value }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xbmmYF",
+        "text_LFweLH",
+        "text_XjRXC8"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 100,
+        "icons_width_mobile": 100,
+        "heading": "De hele dag door een betoverende geur",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#333333",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_icons_row_cHh738": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_9jHJmF": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/step-1-muscara.png",
+            "title": "Open de doos en pak de muskus",
+            "text": "<p>Een kleine hoeveelheid is alles wat je nodig hebt om de hele dag de juiste geur te hebben.</p>"
+          }
+        },
+        "text_6dRMKi": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/step-2-muscara.png",
+            "title": "Breng de gel aan op je intieme plekken",
+            "text": "<p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>"
+          }
+        },
+        "text_NNi3Yw": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/step-3-muscara.png",
+            "title": "Voel je schoon, mooi en begeerlijk",
+            "text": "<p>Je kunt met een gerust hart naar buiten gaan, Muscara musk is ontworpen om 48 uur te blijven zitten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_9jHJmF",
+        "text_6dRMKi",
+        "text_NNi3Yw"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 200,
+        "icons_width_mobile": 150,
+        "heading": "Drie eenvoudige stappen voor een frisse, geurige dag in de privacy van je eigen huis",
+        "subheading": "",
+        "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
+        "text_color": "#333333",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_image_with_text_EBF9Mp": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "icon_QNeFJB": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Absorbeert onaangename geurtjes",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_txf398": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Parfumeer je huid 48 uur non-stop",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_pgYFEb": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Een onmiddellijk fris gevoel",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_bFwPkm": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Free shipping over $99",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_U7iqhe": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Hydrateert de huid",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        },
+        "icon_rEU37L": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "",
+            "icon_width": 20,
+            "icon_text": "Geschikt voor alle huidtypes, zelfs de meest gevoelige",
+            "text_size": 90,
+            "width": "full",
+            "text_alignment": "left",
+            "bg_color": "",
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "icon_QNeFJB",
+        "icon_txf398",
+        "icon_pgYFEb",
+        "icon_bFwPkm",
+        "icon_U7iqhe",
+        "icon_rEU37L"
+      ],
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "left",
+        "image_width": "standard",
+        "image": "shopify://shop_images/gird-4_4d9b1423-ad33-4717-a6e2-be6ac80bf04c.jpg",
+        "subheading": "",
+        "title": "<p>De hele dag door een betoverende geur</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Onze beroemde intieme gel met witte muskus, een onweerstaanbare geur die je de hele dag een fris en schoon gevoel geeft.</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_image_with_text_XK9Vib": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "right",
+        "image_width": "standard",
+        "image": "shopify://shop_images/gird-3.jpg",
+        "subheading": "",
+        "title": "<p>Geef uiting aan je sensualiteit</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Krijg zelfvertrouwen met onze Muscara Musk. Gebruik onze geur als je geheim van verleiding en onthul je sensuele en aantrekkelijke kant.Assertief en vastberaden, La Sensuelle is niet bang om haar verlangens te laten gelden en blijft nooit onopgemerkt...</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_icons_row_tbFKHV": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_4KdMGf": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/madeInFrance_097db484-2af5-4bea-bfa7-6019aae77c1d.svg",
+            "title": "Gemaakt in Frankrijk",
+            "text": "<p>Gemaakt in Frankrijk in ons kleine familielaboratorium</p>"
+          }
+        },
+        "text_TbDyEG": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
+            "title": "Langdurige Geur",
+            "text": "<p>Een betoverende geur die de hele dag blijft hangen</p>"
+          }
+        },
+        "text_CX9jAE": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
+            "title": "Andocrien verstoringsmiddelvrij",
+            "text": "<p>Muscara intieme muskus is 100% veilig voor de huid.</p>"
+          }
+        },
+        "text_bed4yH": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "icon_image": "shopify://shop_images/safe_ff1821fc-970c-46fe-8d92-ce4a01cde188.svg",
+            "title": "Veilig voor de huid",
+            "text": "<p>Muscara is dermatologisch getest</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_4KdMGf",
+        "text_TbDyEG",
+        "text_CX9jAE",
+        "text_bed4yH"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 4,
+        "icons_width": 180,
+        "icons_width_mobile": 100,
+        "heading": "Waarom zul je verliefd worden op de Muscara geur?",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#000000",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_image_with_text_zNp3JU": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "left",
+        "image_width": "standard",
+        "image": "shopify://shop_images/ou_utiliser_d3948dbe-ba65-4c98-b73a-d7dec6a07bd4.jpg",
+        "subheading": "",
+        "title": "<p>Of breng je Muscara muskus aan</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Breng de muskus aan op de warme delen van je lichaam om de hele dag een zachte, lichte geur te verspreiden.</p><p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_image_with_text_4FrxiU": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "right",
+        "image_width": "standard",
+        "image": "shopify://shop_images/gird-5_1dc3969c-9a77-4805-9dcd-0859e029d3bd.jpg",
+        "subheading": "",
+        "title": "<p>30 dagen geld-terug-garantie</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Bij Muscara zijn we zo overtuigd van de kwaliteit van onze muskus dat we u een volledige tevredenheidsgarantie bieden.</p><p>Als u om welke reden dan ook niet volledig tevreden bent met uw aankoop, heeft u tot 30 dagen de tijd om het aan ons te retourneren en een volledige terugbetaling aan te vragen.</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_accordions_WzFwpL": {
+      "type": "section-accordions",
+      "blocks": {
+        "text_CPTJ66": {
+          "type": "text",
+          "settings": {
+            "title": "Wat is intieme muskus?",
+            "text": "<p>Allereerst is intieme muskus een product dat speciaal is ontwikkeld voor vrouwen. Het zorgt voor een langdurige geur voor het lichaam. Deze muskus is geïnspireerd op een oosterse traditie en is erg populair in landen in het Midden-Oosten. Het is het perfecte product om je de hele dag en nacht fris, schoon en vrouwelijk te voelen...</p>"
+          }
+        },
+        "text_RHXVRy": {
+          "type": "text",
+          "settings": {
+            "title": "Waar laat je intieme muskus?",
+            "text": "<p>Intieme muskus wordt aangebracht op warme delen van het lichaam zodat de delicate geur zich na verloop van tijd kan verspreiden. Deze gebieden zijn onder andere<br/><br/>- liezen (rond het kruis)<br/><br/>- nek<br/><br/>- pols<br/><br/>- De holte van de borst</p>"
+          }
+        },
+        "text_4tzNEH": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe muskus aanbrengen?",
+            "text": "<p>Met je vinger rechtstreeks op de huid aanbrengen, als een bodycrème. Het is zeer geconcentreerd, dus slechts één druppel musk is genoeg om je langdurig te parfumeren. Bovendien is het dankzij de unieke geltextuur makkelijk aan te brengen en blijft de muskus niet aan de huid plakken. Al met al zal je huid dankzij onze intieme musk de hele dag geuren!</p>"
+          }
+        },
+        "text_6NfPQV": {
+          "type": "text",
+          "settings": {
+            "title": "Is intieme muskus gevaarlijk voor de geslachtsdelen?",
+            "text": "<p>De <strong>intieme muskus </strong> is niet gevaarlijk voor de geslachtsdelen omdat het niet in contact komt met de slijmvliezen. Volg daarom het gebruiksadvies voor veilig gebruik.</p>"
+          }
+        },
+        "text_XBJD73": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe wordt witte muskus (tahara muskus) gemaakt?",
+            "text": "<p>Onze intieme muskus is ontwikkeld in een Frans laboratorium. Het is ook dermatologisch getest en gevalideerd door een expert in toxicologie. Het heeft alle geldende wettelijke tests doorstaan en is gevalideerd en voldoet aan de MADE IN FRANCE cosmeticastandaarden.</p>"
+          }
+        },
+        "text_Lz73Ec": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe lang is muskus houdbaar?",
+            "text": "<p>Intieme muskus is na opening 8 maanden houdbaar. Als de musk daarentegen gesloten is, kun je hem 12 maanden bewaren.</p>"
+          }
+        },
+        "text_CKb4yM": {
+          "type": "text",
+          "settings": {
+            "title": "Is intieme muskus gevaarlijk voor de geslachtsdelen?",
+            "text": "<p>Intieme muskus is niet gevaarlijk voor de intieme delen omdat het niet in contact komt met de slijmvliezen. Volg daarom de gebruiksaanwijzing voor veilig gebruik.</p>"
+          }
+        },
+        "text_xCV8YN": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe kom je van onaangename intieme geurtjes af?",
+            "text": "<p>De oplossing is een routine die is aangepast aan je intieme zone. Onze intieme verzorgingsroutine reinigt, beschermt en parfumeert je intieme zone.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_CPTJ66",
+        "text_RHXVRy",
+        "text_4tzNEH",
+        "text_6NfPQV",
+        "text_XBJD73",
+        "text_Lz73Ec",
+        "text_CKb4yM",
+        "text_xCV8YN"
+      ],
+      "settings": {
+        "layout": "two-columns",
+        "show_accordion_divider": false,
+        "title": "Twijfel je nog?",
+        "subheading": "",
+        "text": "",
+        "tabs_bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
+        "bg_color_secondary": false,
+        "flo_bg_color": "",
+        "text_color": "text-dark",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "limit": 4,
+        "product_recommendations_heading": "You May Also Like",
+        "bg_color": "",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_icons_row_FLKCNP",
+    "section_icons_row_cHh738",
+    "section_image_with_text_EBF9Mp",
+    "section_image_with_text_XK9Vib",
+    "section_icons_row_tbFKHV",
+    "section_image_with_text_zNp3JU",
+    "section_image_with_text_4FrxiU",
+    "section_accordions_WzFwpL",
+    "related"
+  ]
+}
