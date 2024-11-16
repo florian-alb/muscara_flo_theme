@@ -405,6 +405,102 @@
         "padding_bottom": 60
       }
     },
+    "section_image_with_text_XK9Vib": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "layout": "inline",
+        "image_location": "right",
+        "image_width": "standard",
+        "image": "shopify://shop_images/gird-3.jpg",
+        "subheading": "",
+        "title": "<p>Geef uiting aan je sensualiteit</p>",
+        "heading_highlight_type": "circle",
+        "highlight_color": "#d43747",
+        "highlight_text_color": "#000000",
+        "heading_size": 130,
+        "content": "<p>Krijg zelfvertrouwen met onze Muscara Musk. Gebruik onze geur als je geheim van verleiding en onthul je sensuele en aantrekkelijke kant.Assertief en vastberaden, La Sensuelle is niet bang om haar verlangens te laten gelden en blijft nooit onopgemerkt...</p>",
+        "text_alignment": "left",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "video_link": "",
+        "text_color": "text-dark",
+        "bg_color": "",
+        "gradient": "",
+        "section_width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_icons_row_tbFKHV": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_4KdMGf": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify://shop_images/madeInFrance_097db484-2af5-4bea-bfa7-6019aae77c1d.svg",
+            "title": "Gemaakt in Frankrijk",
+            "text": "<p>Gemaakt in Frankrijk in ons kleine familielaboratorium</p>"
+          }
+        },
+        "text_TbDyEG": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
+            "title": "Langdurige Geur",
+            "text": "<p>Een betoverende geur die de hele dag blijft hangen</p>"
+          }
+        },
+        "text_CX9jAE": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
+            "title": "Andocrien verstoringsmiddelvrij",
+            "text": "<p>Muscara intieme muskus is 100% veilig voor de huid.</p>"
+          }
+        },
+        "text_bed4yH": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "icon_image": "shopify://shop_images/safe_ff1821fc-970c-46fe-8d92-ce4a01cde188.svg",
+            "title": "Veilig voor de huid",
+            "text": "<p>Muscara is dermatologisch getest</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_4KdMGf",
+        "text_TbDyEG",
+        "text_CX9jAE",
+        "text_bed4yH"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 4,
+        "icons_width": 180,
+        "icons_width_mobile": 100,
+        "heading": "",
+        "subheading": "",
+        "bg_color": "",
+        "text_color": "#000000",
+        "box_color": "",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "enable_slider_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "related": {
       "type": "related-products",
       "disabled": true,
@@ -423,6 +519,8 @@
     "section_icons_row_FLKCNP",
     "section_icons_row_cHh738",
     "section_image_with_text_EBF9Mp",
+    "section_image_with_text_XK9Vib",
+    "section_icons_row_tbFKHV",
     "related"
   ]
 }
