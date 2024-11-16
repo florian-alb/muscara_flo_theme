@@ -530,7 +530,7 @@
         "text_block_D8AjJX": {
           "type": "text_block",
           "settings": {
-            "image": "shopify://shop_images/11_ab47a6a4-38e9-44b5-b822-0d6a0b327919.jpg",
+            "image": "shopify://shop_images/muscs-pile_036a36b2-bced-4183-954e-f31bc09a85b3.jpg",
             "title": "Langdurige frisheid 💖",
             "text": "<h3>Intieme muskus</h3><p>❤︎ Absorbeert onaangename geurtjes<br/>❤︎ Kleeft niet aan de huid<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
             "button_text": "Bekijk de producten",
@@ -545,7 +545,7 @@
         "text_block_9tPNfT": {
           "type": "text_block",
           "settings": {
-            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0010_Groupe1_a8b08983-2460-4e76-a99d-1bd9ec4f9c62.jpg",
+            "image": "shopify://shop_images/deo-seul_2259a79a-0792-4e71-abb8-01dc6ebc838a.jpg",
             "title": "98% ingrediënten van natuurlijke oorsprong 🌱",
             "text": "<h3>Vaste deodorants</h3><p>❤︎ Zeg vaarwel tegen vochtige oksels<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
             "button_text": "Bekijk de producten",
@@ -560,7 +560,7 @@
         "text_block_3ARE9U": {
           "type": "text_block",
           "settings": {
-            "image": "shopify://shop_images/MUSCARAFORMATCARREparDigitalabs_0009_Groupe2_a59e7ee8-ed28-4ef9-a515-f047d8aeea2d.jpg",
+            "image": "shopify://shop_images/mist-coton.jpg",
             "title": "Langdurige fixatie - Zonder alcohol 🌞",
             "text": "<h3>Alcoholvrije bodymist</h3><p>❤︎ Lichte, fascinerende geur<br/>❤︎ Geen onaangename geurtjes meer<br/>❤︎ Sensuele geur voor 48 uur<br/><br/></p>",
             "button_text": "Bekijk de producten",
@@ -592,7 +592,7 @@
         "text_size": 100,
         "bg_color_secondary": false,
         "color_borders": "#000000",
-        "bg_color_cards": "{{ shop.brand.colors.secondary[0].background }}",
+        "bg_color_cards": "{{ shop.brand.colors.secondary[1].background }}",
         "layout_mobile": "carousel",
         "width": "wrapper",
         "padding_top": 60,
