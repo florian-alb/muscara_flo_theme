@@ -234,7 +234,7 @@
         "icons_width_mobile": 100,
         "heading": "De hele dag door een betoverende geur",
         "subheading": "",
-        "bg_color": "",
+        "bg_color": "rgba(0,0,0,0)",
         "text_color": "#333333",
         "box_color": "",
         "button_text": "",
