@@ -35,21 +35,13 @@
             "padding_bottom": 20
           }
         },
-        "text_8Nkzpf": {
-          "type": "text",
-          "settings": {
-            "title": "<p>Verrijk je intimiteit met een frisheid die tot 48 uur aanhoudt met onze Muscara intieme musk.</p>",
-            "text_alignment": "left",
-            "padding_bottom": 10
-          }
-        },
         "icon_6P4Fbg": {
           "type": "icon",
           "settings": {
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
+            "icon_text": "Maskeert onaangename geurtjes",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -63,7 +55,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Parfumeer je intimiteit",
+            "icon_text": "Sensuele geur voor 48 uur",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -152,7 +144,6 @@
         "text_fmhiPm",
         "title",
         "price_HxrNeJ",
-        "text_8Nkzpf",
         "icon_6P4Fbg",
         "icon_8PdQjF",
         "icon_nYCiTL",
