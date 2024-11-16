@@ -35,6 +35,14 @@
             "padding_bottom": 20
           }
         },
+        "text_KNW9Vn": {
+          "type": "text",
+          "settings": {
+            "title": "<p>Onwankelbaar vertrouwen van 's ochtends vroeg tot 's avonds laat!</p>",
+            "text_alignment": "left",
+            "padding_bottom": 20
+          }
+        },
         "icon_6P4Fbg": {
           "type": "icon",
           "settings": {
@@ -144,6 +152,7 @@
         "text_fmhiPm",
         "title",
         "price_HxrNeJ",
+        "text_KNW9Vn",
         "icon_6P4Fbg",
         "icon_8PdQjF",
         "icon_nYCiTL",
