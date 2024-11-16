@@ -326,20 +326,6 @@
             "padding_bottom": 10
           }
         },
-        "icon_bFwPkm": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "heart",
-            "icon_color": "",
-            "icon_width": 20,
-            "icon_text": "Free shipping over $99",
-            "text_size": 90,
-            "width": "full",
-            "text_alignment": "left",
-            "bg_color": "",
-            "padding_bottom": 10
-          }
-        },
         "icon_U7iqhe": {
           "type": "icon",
           "settings": {
@@ -373,7 +359,6 @@
         "icon_QNeFJB",
         "icon_txf398",
         "icon_pgYFEb",
-        "icon_bFwPkm",
         "icon_U7iqhe",
         "icon_rEU37L"
       ],
