@@ -38,7 +38,7 @@
         "text_KNW9Vn": {
           "type": "text",
           "settings": {
-            "title": "<p>Onwankelbaar vertrouwen van 's ochtends vroeg tot 's avonds laat!</p>",
+            "title": "<p>Het is veel meer dan een deodorant, het is een dagelijkse bondgenoot voor vrouwelijke frisheid en een verleidelijk effect.</p>",
             "text_alignment": "left",
             "padding_bottom": 20
           }
@@ -117,12 +117,32 @@
             "padding_bottom": 20
           }
         },
+        "product_accordion_DnrBTd": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Onwankelbaar vertrouwen van 's ochtends vroeg tot 's avonds laat!",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Laat de delicate geur van onze deodorant je geheime bondgenoot zijn, je zelfvertrouwen en charisma een boost geven, je een aanwezigheid geven die niet onopgemerkt zal blijven, terwijl je subtiel op de achtergrond blijft van je natuurlijke uitstraling.</p><p>Laat je strelen door witte musk, een pure geur die je vrouwelijkheid wekt met een betoverend vleugje mysterie.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
           "type": "product_accordion",
           "settings": {
             "accordion_heading": "Samenstelling",
             "heading_style": "font-body",
-            "accordion_text": "<p>Parfum, tricyclodecaan-4,8-dimethanol, glycerine, benzylsalicylaat, alfa-Isomethylionon, geraniol, cumarine, hydroxycitronellal, water</p>",
+            "accordion_text": "<p>Aqua, Triethyl Citrate, Pentylene Glycol, Glycerin, Bambusa Arundinacea Stem Powder, Bentonite, Coco-Caprylate/Caprate, Parfum, Lauryl Glucoside, Polyglyceryl-2-Dipolyhydroxystearate, Xanthan Gum, Glyceryl Caprylate/Caprate, Acide citrique, Bisabolol, Menthol, Lactate de Menthyle, Alpha-Isométhyl Ionone, Hexyl Cinnamal, Linalool, Coumarin, Hydroxycitronellal, Citronellol, Tocopherol.<br/><br/>Elk ingrediënt in onze deodorant is zorgvuldig geselecteerd om je de natuurlijke frisheid en verzorging te geven die je huid verdient. Geniet van langdurige bescherming terwijl je je huid verwent met zachte, effectieve ingrediënten.</p>",
+            "accordion_page": "",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion_bNAxGJ": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Alcoholvrij, aluminiumvrij",
+            "heading_style": "font-body",
+            "accordion_text": "<p>Geniet van pure, natuurlijke bescherming met onze alcohol- en aluminiumvrije deodorant, ontworpen om je huid te respecteren en haar natuurlijke balans en gezondheid te behouden.</p><p>Onze alcohol- en aluminiumvrije deodorant biedt een zacht, veilig alternatief voor je dagelijkse welzijn, en zorgt voor langdurige frisheid zonder afbreuk te doen aan je comfort of gezondheid.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -130,9 +150,9 @@
         "e50c5bee-4feb-45c5-b222-cf535a25401d": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Belangrijke veiligheidsaanwijzingen",
+            "accordion_heading": "Onfeilbare bescherming",
             "heading_style": "font-body",
-            "accordion_text": "<p>Vraag uw arts om advies (zwangere vrouwen of vrouwen die zwanger willen worden - vrouwen die borstvoeding geven - vrouwen in de menopauze).</p><p>Niet aanbrengen op of aan de binnenkant van slijmvliezen, maar rond warme lichaamsdelen.</p><p>Zoals met alle cosmetische producten moet je het product voor elk gebruik op je pols testen om te controleren of er geen reacties zijn.</p>",
+            "accordion_text": "<p>Voor compromisloze bescherming is onze deodorant de ultieme oplossing. Hij biedt optimale bescherming en zorgt voor een perfecte balans tussen doeltreffendheid en huidverzorging, zodat je de vrijheid hebt om elk moment ten volle te beleven zonder je zorgen te maken over lichaamsgeur.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -159,7 +179,9 @@
         "flo_product_countdown_ybrwMt",
         "form",
         "flo_stock_scarcity_Mj4TRX",
+        "product_accordion_DnrBTd",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
+        "product_accordion_bNAxGJ",
         "e50c5bee-4feb-45c5-b222-cf535a25401d",
         "product_accordion_6PRWiY"
       ],
