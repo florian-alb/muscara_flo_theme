@@ -567,29 +567,50 @@
         "text_CPTJ66": {
           "type": "text",
           "settings": {
-            "title": "How long does it take to get my products?",
-            "text": "<p>Domestic shipping can take up to 5 business days.<br/><br/>Foreign shipping could take up to 14 business days.<br/><br/>Due to global supply chain challenges, shipping times could be longer than usual.</p>"
+            "title": "Wat is intieme muskus?",
+            "text": "<p>Allereerst is intieme muskus een product dat speciaal is ontwikkeld voor vrouwen. Het zorgt voor een langdurige geur voor het lichaam. Deze muskus is geïnspireerd op een oosterse traditie en is erg populair in landen in het Midden-Oosten. Het is het perfecte product om je de hele dag en nacht fris, schoon en vrouwelijk te voelen...</p>"
           }
         },
         "text_RHXVRy": {
           "type": "text",
           "settings": {
-            "title": "Do you offer warranty for your products?",
-            "text": "<p>All our products are subject to quality control.<br/><br/>Our warranty provides a guarantee against manufacturer defects.<br/><br/>The guarantee covers any manufacturing, design, or material defect. Please notify us within 2 months of noticing any defects.<br/><br/>It does not cover blows, improper use, or other issues that are not attributable to a manufacturer defects.</p>"
+            "title": "Waar laat je intieme muskus?",
+            "text": "<p>Intieme muskus wordt aangebracht op warme delen van het lichaam zodat de delicate geur zich na verloop van tijd kan verspreiden. Deze gebieden zijn onder andere<br/><br/>- liezen (rond het kruis)<br/><br/>- nek<br/><br/>- pols<br/><br/>- De holte van de borst</p>"
           }
         },
         "text_4tzNEH": {
           "type": "text",
           "settings": {
-            "title": "Do you offer refunds?",
-            "text": "<p>Yes, we offer full and partial refunds.<br/><br/>Please enquire for more information about our Refund policy.</p>"
+            "title": "Hoe wordt Musc intime (Tahara muskus) gebruikt?",
+            "text": "<p>Met je vinger rechtstreeks op de huid aanbrengen, als een bodycrème. Het is zeer geconcentreerd, dus slechts één druppel musk is genoeg om je langdurig te parfumeren. Bovendien is het dankzij de unieke geltextuur makkelijk aan te brengen en blijft de muskus niet aan de huid plakken. Al met al zal je huid dankzij onze intieme musk de hele dag geuren!</p>"
           }
         },
         "text_XBJD73": {
           "type": "text",
           "settings": {
-            "title": "What shipping methods do you offer?",
-            "text": "<p>We use all major carriers, and local courier partners. Use the shipping estimator in the cart to check your shipping rates.</p>"
+            "title": "Hoe wordt witte muskus (tahara muskus) gemaakt?",
+            "text": "<p>Onze intieme muskus is ontwikkeld in een Frans laboratorium. Het is ook dermatologisch getest en gevalideerd door een expert in toxicologie. Het heeft alle geldende wettelijke tests doorstaan en is gevalideerd en voldoet aan de MADE IN FRANCE cosmeticastandaarden.</p>"
+          }
+        },
+        "text_Lz73Ec": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe lang is muskus houdbaar?",
+            "text": "<p>Intieme muskus is na opening 8 maanden houdbaar. Als de musk daarentegen gesloten is, kun je hem 12 maanden bewaren.</p>"
+          }
+        },
+        "text_CKb4yM": {
+          "type": "text",
+          "settings": {
+            "title": "Is intieme muskus gevaarlijk voor de geslachtsdelen?",
+            "text": "<p>Intieme muskus is niet gevaarlijk voor de intieme delen omdat het niet in contact komt met de slijmvliezen. Volg daarom de gebruiksaanwijzing voor veilig gebruik.</p>"
+          }
+        },
+        "text_xCV8YN": {
+          "type": "text",
+          "settings": {
+            "title": "Hoe kom je van onaangename intieme geurtjes af?",
+            "text": "<p>De oplossing is een routine die is aangepast aan je intieme zone. Onze intieme verzorgingsroutine reinigt, beschermt en parfumeert je intieme zone.</p>"
           }
         }
       },
@@ -597,7 +618,10 @@
         "text_CPTJ66",
         "text_RHXVRy",
         "text_4tzNEH",
-        "text_XBJD73"
+        "text_XBJD73",
+        "text_Lz73Ec",
+        "text_CKb4yM",
+        "text_xCV8YN"
       ],
       "settings": {
         "layout": "two-columns",
