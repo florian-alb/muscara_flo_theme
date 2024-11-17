@@ -12,6 +12,12 @@
     "main": {
       "type": "product",
       "blocks": {
+        "flo_product_bundles_Hhh7Pp": {
+          "type": "flo-product-bundles",
+          "settings": {
+            "bg_color": "#f7e2ed"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -161,6 +167,7 @@
         }
       },
       "block_order": [
+        "flo_product_bundles_Hhh7Pp",
         "title",
         "price_HxrNeJ",
         "text_8Nkzpf",
