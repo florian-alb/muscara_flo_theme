@@ -1,10 +1,7 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
-  {% for items in bundle_1.product_variants %}
+  {% for items in bundle_1.product_variants.value %}
     {{ items | json }}
-    {% for variant in item.product_variants.value %}
-      {{ variant.product.title }}
-    {% endfor %}
   {% endfor %}
 </div>
 
