@@ -12,8 +12,8 @@
     "main": {
       "type": "product",
       "blocks": {
-        "flo_product_bundles_Hhh7Pp": {
-          "type": "flo-product-bundles",
+        "flo_bundle_3HTbiP": {
+          "type": "flo_bundle",
           "settings": {
             "bg_color": "#f7e2ed"
           }
@@ -167,7 +167,7 @@
         }
       },
       "block_order": [
-        "flo_product_bundles_Hhh7Pp",
+        "flo_bundle_3HTbiP",
         "title",
         "price_HxrNeJ",
         "text_8Nkzpf",
