@@ -4,7 +4,6 @@
       {% for metaobject in bundle %}
         {{ metaobject }}
         {% assign quantity = metaobject.variant_quantity | times: 1 %}
-        {{ quantity | json }}
         {% for product_quantity in (1..quantity) %}
           <select>
             {% for variant in metaobject.product_variants.value %}
