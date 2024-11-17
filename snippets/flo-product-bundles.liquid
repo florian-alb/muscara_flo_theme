@@ -1,6 +1,7 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
   <select>
+    {{ bundle_1 | json }}
     {% for item in bundle_1 %}
       {% for variant in item.product_variants.value %}
         <option value="{{ variant.id }}">
