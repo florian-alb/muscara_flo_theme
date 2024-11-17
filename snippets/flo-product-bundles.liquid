@@ -2,7 +2,7 @@
 <div>
   {% for item in bundle_1 %}
     {% assign variants = item.product_variants.value %}
-    {{ variants.title }}
+    {{ variants | json }}
   {% endfor %}
 </div>
 
