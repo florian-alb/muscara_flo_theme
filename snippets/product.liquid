@@ -351,6 +351,14 @@
                   {{ app_code }}
                 </div>
               {%- endif -%}
+            {% when 'flo_bundle' %}
+              <div
+                class="product__block product__flo-bundle"
+                id="ProductFloBundle--{{ section.id }}-{{ block.id }}"
+                {{ block_style }}
+              >
+                {% render 'flo-product-bundles', section: section %}
+              </div>
 
             {% when 'flo-stock-scarcity' %}
               <div
