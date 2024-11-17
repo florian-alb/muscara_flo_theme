@@ -6,6 +6,7 @@ bundles here 1
     {% for item in product.metafields.custom.product_bundle_1 %}
       <li>
         {{ item.product_bundle_item.product }}
+        {{ item.product_bundle_item.product_quantity }}
       </li>
     {% endfor %}
   </ul>
