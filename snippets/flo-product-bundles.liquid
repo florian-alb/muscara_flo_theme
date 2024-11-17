@@ -1,63 +1,34 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
-  <ul>
-    {% for item in bundle_1 %}
-      {% assign product = item.product.value.title %}
-
-      <div class="custom_bundle_creator">
-        <h3>Create your bundle</h3>
-        <div class="form_custom" id="bundleForm" method="post" enctype="multipart/form-data">
-          {% assign in_stock = true %}
-          {% if product.available != true %}
-            {% assign in_stock = false %}
-          {% endif %}
-          <div class="custom_option">
-            <span class="custom_bundle_product_handle" id="{{ product.handle }}">{{ product.title }}</span>
-            <div class="custom_bundle_options">
-              {% for product_option in product.options_with_values %}
-                <div class="custom_bundle_option">
-                  <label for="option{{ product_option.position }}">{{ product_option.name }}</label>
-                  <select
-                    name="option{{ product_option.position }}"
-                    class="custom_select"
-                    data-option="option{{ product_option.position }}"
-                    data-product="{{ product.handle }}"
-                  >
-                    {% for option in product_option.values %}
-                      {% if option.available %}
-                        <option value="{{ option }}">
-                          {{ option }}
-                        </option>
-                      {% else %}
-                        <option value="{{ option }}" disabled>
-                          {{ option }}
-                        </option>
-                      {% endif %}
-                    {% endfor %}
-                  </select>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-
-          <button class="bundle_atc btn--2" id="addBundle">
-            <span class="btn__text">
-              {%- if in_stock -%}
-                {{- 'products.product.add_to_cart' | t -}}
-              {%- else -%}
-                {{- 'products.product.sold_out' | t -}}
-              {%- endif -%}
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <li>
-        {{ item.product.value.title }}
-        {{ item.product_quantity }}
-      </li>
-    {% endfor %}
-  </ul>
+  {% form 'product' %}
+    <fieldset>
+      {% for item in bundle_1 %}
+        {% assign product = item.product.value.title %}
+        {%- capture input_id -%}{{ unique }}-{{ product.id }}-{{ option.name | escape_once }}-{{ value | escape_once }}{%- endcapture -%}
+        <span class="radio__button">
+          <input
+            type="radio"
+            class="radio__input"
+            data-single-option-selector
+            data-index="{{ forloop.index }}"
+            name="options[{{ product.variants[0] | escape_once }}]"
+            value="{{ product.variants[0] | escape_once }}"
+            id="{{ input_id }}"
+            {% if value == 1 %}
+              checked
+            {% endif %}
+          >
+          <label for="{{ input_id }}" class="radio__label">
+            <span>{{ value | escape_once }}</span>
+          </label>
+        </span>
+        <li>
+          {{ item.product.value.title }}
+          {{ item.product_quantity }}
+        </li>
+      {% endfor %}
+    </fieldset>
+  {% endform %}
 </div>
 
 {% style %}
