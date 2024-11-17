@@ -1,4 +1,4 @@
-{% assign bundle_1 = product.metafields.flo_product_bundle %}
+{% assign bundle_1 = product.metafields.flo_product_bundle.product_bundle_1 %}
 <div class="flo_bundles">
   {% for metaobject in bundle_1 %}
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
