@@ -3,7 +3,7 @@
   <select>
     {% for item in bundle_1 %}
       {% for variant in item.product_variants.value %}
-        <option>
+        <option value="{{ option }}">
           {{ variant.product.title }}
         </option>
       {% endfor %}
