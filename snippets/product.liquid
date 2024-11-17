@@ -357,7 +357,7 @@
                 id="ProductFloBundle--{{ section.id }}-{{ block.id }}"
                 {{ block_style }}
               >
-                {% render 'flo-product-bundles', section: section %}
+                {% render 'flo-product-bundles', section: section, product: product %}
               </div>
 
             {% when 'flo-stock-scarcity' %}
