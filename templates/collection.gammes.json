@@ -297,8 +297,8 @@
           "type": "text_block",
           "settings": {
             "image": "shopify://shop_images/serum.jpg",
-            "title": "1 - Des cosmétiques naturels, vegan et testés dermatologiquement",
-            "text": "<p>Fabriqués à Grasse, en France, avec des ingrédients clean, 100% safe pour ton corps et de haute qualité pour une hygiène intime respectueuse du corps des femmes et de l’environnement. </p>",
+            "title": "1 - Natuurlijke, veganistische en dermatologisch geteste cosmetica",
+            "text": "<p>Gemaakt in Grasse, Frankrijk, met schone ingrediënten, 100% veilig voor je lichaam en van hoge kwaliteit voor intieme hygiëne met respect voor vrouwenlichamen en het milieu.</p>",
             "button_text": "",
             "button_link": "",
             "button_color": "btn--black",
@@ -311,8 +311,8 @@
         "text_block_DnHnRR": {
           "type": "text_block",
           "settings": {
-            "title": "2 - Plus de 50.000 femmes conquises ⭐⭐⭐⭐⭐",
-            "text": "<p>Des dizaines de milliers de femmes à travers le monde ont craqué pour le gel n°1 aux Pays-Bas. Unique, ultra frais, il ne colle pas la peau et parfume délicieusement les zones chaudes.</p>",
+            "title": "2 - Meer dan 50.000 vrouwen gewonnen ⭐⭐⭐⭐⭐",
+            "text": "<p>Tienduizenden vrouwen over de hele wereld zijn gevallen voor de nummer 1 gel in Nederland. Uniek, ultrafris, kleeft niet aan de huid en ruikt heerlijk naar hotspots.</p>",
             "button_text": "",
             "button_link": "",
             "button_color": "btn--black",
@@ -326,8 +326,8 @@
           "type": "text_block",
           "settings": {
             "image": "shopify://shop_images/gird-5-no-prod.jpg",
-            "title": "3 - Un parfum envoutant, subtil, léger et longue durée",
-            "text": "<p>Des fragrances délicates qui captivent tout en douceur, enveloppant votre peau d’une aura raffinée pour une expérience sensorielle inoubliable tout au long de la journée.</p>",
+            "title": "3 - Een betoverende, subtiele, lichte en langdurige geur",
+            "text": "<p>Delicate geuren die zachtjes betoveren en je huid hullen in een verfijnd aura voor een onvergetelijke zintuiglijke ervaring, de hele dag lang.</p>",
             "button_text": "",
             "button_link": "",
             "button_color": "btn--black",
@@ -340,8 +340,9 @@
         "text_block_emxwPf": {
           "type": "text_block",
           "settings": {
-            "title": "4 - Ne laisse pas les mauvaises odeurs te gâcher la vie",
-            "text": "<p>Nos gels, déos et brumes parfumées neutralisent les mauvaises odeurs et parfument délicatement, pour une sensation de propreté et de fraicheur qui dure jusqu’à 48h. 💧</p>",
+            "image": "shopify://shop_images/MUSCARA_par_digitalabs__0000_Remplissage_generatif_34.jpg",
+            "title": "4 - Laat nare geurtjes je leven niet bederven",
+            "text": "<p>Onze gels, deodorants en geurnevels neutraliseren onaangename geurtjes en parfumeren de huid op milde wijze, zodat deze tot 48 uur lang schoon en fris aanvoelt. 💧</p>",
             "button_text": "",
             "button_link": "",
             "button_color": "btn--black",
@@ -355,8 +356,8 @@
           "type": "text_block",
           "settings": {
             "image": "shopify://shop_images/10_5c3087fc-6052-46dc-94e8-e0a4d76f3800.jpg",
-            "title": "5. Avec Muscara, pas le temps de s’ennuyer !",
-            "text": "<p>Tu as le choix parmi 5 délicieuses fragrances selon ton mood et tes envies ! Une chose est sure, tu vas rendre fous tous ceux qui t’entourent 😍 Alors, pour quel parfum vas-tu succomber ?</p>",
+            "title": "5. Met Muscara is er geen tijd voor verveling!",
+            "text": "<p>Je kunt kiezen uit 5 heerlijke geuren die passen bij je stemming en je verlangens! Eén ding is zeker, je zult iedereen om je heen gek maken 😍 Dus voor welke geur val jij?</p>",
             "button_text": "",
             "button_link": "",
             "button_color": "btn--black",
