@@ -1,30 +1,9 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
-  <form>
-    <fieldset>
-      {% for item in bundle_1 %}
-        {% assign product = item.product.value.title %}
-        {%- capture input_id -%}{{ unique }}-{{ product.id }}-{{ option.name | escape_once }}-{{ value | escape_once }}{%- endcapture -%}
-        <span class="radio__button">
-          <input
-            type="radio"
-            class="radio__input"
-            data-single-option-selector
-            data-index="{{ forloop.index }}"
-            name="options[{{ product.variants[0] | escape_once }}]"
-            value="{{ product.variants[0] | escape_once }}"
-            id="{{ input_id }}"
-            {% if value == 1 %}
-              checked
-            {% endif %}
-          >
-          <label for="{{ input_id }}" class="radio__label">
-            <span>{{ value | escape_once }}</span>
-          </label>
-        </span>
-      {% endfor %}
-    </fieldset>
-  </form>
+  {% for item in bundle_1 %}
+    {% assign product = item.product.value.title %}
+    {{ product.option1 }}
+  {% endfor %}
 </div>
 
 {% style %}
