@@ -1,6 +1,6 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
-  {% form 'product' %}
+  <form>
     <fieldset>
       {% for item in bundle_1 %}
         {% assign product = item.product.value.title %}
@@ -28,7 +28,7 @@
         </li>
       {% endfor %}
     </fieldset>
-  {% endform %}
+  </form>
 </div>
 
 {% style %}
