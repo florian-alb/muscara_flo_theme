@@ -2,7 +2,7 @@
 <div>
   {% for variants in bundle_1.product_variants.value %}
     {{ variants | json }}
-    {% for variant in variants %}
+    {% for variant in variants.value %}
       {{ variant | json }}
     {% endfor %}
   {% endfor %}
