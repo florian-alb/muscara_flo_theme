@@ -1,4 +1,5 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
+{{ bundle_1 | json }}
 <div>
   {% assign quantity = bundle_1.variant_quantity | times: 1 %}
   {% for product_quantity in (1..quantity) %}
