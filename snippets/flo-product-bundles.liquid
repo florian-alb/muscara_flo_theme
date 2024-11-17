@@ -4,9 +4,7 @@ bundles here 1
   <ul>
     {% for item in product.metafields.custom.product_bundle_1.value %}
       <li>
-        {{ item | json }}
-        {{ item.product_bundle_item.product }}
-        {{ item.product_bundle_item.product_quantity }}
+        {{ item.product | json }}
       </li>
     {% endfor %}
   </ul>
