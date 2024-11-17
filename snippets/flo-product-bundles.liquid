@@ -1,9 +1,9 @@
 bundles here 1
 
 <div>
-  {{ product.metafields.custom.product_bundle_1 }}
+  {{ product.metafields.custom.product_bundle_1.value }}
   <ul>
-    {% for item in product.metafields.custom.product_bundle_1 %}
+    {% for item in product.metafields.custom.product_bundle_1.value %}
       <li>
         {{ item.product_bundle_item.product }}
         {{ item.product_bundle_item.product_quantity }}
