@@ -1,14 +1,16 @@
 {% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
-  <select>
-    {% for item in bundle_1 %}
-      {% for variant in item.product_variants.value %}
-        <option value="{{ variant.id }}">
-          {{ variant.product.title }}
-        </option>
+  {% for _ in (0..{{ item.product_quantity }} %}
+    <select>
+      {% for item in bundle_1 %}
+        {% for variant in item.product_variants.value %}
+          <option value="{{ variant.id }}">
+            {{ variant.product.title }}
+          </option>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-  </select>
+    </select>
+  {% endfor %}
 </div>
 
 {% style %}
