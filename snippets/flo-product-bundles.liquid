@@ -1,7 +1,10 @@
 bundles here 1
 
+<script>
+  console.log('product', {{ product }})
+</script>
+
 <div>
-  {{ product }}
   {% for metafield in product.metafields %}
     {{ metafield }}
   {% endfor %}
