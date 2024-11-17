@@ -1,8 +1,7 @@
-bundles here 1
-
+{% assign bundle_1 = product.metafields.custom.product_bundle_1.value %}
 <div>
   <ul>
-    {% for item in product.metafields.custom.product_bundle_1.value %}
+    {% for item in bundle_1 %}
       <li>
         {{ item.product }}
         {{ item.product_quantity }}
