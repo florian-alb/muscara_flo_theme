@@ -2,11 +2,12 @@
   {% for bundle in product.metafields.flo_product_bundle %}
     <div>
       {% for metaobject in bundle %}
-        {% assign quantity = metaobject.value.variant_quantity | times: 1 %}
+        {{ metaobject }}
+        {% assign quantity = metaobject.variant_quantity | times: 1 %}
         {{ quantity | json }}
         {% for product_quantity in (1..quantity) %}
           <select>
-            {% for variant in metaobject.value.product_variants.value %}
+            {% for variant in metaobject.product_variants.value %}
               <option value="{{ variant.id }}">
                 {{ variant.product.title }}
               </option>
