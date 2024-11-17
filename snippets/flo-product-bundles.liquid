@@ -2,6 +2,7 @@
 <div>
   {% for item in bundle_1 %}
     {% for variant in item.product_variants.value %}
+      {{ variant | json }}
     {% endfor %}
   {% endfor %}
 </div>
