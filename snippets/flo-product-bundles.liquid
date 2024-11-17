@@ -1,9 +1,7 @@
 bundles here 1
 
-{{ product.metafields.custom.product_bundle_1 }}
-
 <div>
-  {% for metafield in product.metafields %}
+  {% for item in product.metafields.custom.product_bundle_1 %}
     1
     {{ metafield.type }}
   {% endfor %}
