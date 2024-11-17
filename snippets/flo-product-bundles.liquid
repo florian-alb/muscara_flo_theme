@@ -1,27 +1,18 @@
-<div class="flo_bundles">
-  {% for bundle in product.metafields.flo_product_bundle %}
-    <div>
-      {{ bundle }}
-      {% for metaobject in bundle %}
-        {{ metaobject }}
-        {% assign quantity = metaobject.variant_quantity | times: 1 %}
-        {% for product_quantity in (1..quantity) %}
-          <select>
-            {% for variant in metaobject.product_variants.value %}
-              <option value="{{ variant.id }}">
-                {{ variant.product.title }}
-              </option>
-            {% endfor %}
-          </select>
+{% assign bundle_1 = product.metafields.flo_product_bundle %}
+<div>
+  {% for metaobject in bundle_1 %}
+    {% assign quantity = metaobject.variant_quantity | times: 1 %}
+    {% for product_quantity in (1..quantity) %}
+      <select>
+        {% for variant in metaobject.product_variants.value %}
+          <option value="{{ variant.id }}">
+            {{ variant.product.title }}
+          </option>
         {% endfor %}
-      {% endfor %}
-    </div>
+      </select>
+    {% endfor %}
   {% endfor %}
 </div>
+
 {% style %}
-  .flo_bundles{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-  }
 {% endstyle %}
