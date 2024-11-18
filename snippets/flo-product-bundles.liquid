@@ -3,7 +3,6 @@
   <div class="flo_bundles">
     {% for metaobject in bundle_1 %}
       {% assign quantity = metaobject.variant_quantity | times: 1 %}
-<<<<<<< HEAD
       {% for product_quantity in (1..quantity) %}
         <div class="flo_bundles_offer_selector">
           <span class="custom_bundle_product_handle">
@@ -39,30 +38,25 @@
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
       <div class="flo_bundles_offer_slector">
-=======
-      <div class="flo_bundles_offer_selector">
->>>>>>> 36372f7f0a15b8e8030df105011cdd4f570da8ac
         <span class="custom_bundle_product_handle">
           {{ metaobject.product_title.value }}
           {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
         </span>
-
-        <select class="custom_select" name="items[{{ forloop.index0 }}][id]">
+        <select class="custom_select">
           {% for variant in metaobject.product_variants.value %}
-            {% if variant.available %}
-              <option value="{{ variant.id }}">
-                {{ variant.title }}
-              </option>
+            {% if variant.available == false and in_stock == true %}
+              {% assign in_stock = false %}
             {% endif %}
+            <option value="{{ variant.id }}">
+              {{ variant.product.title }}
+            </option>
           {% endfor %}
         </select>
-
-        <input type="hidden" name="items[{{ forloop.index0 }}][quantity]" value="{{ quantity }}">
       </div>
     {% endfor %}
-  </div>
+  {% endfor %}
+{% endcapture %}
 
-<<<<<<< HEAD
 <div class="flo_bundles">
   <form
     action="/cart/add"
@@ -90,10 +84,6 @@
     </button>
   </form>
 </div>
-=======
-  <button type="submit">Add Bundle to Cart</button>
-</form>
->>>>>>> 36372f7f0a15b8e8030df105011cdd4f570da8ac
 
 {% style %}
   .flo_bundles {
