@@ -35,7 +35,7 @@
       const items = [];
 
       // Build the items array from the form data
-      for (let [key, value] of Object.fromEntries(formData)) {
+      for (let [key, value] of Array.from(formData)) {
         console.log('🚀 ~ value:', value);
         console.log('🚀 ~ key:', key);
       }
