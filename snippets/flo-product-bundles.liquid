@@ -20,12 +20,35 @@
   {% endfor %}
 </div>
 
+<button
+  type="submit"
+  name="add"
+  id="AddToCart--{{ unique }}"
+  class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
+  data-add-to-cart
+  {% if show_newsletter %}
+    data-notification-popup="{%- render 'notification-form', product_title: product.title, product_subtitle: current_variant.title, product_id: current_variant.id -%}"
+  {% endif %}
+>
+  <span data-add-to-cart-text>
+    {%- if current_variant.available and product.tags contains '_preorder' -%}
+      {{ 'products.product.preorder' | t }}
+    {%- elsif current_variant.available -%}
+      {{ 'products.product.add_to_cart' | t }}
+    {%- else -%}
+      {{ sold_out_text }}
+    {%- endif -%}
+  </span>
+
+  <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
+</button>
+
 {% style %}
-    .flo_bundles {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+  .flo_bundles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
   .flo_bundles_offer_slector {
     border: 2px solid #de9fc2;
@@ -38,27 +61,26 @@
     justify-content: space-between;
   }
 
-    .custom_select {
-      line-height: 23px;
-      position: static;
-      opacity: 1;
-      display: block;
-      background-position: right 10px center !important;
-      border-radius: 3px;
-      border: 1px solid #000;
-      font-size: 16px;
-      float: left;
-      width: 200px;
-      min-height: 25px;
-      height: 25px;
-      padding: 0 25px 0 3px;
-      margin: 0;
-      color: #000;
-          overflow: hidden;
+  .custom_select {
+    line-height: 23px;
+    position: static;
+    opacity: 1;
+    display: block;
+    background-position: right 10px center !important;
+    border-radius: 3px;
+    border: 1px solid #000;
+    font-size: 16px;
+    float: left;
+    width: 200px;
+    min-height: 25px;
+    height: 25px;
+    padding: 0 25px 0 3px;
+    margin: 0;
+    color: #000;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .custom_bundle_product_handle{
-
+  .custom_bundle_product_handle {
   }
 {% endstyle %}
