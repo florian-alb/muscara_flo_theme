@@ -47,26 +47,7 @@
 
       console.log('items', items);
 
-      // Add each item to the cart using Shopify's AJAX API
-      const promises = items.map((item) =>
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            id: item.id,
-            quantity: parseInt(item.quantity, 10),
-          }),
-        })
-      );
 
-      // Wait for all items to be added, then open the drawer cart
-      Promise.all(promises)
-        .then(() => {})
-        .catch((error) => {
-          console.error('Error adding bundle to cart:', error);
-        });
     });
   });
 </script>
