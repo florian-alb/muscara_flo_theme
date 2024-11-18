@@ -40,6 +40,9 @@
 
       // Build the items array from the form data
       for (let [key, value] of formData.entries()) {
+        console.log('🚀 ~ value:', value);
+        console.log('🚀 ~ key:', key);
+
         const match = key.match(/items\[(\d+)\]\[(id|quantity)\]/);
         if (match) {
           const index = match[1];
