@@ -51,6 +51,11 @@
           throw new Error(`Failed to add items: ${response.statusText}`);
         }
 
+        // Fetching the updated cart data
+        const cartResponse = await fetch(window.Shopify.routes.root + 'cart.js');
+        const cartData = await cartResponse.json();
+        console.log('Cart updated:', cartData);
+
         // Open the drawer cart (replace with your theme's drawer functionality)
         if (typeof Shopify !== 'undefined' && Shopify.StorefrontCart) {
           Shopify.StorefrontCart.open();
