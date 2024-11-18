@@ -32,16 +32,14 @@
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const formData = new FormData(event.target);
-      const items = [
-      ];
+      const items = [];
 
       // Build the items array from the form data
       for (let value of Array.from(formData)) {
         const index = items.findIndex((item) => item.id === value[1]);
+        console.log("🚀 ~ index:", index)
         if (index > 0) {
-          const quantity = parseInt(items[index].quantity;
-          console.log("🚀 ~ quantity:", quantity);
-          items[index].quantity = String(quantity++);
+          String(parseInt(items[index].quantity)++);
         } else {
           items.push({"id": value[1],  "quantity": "1"})
         }
