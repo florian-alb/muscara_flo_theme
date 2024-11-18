@@ -31,32 +31,6 @@
 
 {% assign bundle_1 = product.metafields.flo_product_bundle.product_bundle_1.value %}
 
-{% capture bundle_selectors %}
-  {% assign in_stock = true %}
-
-  {% for metaobject in bundle_1 %}
-    {% assign quantity = metaobject.variant_quantity | times: 1 %}
-    {% for product_quantity in (1..quantity) %}
-      <div class="flo_bundles_offer_slector">
-        <span class="custom_bundle_product_handle">
-          {{ metaobject.product_title.value }}
-          {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
-        </span>
-        <select class="custom_select">
-          {% for variant in metaobject.product_variants.value %}
-            {% if variant.available == false and in_stock == true %}
-              {% assign in_stock = false %}
-            {% endif %}
-            <option value="{{ variant.id }}">
-              {{ variant.product.title }}
-            </option>
-          {% endfor %}
-        </select>
-      </div>
-    {% endfor %}
-  {% endfor %}
-{% endcapture %}
-
 <script>
   document.getElementById('add-bundle-button').addEventListener('click', function () {
     const form = document.getElementById('bundle-form');
@@ -78,34 +52,6 @@
 
         console.log("🚀 ~ items:", items)
 </script>
-
-<div class="flo_bundles">
-  <form
-    action="/cart/add"
-    data-productid=""
-    id="AddToCartForm--{{ section.id }}"
-    method="post"
-    data-product-form=""
-    enctype="multipart/form-data"
-    class=""
-  >
-    {{ bundle_selectors }}
-
-    <button
-      type="submit"
-      name="add"
-      id="AddToCart--{{ unique }}"
-      class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
-      data-add-to-cart
-    >
-      <span data-add-to-cart-text>
-        {{ 'products.product.add_to_cart' | t }}
-      </span>
-
-      <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
-    </button>
-  </form>
-</div>
 
 {% style %}
   .flo_bundles {
