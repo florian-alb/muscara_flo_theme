@@ -3,8 +3,10 @@
   {% for metaobject in bundle_1 %}
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
-      {{ metaobject.product_title.value }}
-      {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}}
+      <p>
+        {{ metaobject.product_title.value }}
+        {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}}
+      </p>
       <select>
         {% for variant in metaobject.product_variants.value %}
           <option value="{{ variant.id }}">
