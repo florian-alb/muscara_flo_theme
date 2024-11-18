@@ -31,6 +31,7 @@
 </form>
 
 <script>
+  <script src="{{ 'theme.dev.js' | asset_url }}"></script>;
   document.addEventListener('DOMContentLoaded', function (event) {
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
