@@ -37,26 +37,22 @@
     class=""
   >
     {{ bundle_selectors }}
+
+    <button
+      type="submit"
+      name="add"
+      id="AddToCart--{{ unique }}"
+      class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
+      data-add-to-cart
+    >
+      <span data-add-to-cart-text>
+        {{ 'products.product.add_to_cart' | t }}
+      </span>
+
+      <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
+    </button>
   </form>
 </div>
-
-<button
-  type="submit"
-  name="add"
-  id="AddToCart--{{ unique }}"
-  class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
-  data-add-to-cart
->
-  <span data-add-to-cart-text>
-    {%- if in_stock == true -%}
-      {{ 'products.product.add_to_cart' | t }}
-    {%- else -%}
-      {{ sold_out_text }}
-    {%- endif -%}
-  </span>
-
-  <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
-</button>
 
 {% style %}
   .flo_bundles {
