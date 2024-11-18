@@ -36,6 +36,7 @@
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const formData = new FormData(event.target);
+      console.log('🚀 ~ formData:', formData);
       const items = [];
 
       // Build the items array from the form data
@@ -72,8 +73,7 @@
 
       // Wait for all items to be added, then open the drawer cart
       Promise.all(promises)
-        .then(() => {
-        })
+        .then(() => {})
         .catch((error) => {
           console.error('Error adding bundle to cart:', error);
         });
