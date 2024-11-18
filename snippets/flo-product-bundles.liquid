@@ -10,7 +10,7 @@
             {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
           </span>
 
-          <select class="custom_select" name="">
+          <select class="custom_select" name="id">
             {% for variant in metaobject.product_variants.value %}
               {% if variant.available %}
                 <option value="{{ variant.id }}">
