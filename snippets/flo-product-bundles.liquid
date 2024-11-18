@@ -43,7 +43,8 @@
 
       // Build the items array from the form data
       for (let value of Array.from(formData)) {
-        const index = items.findIndex((item) => item.id === "47862934503765");
+        console.log("🚀 ~ value:", value)
+        const index = items.findIndex((item) => item.id === '47862934503765');
         console.log(index);
       }
 
