@@ -31,7 +31,9 @@
 </div>
 
 <script>
-  document.getElementById('add-bundle-button').addEventListener('click', function () {
+  const btn = document.getElementById('add-bundle-button')
+  console.log(btn)
+  btn.addEventListener('click', function () {
     console.log("click")
     const form = document.getElementById('bundle-form');
     const formData = new FormData(form);
