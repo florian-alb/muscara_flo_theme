@@ -8,7 +8,7 @@
           {{ metaobject.product_title.value }}
           {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
         </p>
-        <select>
+        <select class="custom_select">
           {% for variant in metaobject.product_variants.value %}
             <option value="{{ variant.id }}">
               {{ variant.product.title }}
