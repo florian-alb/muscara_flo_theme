@@ -32,7 +32,12 @@
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const formData = new FormData(event.target);
-      const items = [];
+      const items = [
+        {
+          id: '47862934503765',
+          quantity: '1',
+        },
+      ];
 
       // Build the items array from the form data
       for (let value of Array.from(formData)) {
