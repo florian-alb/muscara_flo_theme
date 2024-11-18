@@ -31,28 +31,7 @@
 </div>
 
 <script defer="">
-  const btn = document.querySelector('#add-bundle-button')
-  console.log(btn)
-  btn.addEventListener('click', function () {
-    console.log("click")
-    const form = document.getElementById('bundle-form');
-    const formData = new FormData(form);
-    const items = [];
-
-    // Build the items array from the form data
-    for (let [key, value] of formData.entries()) {
-      const match = key.match(/items\[(\d+)\]\[(id|quantity)\]/);
-      if (match) {
-        const index = match[1];
-        const field = match[2];
-        if (!items[index]) {
-          items[index] = {};
-        }
-        items[index][field] = value;
-      }
-    }
-
-        console.log("🚀 ~ items:", items)
+  console.log("ouiiii")
 </script>
 
 {% style %}
