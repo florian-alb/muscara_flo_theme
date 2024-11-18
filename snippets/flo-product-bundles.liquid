@@ -12,7 +12,6 @@
         </span>
         <select class="custom_select">
           {% for variant in metaobject.product_variants.value %}
-            {{ variant | json }}
             {% if variant.available == false and in_stock == true %}
               {% assign in_stock = false %}
             {% endif %}
