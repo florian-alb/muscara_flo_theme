@@ -28,28 +28,38 @@
   v-3
 </form>
 <script>
-  document.addEventListener('DOMContentLoaded', function (event) {
-    document.getElementById('bundle-form').addEventListener('submit', function (event) {
-      event.preventDefault();
+  document.addEventListener('DOMContentLoaded', function () {
+    const bundleForm = document.getElementById('bundle-form');
+
+    bundleForm.addEventListener('submit', async function (event) {
+      event.preventDefault(); // Prevent page reload
+
       const formData = new FormData(event.target);
       const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
-      console.log('🚀 ~ itemsToAdd:', itemsToAdd);
 
-      // Performs the add-to-cart request with the prepared variants.
-      const promise = fetch(window.Shopify.routes.root + 'cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: itemsToAdd }),
-      });
-
-      // Wait for all items to be added, then open the drawer cart
-      Promise.all(promise)
-        .then(() => {})
-        .catch((error) => {
-          console.error('Error adding bundle to cart:', error);
+      try {
+        // Add all items to the cart using Shopify's AJAX API
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ items: itemsToAdd }),
         });
+
+        if (!response.ok) {
+          throw new Error(`Failed to add items: ${response.statusText}`);
+        }
+
+        // Open the drawer cart (replace with your theme's drawer functionality)
+        if (typeof Shopify !== 'undefined' && Shopify.StorefrontCart) {
+          Shopify.StorefrontCart.open();
+        } else {
+          console.log('Items added to cart, but drawer cart functionality not found.');
+        }
+      } catch (error) {
+        console.error('Error adding bundle to cart:', error);
+      }
     });
   });
 </script>
