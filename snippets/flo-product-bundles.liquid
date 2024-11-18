@@ -37,7 +37,6 @@
       // Build the items array from the form data
       for (let value of Array.from(formData)) {
         const index = items.findIndex((item) => item.id === value[1]);
-        console.log("🚀 ~ index:", index)
         if (index > 0) {
           String(parseInt(items[index].quantity)++);
         } else {
