@@ -4,10 +4,10 @@
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
       <div class="flo_bundles_offer_slector">
-        <p>
+        <span class="custom_bundle_product_handle">
           {{ metaobject.product_title.value }}
           {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
-        </p>
+        </span>
         <select class="custom_select">
           {% for variant in metaobject.product_variants.value %}
             <option value="{{ variant.id }}">
