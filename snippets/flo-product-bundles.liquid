@@ -35,7 +35,23 @@
       const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
       console.log("🚀 ~ itemsToAdd:", itemsToAdd)
 
+    // Performs the add-to-cart request with the prepared variants.
+    const response = await fetch(window.Shopify.routes.root + "cart/add.js", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ items: itemsToAdd }),
+    });
 
+    if (!response.ok) {
+      throw new Error("Network response was not ok.");
+    }
+
+        // Fetching the updated cart data
+        const cartResponse = await fetch(window.Shopify.routes.root + "cart.js");
+        const cartData = await cartResponse.json();
+        console.log("Cart updated:", cartData);
     });
   });
 </script>
