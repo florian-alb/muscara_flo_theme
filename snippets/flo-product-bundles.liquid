@@ -70,7 +70,7 @@
       // Wait for all items to be added, then open the drawer cart
       Promise.all(promises)
         .then(() => {
-          getCart();
+          CartDrawer.getCart();
         })
         .catch((error) => {
           console.error('Error adding bundle to cart:', error);
