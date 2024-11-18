@@ -3,7 +3,7 @@
   {% for metaobject in bundle_1 %}
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
-      <div>
+      <div class="flo_bundles_offer_slector">
         <p>
           {{ metaobject.product_title.value }}
           {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
