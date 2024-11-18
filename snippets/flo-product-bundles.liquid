@@ -69,7 +69,10 @@
 
       // Wait for all items to be added, then open the drawer cart
       Promise.all(promises)
-        .then(() => {})
+        .then(() => {
+          const cartDrawerBtn = document.querySelector('a.navlink navlink--icon.cart__toggle');
+          if (cartDrawerBtn) cartDrawerBtn.click();
+        })
         .catch((error) => {
           console.error('Error adding bundle to cart:', error);
         });
