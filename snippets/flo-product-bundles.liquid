@@ -43,9 +43,8 @@
 
       // Build the items array from the form data
       for (let value of Array.fromEntries(formData)) {
-        if (value in items) {
-          console.log('oui');
-        }
+        const index = items.findIndex(item => item.id === targetId);
+        console.log(index);
       }
 
       console.log('items', items);
