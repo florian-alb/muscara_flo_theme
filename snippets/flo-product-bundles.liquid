@@ -3,6 +3,7 @@
   {% for metaobject in bundle_1 %}
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
+      {{ metaobject.product_title.value }}
       <select>
         {% for variant in metaobject.product_variants.value %}
           <option value="{{ variant.id }}">
@@ -15,9 +16,9 @@
 </div>
 
 {% style %}
-    .flo_bundles{
+  .flo_bundles {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
   }
 {% endstyle %}
