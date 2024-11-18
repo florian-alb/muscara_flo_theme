@@ -33,7 +33,54 @@
 <script>
   document.addEventListener('DOMContentLoaded', function (event) {
     const addToCartForms = document.querySelector('#add-bundle-button');
-    console.log('🚀 ~ addToCartForms:', addToCartForms);
+    addToCartForms.addEventListener('click', function () {
+      const form = document.getElementById('bundle-form');
+      const formData = new FormData(form);
+      const items = [];
+
+      // Build the items array from the form data
+      for (let [key, value] of formData.entries()) {
+        const match = key.match(/items\[(\d+)\]\[(id|quantity)\]/);
+        if (match) {
+          const index = match[1];
+          const field = match[2];
+          if (!items[index]) {
+            items[index] = {};
+          }
+          items[index][field] = value;
+        }
+      }
+
+      console.log('items', items);
+
+      // Add each item to the cart using Shopify's AJAX API
+      const promises = items.map((item) =>
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: item.id,
+            quantity: parseInt(item.quantity, 10),
+          }),
+        })
+      );
+
+      // Wait for all items to be added, then open the drawer cart
+      Promise.all(promises)
+        .then(() => {
+          // Replace this with your method to open the drawer cart
+          if (typeof Shopify !== 'undefined' && Shopify.StorefrontCart) {
+            Shopify.StorefrontCart.open();
+          } else {
+            console.error('Drawer cart functionality not found.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error adding bundle to cart:', error);
+        });
+    });
   });
 </script>
 
