@@ -26,15 +26,14 @@
     {% endfor %}
   </div>
 
-  <button id="add-bundle-button">Add Bundle to Cart</button>
+  <button type="submit" id="add-bundle-button">Add Bundle to Cart</button>
   v-3
 </form>
 
 <script>
   document.addEventListener('DOMContentLoaded', function (event) {
-    const addToCartForms = document.querySelector('#add-bundle-button');
-    addToCartForms.addEventListener('click', function () {
-      const form = document.getElementById('bundle-form');
+    document.getElementById('bundle-form').addEventListener('submit', function (event) {
+      event.preventDefault();
       const formData = new FormData(form);
       const items = [];
 
