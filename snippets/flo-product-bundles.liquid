@@ -32,26 +32,19 @@
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const formData = new FormData(event.target);
-      const items = [];
-
-      console.log('items', formData.getAll('id'));
+      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
 
       // Add each item to the cart using Shopify's AJAX API
-      const promises = items.map((item) =>
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            id: item.id,
-            quantity: parseInt(item.quantity, 10),
-          }),
-        })
-      );
+      const response = await fetch('/cart/add.js', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ items: itemsToAdd }),
+      });
 
       // Wait for all items to be added, then open the drawer cart
-      Promise.all(promises)
+      Promise.all(response)
         .then(() => {})
         .catch((error) => {
           console.error('Error adding bundle to cart:', error);
