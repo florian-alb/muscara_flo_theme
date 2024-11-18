@@ -10,7 +10,7 @@
             {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
           </span>
 
-          <select class="custom_select" name="id">
+          <select class="custom_select" name="items[{{ forloop.index0 }}][id]">
             {% for variant in metaobject.product_variants.value %}
               {% if variant.available %}
                 <option value="{{ variant.id }}">
@@ -19,6 +19,8 @@
               {% endif %}
             {% endfor %}
           </select>
+
+          <input type="hidden" name="items[{{ forloop.index0 }}][quantity]" value="1">
         </div>
       {% endfor %}
     {% endfor %}
@@ -32,12 +34,18 @@
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const formData = new FormData(event.target);
-      const items = [];
+      const items = [
+        {
+          id: '47862934503765',
+          quantity: '1',
+        },
+      ];
 
       // Build the items array from the form data
-      for (let [key, value] of Array.from(formData)) {
-        console.log('🚀 ~ value:', value);
-        console.log('🚀 ~ key:', key);
+      for (let value of Array.fromEntries(formData)) {
+        if (value in items) {
+          console.log('oui');
+        }
       }
 
       console.log('items', items);
