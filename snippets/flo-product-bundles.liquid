@@ -19,7 +19,6 @@
               {% endif %}
             {% endfor %}
           </select>
-          <input type="hidden" name="quantity" value="1">
         </div>
       {% endfor %}
     {% endfor %}
@@ -35,7 +34,7 @@
       const formData = new FormData(event.target);
       const items = [];
 
-      console.log('items', Array.from(formData));
+      console.log('items', formData.getAll('id'));
 
       // Add each item to the cart using Shopify's AJAX API
       const promises = items.map((item) =>
