@@ -33,25 +33,23 @@
       event.preventDefault();
       const formData = new FormData(event.target);
       const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
-      console.log("🚀 ~ itemsToAdd:", itemsToAdd)
+      console.log('🚀 ~ itemsToAdd:', itemsToAdd);
 
-    // Performs the add-to-cart request with the prepared variants.
-    const response = await fetch(window.Shopify.routes.root + "cart/add.js", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ items: itemsToAdd }),
-    });
+      // Performs the add-to-cart request with the prepared variants.
+      const promise = fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ items: itemsToAdd }),
+      });
 
-    if (!response.ok) {
-      throw new Error("Network response was not ok.");
-    }
-
-        // Fetching the updated cart data
-        const cartResponse = await fetch(window.Shopify.routes.root + "cart.js");
-        const cartData = await cartResponse.json();
-        console.log("Cart updated:", cartData);
+      // Wait for all items to be added, then open the drawer cart
+      Promise.all(promise)
+        .then(() => {})
+        .catch((error) => {
+          console.error('Error adding bundle to cart:', error);
+        });
     });
   });
 </script>
