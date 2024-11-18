@@ -40,8 +40,8 @@
       ];
 
       // Build the items array from the form data
-      for (let value of Array.from(formData)) {
-        console.log('🚀 ~ value:', value[1]);
+      for (let product of Object.fromEntries(formData)) {
+        console.log('🚀 ~ value:', product.id);
         const index = items.findIndex((item) => item.id === '4786293450365');
         console.log(index);
       }
