@@ -33,7 +33,7 @@
       event.preventDefault();
       const formData = new FormData(event.target);
       const items = [];
-
+      console.log('items', Array.from(formData));
       console.log('items', items);
 
       // Add each item to the cart using Shopify's AJAX API
