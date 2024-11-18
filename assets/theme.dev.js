@@ -11534,6 +11534,8 @@
   };
   register("cart-template", cartDrawer);
 
+  window.cartDrawer = cartDrawer;
+
   const selectors$F = {
     scrollToTop: "[data-scroll-top-button]",
   };
