@@ -67,6 +67,13 @@
         })
       );
 
+      // Access the `CartDrawer` instance
+      const cartSectionId = Object.keys(sections$s).find((id) => sections$s[id] instanceof CartDrawer);
+      if (!cartSectionId) {
+        console.error('CartDrawer instance not found');
+        return;
+      }
+
       // Wait for all items to be added, then open the drawer cart
       Promise.all(promises)
         .then(() => {
