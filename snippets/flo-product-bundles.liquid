@@ -30,8 +30,8 @@
   v-3
 </form>
 
+<script src="{{ 'theme.dev.js' | asset_url }}"></script>
 <script>
-  <script src="{{ 'theme.dev.js' | asset_url }}"></script>;
   document.addEventListener('DOMContentLoaded', function (event) {
     document.getElementById('bundle-form').addEventListener('submit', function (event) {
       event.preventDefault();
