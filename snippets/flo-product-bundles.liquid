@@ -70,6 +70,7 @@
       // Wait for all items to be added, then open the drawer cart
       Promise.all(promises)
         .then(() => {
+          console.log(window.cartDrawer)
           window.cartDrawer.getCart();
         })
         .catch((error) => {
