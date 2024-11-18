@@ -4,6 +4,7 @@
     {% assign quantity = metaobject.variant_quantity | times: 1 %}
     {% for product_quantity in (1..quantity) %}
       {{ metaobject.product_title.value }}
+      {{ metaobject.product_title | json }}
       <select>
         {% for variant in metaobject.product_variants.value %}
           <option value="{{ variant.id }}">
