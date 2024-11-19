@@ -12,8 +12,28 @@
         <p class="flo_bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
       </div>
       {% for product in offer.bundle_products.value %}
-        {{ product | json }}
         {% assign quantity = product.variant_quantity | times: 1 %}
+        {% for product_quantity in (1..quantity) %}
+          <div class="flo_bundles_offer_selector">
+            <span class="custom_bundle_product_handle">
+              {{ metaobject.product_title.value }}
+              {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
+            </span>
+
+            <select class="custom_select" name="id">
+              {% for variant in metaobject.product_variants.value %}
+                <option
+                  value="{{ variant.id }}"
+                  {% unless variant.available %}
+                    disabled
+                  {% endunless %}
+                >
+                  {{ variant.product.title }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% endfor %}
       {% endfor %}
     </div>
   {% endfor %}
