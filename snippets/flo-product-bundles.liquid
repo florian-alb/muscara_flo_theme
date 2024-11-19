@@ -102,6 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateCartUI(data) {
     console.log('🔄 Mise à jour de l\'UI du panier avec les données :', data);
 
+    console.log('🧾 Contenu complet de la réponse HTML :', data.innerHTML);
+
+
     const selectors = {
       apiLineItems: '[data-cart-line-items]',
       apiUpsellItems: '[data-upsell-items]',
