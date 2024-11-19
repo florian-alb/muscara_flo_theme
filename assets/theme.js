@@ -12105,39 +12105,3 @@
   themeVendor.themeCurrency,
   themeVendor.ajaxinate
 );
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const bundleForm = document.getElementById('bundle-form');
-
-    bundleForm.addEventListener('submit', async function (event) {
-      event.preventDefault(); // Empêche le rechargement de la page
-
-      const formData = new FormData(event.target);
-      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
-
-      try {
-        // Ajout des articles au panier via l'API AJAX de Shopify
-        const response = await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ items: itemsToAdd }),
-        });
-
-        if (!response.ok) {
-          throw new Error(`Échec de l'ajout des articles : ${response.statusText}`);
-        }
-
-        // Mettre à jour et ouvrir le panier
-        if (typeof sections$s !== 'undefined' && sections$s['your-cart-section-id']) {
-          const cartDrawer = sections$s['your-cart-section-id']; // Assurez-vous que l'ID correspond au fichier theme.js
-          cartDrawer.getCart(); // Appelle la méthode pour mettre à jour et afficher le panier
-        } else {
-          console.log('Impossible de trouver le panier dynamique.');
-        }
-      } catch (error) {
-        console.error('Erreur lors de l\'ajout au panier :', error);
-      }
-    });
-  });
