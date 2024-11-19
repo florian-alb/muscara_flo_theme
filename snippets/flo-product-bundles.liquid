@@ -8,8 +8,8 @@
       </span>
       <p class="bundle_title">{{ offer.bundle_title }}</p>
       <div class="flo_bundle_price">
-        <p class="flo_bundle_price_after">{{ offer.bundle_price | money }}</p>
-        <p class="flo_bundle_price_before">{{ offer.bundle_price_before | money }}</p>
+        <p class="flo_bundle_price_after">{{ offer.bundle_price.value | money }}</p>
+        <p class="flo_bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
       </div>
       {% for product in bundle_products.value %}
         {{ product | json }}
