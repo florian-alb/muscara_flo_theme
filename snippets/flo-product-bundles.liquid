@@ -16,12 +16,12 @@
         {% for product_quantity in (1..quantity) %}
           <div class="flo_bundles_offer_selector">
             <span class="custom_bundle_product_handle">
-              {{ metaobject.product_title.value }}
+              {{ product.product_title.value }}
               {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
             </span>
 
             <select class="custom_select" name="id">
-              {% for variant in metaobject.product_variants.value %}
+              {% for variant in product.product_variants.value %}
                 <option
                   value="{{ variant.id }}"
                   {% unless variant.available %}
