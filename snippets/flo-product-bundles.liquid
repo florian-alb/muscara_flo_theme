@@ -62,7 +62,16 @@
         const element = document.createElement('div');
         element.innerHTML = cartHTML;
 
+        console.log('🚀 ~ element:', element);
+
+        // get drawer
+        const cartDrawerItems = document.querySelectorAll('.cart__item');
+        console.log('🚀 ~ cartDrawerItems:', cartDrawerItems);
+
         console.log('🔧 Élément créé à partir du HTML récupéré.', element);
+      } catch (error) {
+        console.error('❌ Erreur lors de la mise à jour du panier :', error);
+      }
     });
   });
 </script>
