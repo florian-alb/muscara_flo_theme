@@ -52,18 +52,17 @@
         }
 
         // Fetching the updated cart data
-        const cartResponse = await fetch(window.Shopify.routes.root + 'cart?section_id=api-cart-items');
+        const cartResponse = await fetch(window.Shopify.routes.root + 'cart.js');
         const cartData = await cartResponse.json();
         console.log('Cart updated:', cartData);
 
-        // Open the drawer cart (replace with your theme's drawer functionality)
-        if (typeof Shopify !== 'undefined' && Shopify.StorefrontCart) {
-          Shopify.StorefrontCart.open();
-        } else {
-          console.log('Items added to cart, but drawer cart functionality not found.');
-        }
+        // Open the cart drawer
+        const cartDrawerBtn = document.querySelector(
+          'a.site-nav__link.site-nav__link--icon.cart-link.js-drawer-open-button-right'
+        );
+        if (cartDrawerBtn) cartDrawerBtn.click();
       } catch (error) {
-        console.error('Error adding bundle to cart:', error);
+        console.error('Error adding items to cart:', error);
       }
     });
   });
