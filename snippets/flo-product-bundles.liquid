@@ -2,7 +2,7 @@
 
 <div>
   {% for offer in bundle %}
-    <div class="flo_bundle_offer {% if if forloop.first %}selected{% endif %}">
+    <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
       <span class="flo_bundle_offer_title">
         {{ offer.bundle_offer_title }}
       </span>
