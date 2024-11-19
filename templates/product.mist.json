@@ -12,12 +12,6 @@
     "main": {
       "type": "product",
       "blocks": {
-        "flo_bundle_3HTbiP": {
-          "type": "flo_bundle",
-          "settings": {
-            "bg_color": "#f7e2ed"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -96,6 +90,12 @@
             "padding_bottom": 0
           }
         },
+        "flo_bundle_3HTbiP": {
+          "type": "flo_bundle",
+          "settings": {
+            "bg_color": "#f7e2ed"
+          }
+        },
         "form": {
           "type": "form",
           "settings": {
@@ -167,7 +167,6 @@
         }
       },
       "block_order": [
-        "flo_bundle_3HTbiP",
         "title",
         "price_HxrNeJ",
         "text_8Nkzpf",
@@ -175,6 +174,7 @@
         "icon_8PdQjF",
         "icon_nYCiTL",
         "flo_product_countdown_ybrwMt",
+        "flo_bundle_3HTbiP",
         "form",
         "flo_stock_scarcity_Mj4TRX",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
