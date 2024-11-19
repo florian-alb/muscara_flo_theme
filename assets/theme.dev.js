@@ -19601,10 +19601,8 @@
         console.error("❌ Erreur lors de la mise à jour du panier :", error);
       }
 
-      console.log("CartDrawer est disponible");
-      const cartDrawer = new CartDrawer();
       cartDrawer.getCart(); // Appelle la méthode getCart
-      cartDrawer.openCartDrawer(); // Appelle la méthode open
+      cartDrawer.toggleCartDrawer(); // Appelle la méthode open
     });
   });
 })(
