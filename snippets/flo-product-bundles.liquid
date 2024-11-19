@@ -18,7 +18,7 @@
                   disabled
                 {% endunless %}
               >
-                {{ variant.name }}
+                {{ variant | json }}
               </option>
             {% endfor %}
           </select>
