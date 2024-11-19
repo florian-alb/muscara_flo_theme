@@ -1,15 +1,21 @@
 {% assign bundle = product.metafields.flo_product_bundle.product_bundle.value %}
 
 <div>
-  {{ bundle | json }}
-</div>
-
-<div>
   {% for offer in bundle %}
-    <ul>
-      <li>{{ offer.value | json }}</li>
-      <li>{{ offer | json }}</li>
-    </ul>
+    <div class="flo_bundle_offer selected">
+      <span class="flo_bundle_offer_title">
+        {{ offer.bundle_offer_title }}
+      </span>
+      <p class="bundle_title">{{ offer.bundle_title }}</p>
+      <div class="flo_bundle_price">
+        <p class="flo_bundle_price_after">{{ offer.bundle_price | money }}</p>
+        <p class="flo_bundle_price_before">{{ offer.bundle_price_before | money }}</p>
+      </div>
+      {% for product in bundle_products.value %}
+        {{ product | json }}
+        {% assign quantity = product.variant_quantity | times: 1 %}
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>
 
