@@ -52,15 +52,12 @@
         }
 
         // Fetching the updated cart data
-        const resp = await fetch('/cart/change');
         const cartResponse = await fetch('/cart.js');
         const cartData = await cartResponse.json();
         console.log('Cart updated:', cartData);
 
         // Open the cart drawer
-        const cartDrawerBtn = document.querySelector(
-          'a.site-nav__link.site-nav__link--icon.cart-link.js-drawer-open-button-right'
-        );
+        const cartDrawerBtn = document.querySelector('a.navlink.navlink--icon.cart__toggle.cart__toggle--has-items');
         if (cartDrawerBtn) cartDrawerBtn.click();
       } catch (error) {
         console.error('Error adding items to cart:', error);
