@@ -43,7 +43,7 @@ function getCart() {
           const element = document.createElement("div");
           element.innerHTML = response;
 
-          const cleanResponse = element.querySelector([data-api-content]);
+          const cleanResponse = element.querySelector("[data-api-content]");
           this.build(cleanResponse);
         })
         .catch((error) => console.log(error));
