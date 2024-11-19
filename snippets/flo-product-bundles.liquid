@@ -29,13 +29,24 @@
 </form>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('🚀 DOM Content Loaded');
+  
   const bundleForm = document.getElementById('bundle-form');
+  if (!bundleForm) {
+    console.error('❌ Formulaire bundle non trouvé.');
+    return;
+  }
+
+  console.log('✅ Formulaire bundle trouvé.');
 
   bundleForm.addEventListener('submit', async function (event) {
     event.preventDefault(); // Empêche le rechargement de la page
+    console.log('🚀 Soumission du formulaire interceptée.');
 
     const formData = new FormData(event.target);
     const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
+
+    console.log('🛒 Articles à ajouter au panier :', itemsToAdd);
 
     try {
       // Ajout des articles au panier via l'API AJAX de Shopify
@@ -47,25 +58,40 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify({ items: itemsToAdd }),
       });
 
+      console.log('📡 Réponse de /cart/add.js reçue.', addResponse);
+
       if (!addResponse.ok) {
         throw new Error(`Erreur lors de l'ajout des articles : ${addResponse.statusText}`);
       }
 
+      console.log('✅ Articles ajoutés avec succès.');
+
       // Récupération des données mises à jour du panier
+      console.log('📡 Récupération des données du panier...');
       const cartResponse = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`);
+      console.log('📡 Réponse de /cart.js reçue.', cartResponse);
+
+      if (!cartResponse.ok) {
+        throw new Error(`Erreur lors de la récupération des données du panier : ${cartResponse.statusText}`);
+      }
+
       const cartHTML = await cartResponse.text();
+      console.log('🧾 Contenu HTML du panier récupéré :', cartHTML);
 
       const element = document.createElement('div');
       element.innerHTML = cartHTML;
 
+      console.log('🔧 Élément créé à partir du HTML récupéré.', element);
+
       const cleanResponse = element.querySelector('[data-api-content]');
       if (cleanResponse) {
+        console.log('✅ Contenu propre trouvé pour mise à jour :', cleanResponse);
         updateCartUI(cleanResponse);
       } else {
-        console.error('Impossible de trouver les données du panier.');
+        console.error('❌ Impossible de trouver le contenu propre du panier.');
       }
     } catch (error) {
-      console.error('Erreur lors de la mise à jour du panier :', error);
+      console.error('❌ Erreur lors de la mise à jour du panier :', error);
     }
   });
 
@@ -74,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
    * @param {HTMLElement} data - Contenu HTML nettoyé du panier
    */
   function updateCartUI(data) {
+    console.log('🔄 Mise à jour de l\'UI du panier avec les données :', data);
+
     const selectors = {
       apiLineItems: '[data-cart-line-items]',
       apiUpsellItems: '[data-upsell-items]',
@@ -87,6 +115,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const priceData = data.querySelector(selectors.apiCartPrice);
     const cartTotal = data.querySelector(selectors.cartTotal);
 
+    console.log('📊 Données extraites :', {
+      cartItemsData,
+      upsellItemsData,
+      priceData,
+      cartTotal,
+    });
+
     // Mise à jour des éléments du DOM
     const itemsHolder = document.querySelector('[data-cart-items-holder]');
     const priceHolder = document.querySelector('[data-cart-price-holder]');
@@ -94,29 +129,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartCountElement = document.querySelector('[data-cart-count]');
 
     if (priceHolder && priceData) {
+      console.log('💰 Mise à jour du prix total.');
       priceHolder.innerHTML = priceData.innerHTML;
     }
 
     if (cartItemsData) {
+      console.log('🛍️ Mise à jour des articles dans le panier.');
       itemsHolder.innerHTML = cartItemsData.innerHTML;
     }
 
     if (upsellItemsData && upsellHolder) {
+      console.log('📈 Mise à jour des produits associés (upsells).');
       upsellHolder.innerHTML = upsellItemsData.innerHTML;
     }
 
     if (cartTotal) {
       const newCartCount = cartItemsData.querySelectorAll('[data-cart-item]').length || 0;
+      console.log('🔢 Nombre d\'articles dans le panier :', newCartCount);
       cartCountElement.textContent = newCartCount;
 
       const subtotal = cartTotal.getAttribute('data-cart-total') || '0';
+      console.log('💳 Sous-total du panier :', subtotal);
+
       document.querySelector('[data-cart-total-price]').innerHTML = themeCurrency.formatMoney(
         parseInt(subtotal, 10),
         theme.moneyWithCurrencyFormat
       );
     }
 
-    console.log('Le panier a été mis à jour avec succès.');
+    console.log('✅ Mise à jour de l\'UI du panier terminée.');
   }
 });
 </script>
