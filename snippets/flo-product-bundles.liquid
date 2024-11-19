@@ -24,21 +24,29 @@
     {% endfor %}
   </div>
 
-  <button
-    type="submit"
-    id="add-bundle-button"
-    class="btn btn--primary btn--solid btn--large btn--submit product__submit__add"
-  >
-    {{ 'products.product.add_to_cart' | t }}
-  </button>
-  v-3
+  <div class="flo_btn_container">
+    <button
+      type="submit"
+      id="add-bundle-button"
+      class="btn btn--primary btn--solid btn--large btn--submit product__submit__add flo_atc_btn"
+    >
+      {{ 'products.product.add_to_cart' | t }}
+    </button>
+  </div>
 </form>
 
 {% style %}
   .flo_bundles {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+  }
+
+  .flo_btn_container {
+    width: 100%;
+  }
+
+  .flo_atc_btn {
+    width: 100%;
   }
 
   .flo_bundles_offer_selector {
