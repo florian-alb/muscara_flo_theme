@@ -79,11 +79,7 @@
         console.error('❌ Erreur lors de la mise à jour du panier :', error);
       }
     });
-  });
-</script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
     if (typeof CartDrawer !== 'undefined') {
       console.log('CartDrawer est disponible');
       const cartDrawer = new CartDrawer();
@@ -91,6 +87,7 @@
     } else {
       console.error("CartDrawer n'est pas défini.");
     }
+    
   });
 </script>
 
