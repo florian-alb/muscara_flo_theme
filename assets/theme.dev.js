@@ -19569,13 +19569,11 @@
       loadScript({ url: theme.assets.smoothscroll });
     }
   });
-
   // flo bundle creator
   document.addEventListener("DOMContentLoaded", function () {
     const bundleForm = document.getElementById("bundle-form");
     bundleForm.addEventListener("submit", async function (event) {
       event.preventDefault();
-      const cartDrawer = new CartDrawer();
 
       const formData = new FormData(event.target);
       const itemsToAdd = formData
@@ -19602,7 +19600,7 @@
         console.error("❌ Erreur lors de la mise à jour du panier :", error);
       }
       cartDrawer.getCart(); // Appelle la méthode getCart
-      cartDrawer.toggleCartDrawer(); // Appelle la méthode open
+      cartDrawer.openCartDrawer(); // Appelle la méthode open
     });
   });
 })(
