@@ -29,24 +29,12 @@
 </form>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    console.log('🚀 DOM Content Loaded');
-
     const bundleForm = document.getElementById('bundle-form');
-    if (!bundleForm) {
-      console.error('❌ Formulaire bundle non trouvé.');
-      return;
-    }
-
-    console.log('✅ Formulaire bundle trouvé.');
-
     bundleForm.addEventListener('submit', async function (event) {
-      event.preventDefault(); // Empêche le rechargement de la page
-      console.log('🚀 Soumission du formulaire interceptée.');
+      event.preventDefault();
 
       const formData = new FormData(event.target);
       const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
-
-      console.log('🛒 Articles à ajouter au panier :', itemsToAdd);
 
       try {
         // Ajout des articles au panier via l'API AJAX de Shopify
@@ -58,29 +46,19 @@
           body: JSON.stringify({ items: itemsToAdd }),
         });
 
-        console.log('📡 Réponse de /cart/add.js reçue.', addResponse);
-
         if (!addResponse.ok) {
           throw new Error(`Erreur lors de l'ajout des articles : ${addResponse.statusText}`);
         }
-
         console.log('✅ Articles ajoutés avec succès.');
 
-        const rest = await fetch('/?section_id=cart');
-        console.log('🚀 ~ rest:', rest);
-
         // Récupération des données mises à jour du panier
-        console.log('📡 Récupération des données du panier...');
         const cartResponse = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`);
-        console.log('📡 Réponse de /cart.js reçue.', cartResponse);
 
         if (!cartResponse.ok) {
           throw new Error(`Erreur lors de la récupération des données du panier : ${cartResponse.statusText}`);
         }
 
         const cartHTML = await cartResponse.text();
-        console.log('🧾 Contenu HTML du panier récupéré :', cartHTML);
-
         const element = document.createElement('div');
         element.innerHTML = cartHTML;
 
