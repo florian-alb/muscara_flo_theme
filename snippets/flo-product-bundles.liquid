@@ -52,6 +52,7 @@
         }
 
         // Fetching the updated cart data
+        const resp = await fetch('/cart/change.js');
         const cartResponse = await fetch('/cart.js');
         const cartData = await cartResponse.json();
         console.log('Cart updated:', cartData);
