@@ -52,14 +52,18 @@
         }
 
         //fetch cart drawer section
-        const cartDrawer = await fetch(theme.routes.cart_url + "?section_id=api-cart-items").then((response) => response.text())
-        .then((response) => {
-          const element = document.createElement("div");
-          element.innerHTML = response;
+const cartDrawerHTML = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.text();
+    });
 
-          console.log('🚀 ~ element:', element);
-        }
-        console.log('🚀 ~ cartDrawer:', cartDrawer);
+  const element = document.createElement("div");
+  element.innerHTML = cartDrawerHTML;
+
+  console.log("🚀 ~ element:", element);
 
         // Fetching the updated cart data
         const cartResponse = await fetch('/cart.js');
