@@ -44,7 +44,7 @@ function getCart() {
           element.innerHTML = response;
 
           const cleanResponse = element.querySelector("[data-api-content]");
-          console.log(cleanResponse)
+          console.log("cleanResponse",cleanResponse)
           this.build(cleanResponse);
         })
         .catch((error) => console.log(error));
