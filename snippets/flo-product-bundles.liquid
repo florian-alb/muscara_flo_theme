@@ -52,7 +52,13 @@
         }
 
         //fetch cart drawer section
-        const cartDrawer = await fetch(theme.routes.cart_url + "?section_id=api-cart-items")
+        const cartDrawer = await fetch(theme.routes.cart_url + "?section_id=api-cart-items").then((response) => response.text())
+        .then((response) => {
+          const element = document.createElement("div");
+          element.innerHTML = response;
+
+          console.log('🚀 ~ element:', element);
+        }
         console.log('🚀 ~ cartDrawer:', cartDrawer);
 
         // Fetching the updated cart data
