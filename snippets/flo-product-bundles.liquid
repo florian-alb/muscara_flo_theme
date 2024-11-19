@@ -52,6 +52,8 @@
         }
 
         // Fetching the updated cart data
+        const res = await fetch("/?section_id=cart-drawer");
+        console.log('Cart :', res);
         const cartResponse = await fetch('/cart.js');
         const cartData = await cartResponse.json();
         console.log('Cart updated:', cartData);
