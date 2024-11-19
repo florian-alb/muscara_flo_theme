@@ -28,139 +28,141 @@
   v-3
 </form>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('🚀 DOM Content Loaded');
-  
-  const bundleForm = document.getElementById('bundle-form');
-  if (!bundleForm) {
-    console.error('❌ Formulaire bundle non trouvé.');
-    return;
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('🚀 DOM Content Loaded');
 
-  console.log('✅ Formulaire bundle trouvé.');
+    const bundleForm = document.getElementById('bundle-form');
+    if (!bundleForm) {
+      console.error('❌ Formulaire bundle non trouvé.');
+      return;
+    }
 
-  bundleForm.addEventListener('submit', async function (event) {
-    event.preventDefault(); // Empêche le rechargement de la page
-    console.log('🚀 Soumission du formulaire interceptée.');
+    console.log('✅ Formulaire bundle trouvé.');
 
-    const formData = new FormData(event.target);
-    const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
+    bundleForm.addEventListener('submit', async function (event) {
+      event.preventDefault(); // Empêche le rechargement de la page
+      console.log('🚀 Soumission du formulaire interceptée.');
 
-    console.log('🛒 Articles à ajouter au panier :', itemsToAdd);
+      const formData = new FormData(event.target);
+      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
 
-    try {
-      // Ajout des articles au panier via l'API AJAX de Shopify
-      const addResponse = await fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: itemsToAdd }),
-      });
+      console.log('🛒 Articles à ajouter au panier :', itemsToAdd);
 
-      console.log('📡 Réponse de /cart/add.js reçue.', addResponse);
+      try {
+        // Ajout des articles au panier via l'API AJAX de Shopify
+        const addResponse = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ items: itemsToAdd }),
+        });
 
-      if (!addResponse.ok) {
-        throw new Error(`Erreur lors de l'ajout des articles : ${addResponse.statusText}`);
+        console.log('📡 Réponse de /cart/add.js reçue.', addResponse);
+
+        if (!addResponse.ok) {
+          throw new Error(`Erreur lors de l'ajout des articles : ${addResponse.statusText}`);
+        }
+
+        console.log('✅ Articles ajoutés avec succès.');
+
+        const rest = await fetch('/?section_id=cart');
+        console.log('🚀 ~ rest:', rest);
+
+        // Récupération des données mises à jour du panier
+        console.log('📡 Récupération des données du panier...');
+        const cartResponse = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`);
+        console.log('📡 Réponse de /cart.js reçue.', cartResponse);
+
+        if (!cartResponse.ok) {
+          throw new Error(`Erreur lors de la récupération des données du panier : ${cartResponse.statusText}`);
+        }
+
+        const cartHTML = await cartResponse.text();
+        console.log('🧾 Contenu HTML du panier récupéré :', cartHTML);
+
+        const element = document.createElement('div');
+        element.innerHTML = cartHTML;
+
+        console.log('🔧 Élément créé à partir du HTML récupéré.', element);
+
+        const cleanResponse = element.querySelector('[data-api-content]');
+        if (cleanResponse) {
+          console.log('✅ Contenu propre trouvé pour mise à jour :', cleanResponse);
+          updateCartUI(cleanResponse);
+        } else {
+          console.error('❌ Impossible de trouver le contenu propre du panier.');
+        }
+      } catch (error) {
+        console.error('❌ Erreur lors de la mise à jour du panier :', error);
+      }
+    });
+
+    /**
+     * Met à jour l'interface utilisateur du panier
+     * @param {HTMLElement} data - Contenu HTML nettoyé du panier
+     */
+    function updateCartUI(data) {
+      console.log("🔄 Mise à jour de l'UI du panier avec les données :", data);
+
+      const selectors = {
+        apiLineItems: '[data-api-line-items]',
+        apiUpsellItems: '[data-api-upsell-items]',
+        apiCartPrice: '[data-api-cart-price]',
+        cartTotal: '[data-cart-total]',
+      };
+
+      // Étape 1 : Extraire les données
+      const cartItemsData = data.querySelector(selectors.apiLineItems);
+      console.log('✅ cartItemsData trouvé :', cartItemsData);
+
+      const upsellItemsData = data.querySelector(selectors.apiUpsellItems);
+      console.log('✅ upsellItemsData trouvé :', upsellItemsData);
+
+      const priceData = data.querySelector(selectors.apiCartPrice);
+      console.log('✅ priceData trouvé :', priceData);
+
+      const cartTotal = priceData?.querySelector(selectors.cartTotal);
+      console.log('✅ cartTotal trouvé :', cartTotal);
+
+      // Étape 2 : Vérification et mise à jour
+      const itemsHolder = document.querySelector('[data-cart-items-holder]');
+      const priceHolder = document.querySelector('[data-cart-price-holder]');
+      const upsellHolder = document.querySelector('[data-upsell-holder]');
+      const cartCountElement = document.querySelector('[data-cart-count]');
+
+      if (itemsHolder && cartItemsData) {
+        console.log('🛍️ Mise à jour des articles du panier.');
+        itemsHolder.innerHTML = cartItemsData.innerHTML;
       }
 
-      console.log('✅ Articles ajoutés avec succès.');
-
-      // Récupération des données mises à jour du panier
-      console.log('📡 Récupération des données du panier...');
-      const cartResponse = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`);
-      console.log('📡 Réponse de /cart.js reçue.', cartResponse);
-
-      if (!cartResponse.ok) {
-        throw new Error(`Erreur lors de la récupération des données du panier : ${cartResponse.statusText}`);
+      if (priceHolder && priceData) {
+        console.log('💰 Mise à jour du prix total.');
+        priceHolder.innerHTML = priceData.innerHTML;
       }
 
-      const cartHTML = await cartResponse.text();
-      console.log('🧾 Contenu HTML du panier récupéré :', cartHTML);
-
-      const element = document.createElement('div');
-      element.innerHTML = cartHTML;
-
-      console.log('🔧 Élément créé à partir du HTML récupéré.', element);
-
-      const cleanResponse = element.querySelector('[data-api-content]');
-      if (cleanResponse) {
-        console.log('✅ Contenu propre trouvé pour mise à jour :', cleanResponse);
-        updateCartUI(cleanResponse);
-      } else {
-        console.error('❌ Impossible de trouver le contenu propre du panier.');
+      if (upsellItemsData && upsellHolder) {
+        console.log('📈 Mise à jour des produits associés (upsells).');
+        upsellHolder.innerHTML = upsellItemsData.innerHTML;
       }
-    } catch (error) {
-      console.error('❌ Erreur lors de la mise à jour du panier :', error);
+
+      if (cartTotal && cartCountElement) {
+        const itemCount = cartItemsData?.querySelectorAll('[data-cart-item]').length || 0;
+        console.log("🔢 Nombre d'articles mis à jour :", itemCount);
+        cartCountElement.textContent = itemCount;
+
+        const subtotal = cartTotal.getAttribute('data-cart-total') || '0';
+        console.log('💳 Sous-total du panier :', subtotal);
+
+        document.querySelector('[data-cart-total-price]').innerHTML = themeCurrency.formatMoney(
+          parseInt(subtotal, 10),
+          theme.moneyWithCurrencyFormat
+        );
+      }
+
+      console.log("✅ Mise à jour de l'UI du panier terminée.");
     }
   });
-
-  /**
-   * Met à jour l'interface utilisateur du panier
-   * @param {HTMLElement} data - Contenu HTML nettoyé du panier
-   */
-  function updateCartUI(data) {
-  console.log('🔄 Mise à jour de l\'UI du panier avec les données :', data);
-
-  const selectors = {
-    apiLineItems: '[data-api-line-items]',
-    apiUpsellItems: '[data-api-upsell-items]',
-    apiCartPrice: '[data-api-cart-price]',
-    cartTotal: '[data-cart-total]',
-  };
-
-  // Étape 1 : Extraire les données
-  const cartItemsData = data.querySelector(selectors.apiLineItems);
-  console.log('✅ cartItemsData trouvé :', cartItemsData);
-
-  const upsellItemsData = data.querySelector(selectors.apiUpsellItems);
-  console.log('✅ upsellItemsData trouvé :', upsellItemsData);
-
-  const priceData = data.querySelector(selectors.apiCartPrice);
-  console.log('✅ priceData trouvé :', priceData);
-
-  const cartTotal = priceData?.querySelector(selectors.cartTotal);
-  console.log('✅ cartTotal trouvé :', cartTotal);
-
-  // Étape 2 : Vérification et mise à jour
-  const itemsHolder = document.querySelector('[data-cart-items-holder]');
-  const priceHolder = document.querySelector('[data-cart-price-holder]');
-  const upsellHolder = document.querySelector('[data-upsell-holder]');
-  const cartCountElement = document.querySelector('[data-cart-count]');
-
-  if (itemsHolder && cartItemsData) {
-    console.log('🛍️ Mise à jour des articles du panier.');
-    itemsHolder.innerHTML = cartItemsData.innerHTML;
-  }
-
-  if (priceHolder && priceData) {
-    console.log('💰 Mise à jour du prix total.');
-    priceHolder.innerHTML = priceData.innerHTML;
-  }
-
-  if (upsellItemsData && upsellHolder) {
-    console.log('📈 Mise à jour des produits associés (upsells).');
-    upsellHolder.innerHTML = upsellItemsData.innerHTML;
-  }
-
-  if (cartTotal && cartCountElement) {
-    const itemCount = cartItemsData?.querySelectorAll('[data-cart-item]').length || 0;
-    console.log('🔢 Nombre d\'articles mis à jour :', itemCount);
-    cartCountElement.textContent = itemCount;
-
-    const subtotal = cartTotal.getAttribute('data-cart-total') || '0';
-    console.log('💳 Sous-total du panier :', subtotal);
-
-    document.querySelector('[data-cart-total-price]').innerHTML = themeCurrency.formatMoney(
-      parseInt(subtotal, 10),
-      theme.moneyWithCurrencyFormat
-    );
-  }
-
-  console.log('✅ Mise à jour de l\'UI du panier terminée.');
-}
-
-});
 </script>
 
 {% style %}
