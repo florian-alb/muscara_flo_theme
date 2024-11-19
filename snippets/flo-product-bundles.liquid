@@ -1,58 +1,112 @@
-const addToCartForms = document.querySelector("#addBundle"); addToCartForms.addEventListener("click", async (event) => {
-event.preventDefault();
+{% assign bundle_1 = product.metafields.flo_product_bundle.product_bundle_1.value %}
+<form id="bundle-form">
+  <div class="flo_bundles">
+    {% for metaobject in bundle_1 %}
+      {% assign quantity = metaobject.variant_quantity | times: 1 %}
+      {% for product_quantity in (1..quantity) %}
+        <div class="flo_bundles_offer_selector">
+          <span class="custom_bundle_product_handle">
+            {{ metaobject.product_title.value }}
+            {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
+          </span>
 
-// pourquoi pas le faire en dehors de cette fonction et pourquoi pas le faire premièrement quand le DOM charge et quand
-le form est update pour avoir l'id de la variante en temps réel.
+          <select class="custom_select" name="id">
+            {% for variant in metaobject.product_variants.value %}
+              {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }}
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
 
-// Collects product data at the time of click to ensure that it is up to date. const productData = collectProductData();
-console.log("🚀 ~ productData:", productData);
+  <button type="submit" id="add-bundle-button">Add Bundle to Cart</button>
+  v-3
+</form>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const bundleForm = document.getElementById('bundle-form');
 
-try { // Match product variants and wait for completion. const addedVariants = await matchProductsVariants(productData);
-console.log("🚀 ~ added_variants:", addedVariants);
+    bundleForm.addEventListener('submit', async function (event) {
+      event.preventDefault(); // Prevent page reload
 
-// Prepare objects for API cart/add.js, each variant with quantity = 1. const itemsToAdd = addedVariants.map(id => ({id,
-quantity:1}));
+      const formData = new FormData(event.target);
+      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
 
-// Performs the add-to-cart request with the prepared variants. const response = await fetch(window.Shopify.routes.root
-+ "cart/add.js", { method: "POST", headers: { "Content-Type": "application/json", }, body: JSON.stringify({ items:
-itemsToAdd }), });
+      try {
+        // Add all items to the cart using Shopify's AJAX API
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ items: itemsToAdd }),
+        });
 
-if (!response.ok) { throw new Error("Network response was not ok."); }
+        if (!response.ok) {
+          throw new Error(`Failed to add items: ${response.statusText}`);
+        }
 
-console.log("🚀 ~ Items added to cart");
+        // Fetching the updated cart data
+        const cartResponse = await fetch(window.Shopify.routes.root + 'cart?section_id=api-cart-items');
+        const cartData = await cartResponse.json();
+        console.log('Cart updated:', cartData);
 
-// Fetching the updated cart data const cartResponse = await fetch(window.Shopify.routes.root +
-"cart?section_id=api-cart-items"); const cartData = await cartResponse.json(); console.log("Cart updated:", cartData);
+        // Open the drawer cart (replace with your theme's drawer functionality)
+        if (typeof Shopify !== 'undefined' && Shopify.StorefrontCart) {
+          Shopify.StorefrontCart.open();
+        } else {
+          console.log('Items added to cart, but drawer cart functionality not found.');
+        }
+      } catch (error) {
+        console.error('Error adding bundle to cart:', error);
+      }
+    });
+  });
+</script>
 
-// Open the cart drawer const cartDrawerBtn =
-document.querySelector("a.site-nav__link.site-nav__link--icon.cart-link.js-drawer-open-button-right"); if
-(cartDrawerBtn) cartDrawerBtn.click();
+{% style %}
+  .flo_bundles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-} catch (error) { console.error("Error adding items to cart:", error); } });
+  .flo_bundles_offer_slector {
+    border: 2px solid #de9fc2;
+    border-radius: 5px;
+    background-color: #f7e2ed;
+    margin-top: 5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-function collectProductData() { const selectedVariants = document.querySelectorAll(".custom_select");
+  .custom_select {
+    line-height: 23px;
+    position: static;
+    opacity: 1;
+    display: block;
+    background-position: right 10px center !important;
+    border-radius: 3px;
+    border: 1px solid #000;
+    font-size: 16px;
+    float: left;
+    width: 200px;
+    min-height: 25px;
+    height: 25px;
+    padding: 0 25px 0 3px;
+    margin: 0;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-const productMap = new Map();
-
-selectedVariants.forEach((variant) => { const productHandle = variant.dataset.product; const value = variant.value;
-
-// If the product handle is already in the map, append the value to its options array if (productMap.has(productHandle))
-{ const existingProduct = productMap.get(productHandle); existingProduct.options.push(value); } else { // Otherwise, add
-a new entry for this product handle with the options initialized as an array with the value
-productMap.set(productHandle, { product_handle: productHandle, options: [value], quantity: 1, }); } });
-
-return Array.from(productMap.values()); }
-
-async function matchProductsVariants(productData) { const fetchPromises = productData.map(async (product) => { const
-response = await fetch(`${window.Shopify.routes.root}products/${product.product_handle}.js`); const productDetails =
-await response.json(); return { product_handle: productDetails.handle, variants: productDetails.variants, }; });
-
-const productsVariantsDetails = await Promise.all(fetchPromises);
-
-const variantsMap = new Map(productsVariantsDetails.map(item => [item.product_handle, item.variants]));
-
-const cartVariants = productData.flatMap((product) => { const variants = variantsMap.get(product.product_handle) || [];
-return variants .filter(variant => JSON.stringify(variant.options) === JSON.stringify(product.options))
-.map(matchingVariant => matchingVariant.id); });
-
-return cartVariants; }
+  .custom_bundle_product_handle {
+  }
+{% endstyle %}
