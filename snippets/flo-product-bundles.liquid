@@ -28,56 +28,41 @@
   v-3
 </form>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const bundleForm = document.getElementById('bundle-form');
+document.addEventListener('DOMContentLoaded', function () {
+  const bundleForm = document.getElementById('bundle-form');
 
-    bundleForm.addEventListener('submit', async function (event) {
-      event.preventDefault(); // Prevent page reload
+  bundleForm.addEventListener('submit', async function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-      const formData = new FormData(event.target);
-      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
+    const formData = new FormData(event.target);
+    const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
 
-      try {
-        // Add all items to the cart using Shopify's AJAX API
-        const response = await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ items: itemsToAdd }),
-        });
+    try {
+      // Ajout des articles au panier via l'API AJAX de Shopify
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ items: itemsToAdd }),
+      });
 
-        if (!response.ok) {
-          throw new Error(`Failed to add items: ${response.statusText}`);
-        }
-
-        //fetch cart drawer section
-const cartDrawerHTML = await fetch(`${theme.routes.cart_url}?section_id=api-cart-items`)
-    .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`Erreur lors de l'ajout des articles : ${response.statusText}`);
       }
-      return response.text();
-    });
 
-  const element = document.createElement("div");
-  element.innerHTML = cartDrawerHTML;
-
-  console.log("🚀 ~ element:", element);
-
-        // Fetching the updated cart data
-        const cartResponse = await fetch('/cart.js');
-        const cartData = await cartResponse.json();
-        console.log('Cart updated:', cartData);
-
-        // Open the cart drawer
-        const cartDrawerBtn = document.querySelector('a.navlink.navlink--icon.cart__toggle.cart__toggle--has-items');
-        if (cartDrawerBtn) cartDrawerBtn.click();
-      } catch (error) {
-        console.error('Error adding items to cart:', error);
+      // Mise à jour du panier via la méthode `getCart` du thème
+      if (typeof window.cartDrawerInstance !== 'undefined' && window.cartDrawerInstance.getCart) {
+        // Appelle `getCart` pour mettre à jour et afficher le panier
+        window.cartDrawerInstance.getCart();
+      } else {
+        console.warn('L\'instance de cartDrawer ou la méthode getCart n\'a pas été trouvée.');
       }
-    });
+    } catch (error) {
+      console.error('Erreur lors de l\'ajout au panier :', error);
+    }
   });
+});
 </script>
 
 {% style %}
