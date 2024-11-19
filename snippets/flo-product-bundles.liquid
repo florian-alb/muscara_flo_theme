@@ -62,6 +62,12 @@
         const element = document.createElement('div');
         element.innerHTML = cartHTML;
 
+        // Open the cart drawer
+        const cartDrawerBtn = document.querySelector(
+          'a.site-nav__link.site-nav__link--icon.cart-link.js-drawer-open-button-right'
+        );
+        if (cartDrawerBtn) cartDrawerBtn.click();
+
         console.log('🚀 ~ element:', element);
 
         // get drawer
@@ -73,6 +79,18 @@
         console.error('❌ Erreur lors de la mise à jour du panier :', error);
       }
     });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof CartDrawer !== 'undefined') {
+      console.log('CartDrawer est disponible');
+      const cartDrawer = new CartDrawer();
+      cartDrawer.getCart(); // Appelle la méthode getCart
+    } else {
+      console.error("CartDrawer n'est pas défini.");
+    }
   });
 </script>
 
