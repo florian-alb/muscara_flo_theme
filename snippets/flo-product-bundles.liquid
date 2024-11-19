@@ -27,6 +27,48 @@
   <button type="submit" id="add-bundle-button">Add Bundle to Cart</button>
   v-3
 </form>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const bundleForm = document.getElementById('bundle-form');
+
+    bundleForm.addEventListener('submit', async function (event) {
+      event.preventDefault(); // Prevent page reload
+
+      const formData = new FormData(event.target);
+      const itemsToAdd = formData.getAll('id').map((id) => ({ id, quantity: 1 }));
+
+      try {
+        // Add all items to the cart using Shopify's AJAX API
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ items: itemsToAdd }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to add items: ${response.statusText}`);
+        }
+
+        //fetch cart drawer section
+        const cartDrawer = await fetch('?section_id=cart-drawer');
+        console.log('🚀 ~ cartDrawer:', cartDrawer);
+
+        // Fetching the updated cart data
+        const cartResponse = await fetch('/cart.js');
+        const cartData = await cartResponse.json();
+        console.log('Cart updated:', cartData);
+
+        // Open the cart drawer
+        const cartDrawerBtn = document.querySelector('a.navlink.navlink--icon.cart__toggle.cart__toggle--has-items');
+        if (cartDrawerBtn) cartDrawerBtn.click();
+      } catch (error) {
+        console.error('Error adding items to cart:', error);
+      }
+    });
+  });
+</script>
 
 {% style %}
   .flo_bundles {
