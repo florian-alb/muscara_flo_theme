@@ -1,6 +1,6 @@
 {% assign bundle = product.metafields.flo_product_bundle.product_bundle.value %}
 
-<div>
+<div class="flo_bundle_container">
   {% for offer in bundle %}
     <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
       <span class="flo_bundle_offer_title">
@@ -79,6 +79,16 @@
 </form>
 
 {% style %}
+  .flo_bundle_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flo_bundle_offer {
+    border: 1px solid black;
+  }
+
   .flo_bundles {
     display: flex;
     flex-direction: column;
