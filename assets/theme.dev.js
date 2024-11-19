@@ -19572,6 +19572,7 @@
 
   // flo bundle creator
   document.addEventListener("DOMContentLoaded", function () {
+    const cartDrawer = new CartDrawer();
     const bundleForm = document.getElementById("bundle-form");
     bundleForm.addEventListener("submit", async function (event) {
       event.preventDefault();
@@ -19600,9 +19601,8 @@
       } catch (error) {
         console.error("❌ Erreur lors de la mise à jour du panier :", error);
       }
-
-      CartDrawer.getCart(); // Appelle la méthode getCart
-      CartDrawer.toggleCartDrawer(); // Appelle la méthode open
+      cartDrawer.getCart(); // Appelle la méthode getCart
+      cartDrawer.toggleCartDrawer(); // Appelle la méthode open
     });
   });
 })(
