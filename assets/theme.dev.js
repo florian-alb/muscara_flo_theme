@@ -19604,7 +19604,8 @@
       if (typeof CartDrawer !== "undefined") {
         console.log("CartDrawer est disponible");
         const cartDrawer = new CartDrawer();
-        //cartDrawer.getCart(); // Appelle la méthode getCart
+        cartDrawer.getCart(); // Appelle la méthode getCart
+        cartDrawer.openCartDrawer(); // Appelle la méthode open
       } else {
         console.error("CartDrawer n'est pas défini.");
       }
