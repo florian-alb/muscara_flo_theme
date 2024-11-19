@@ -12,11 +12,14 @@
 
           <select class="custom_select" name="id">
             {% for variant in metaobject.product_variants.value %}
-              {% if variant.available %}
-                <option value="{{ variant.id }}">
-                  {{ variant | json }}
-                </option>
-              {% endif %}
+              <option
+                value="{{ variant.id }}"
+                {% unless variant.available %}
+                  disabled
+                {% endunless %}
+              >
+                {{ variant | json }}
+              </option>
             {% endfor %}
           </select>
         </div>
