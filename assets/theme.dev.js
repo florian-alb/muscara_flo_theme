@@ -19597,35 +19597,6 @@
           );
         }
         console.log("✅ Articles ajoutés avec succès.");
-
-        // // Récupération des données mises à jour du panier
-        // const cartResponse = await fetch(
-        //   `${theme.routes.cart_url}?section_id=api-cart-items`
-        // );
-
-        // if (!cartResponse.ok) {
-        //   throw new Error(
-        //     `Erreur lors de la récupération des données du panier : ${cartResponse.statusText}`
-        //   );
-        // }
-
-        // const cartHTML = await cartResponse.text();
-        // const element = document.createElement("div");
-        // element.innerHTML = cartHTML;
-
-        // // Open the cart drawer
-        // const cartDrawerBtn = document.querySelector(
-        //   "a.site-nav__link.site-nav__link--icon.cart-link.js-drawer-open-button-right"
-        // );
-        // if (cartDrawerBtn) cartDrawerBtn.click();
-
-        // console.log("🚀 ~ element:", element);
-
-        // // get drawer
-        // const cartDrawerItems = document.querySelectorAll(".cart__item");
-        // console.log("🚀 ~ cartDrawerItems:", cartDrawerItems);
-
-        // console.log("🔧 Élément créé à partir du HTML récupéré.", element);
       } catch (error) {
         console.error("❌ Erreur lors de la mise à jour du panier :", error);
       }
@@ -19633,7 +19604,7 @@
       if (typeof CartDrawer !== "undefined") {
         console.log("CartDrawer est disponible");
         const cartDrawer = new CartDrawer();
-        cartDrawer.getCart(); // Appelle la méthode getCart
+        //cartDrawer.getCart(); // Appelle la méthode getCart
       } else {
         console.error("CartDrawer n'est pas défini.");
       }
