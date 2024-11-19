@@ -63,6 +63,9 @@
         element.innerHTML = cartHTML;
 
         console.log('🔧 Élément créé à partir du HTML récupéré.', element);
+      } catch (error) {
+        console.error('❌ Erreur lors de la mise à jour du panier :', error);
+      }
     });
   });
 </script>
