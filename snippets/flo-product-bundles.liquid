@@ -100,68 +100,66 @@ document.addEventListener('DOMContentLoaded', function () {
    * @param {HTMLElement} data - Contenu HTML nettoyé du panier
    */
   function updateCartUI(data) {
-    console.log('🔄 Mise à jour de l\'UI du panier avec les données :', data);
+  console.log('🔄 Mise à jour de l\'UI du panier avec les données :', data);
 
-    console.log('🧾 Contenu complet de la réponse HTML :', data.innerHTML);
+  const selectors = {
+    apiLineItems: '[data-api-line-items]',
+    apiUpsellItems: '[data-api-upsell-items]',
+    apiCartPrice: '[data-api-cart-price]',
+    cartTotal: '[data-cart-total]',
+  };
 
+  // Étape 1 : Extraire les données
+  const cartItemsData = data.querySelector(selectors.apiLineItems);
+  console.log('✅ cartItemsData trouvé :', cartItemsData);
 
-    const selectors = {
-      apiLineItems: '[data-cart-line-items]',
-      apiUpsellItems: '[data-upsell-items]',
-      apiCartPrice: '[data-cart-price]',
-      cartTotal: '[data-cart-total]',
-    };
+  const upsellItemsData = data.querySelector(selectors.apiUpsellItems);
+  console.log('✅ upsellItemsData trouvé :', upsellItemsData);
 
-    // Récupération des données nécessaires
-    const cartItemsData = data.querySelector(selectors.apiLineItems);
-    const upsellItemsData = data.querySelector(selectors.apiUpsellItems);
-    const priceData = data.querySelector(selectors.apiCartPrice);
-    const cartTotal = data.querySelector(selectors.cartTotal);
+  const priceData = data.querySelector(selectors.apiCartPrice);
+  console.log('✅ priceData trouvé :', priceData);
 
-    console.log('📊 Données extraites :', {
-      cartItemsData,
-      upsellItemsData,
-      priceData,
-      cartTotal,
-    });
+  const cartTotal = priceData?.querySelector(selectors.cartTotal);
+  console.log('✅ cartTotal trouvé :', cartTotal);
 
-    // Mise à jour des éléments du DOM
-    const itemsHolder = document.querySelector('[data-cart-items-holder]');
-    const priceHolder = document.querySelector('[data-cart-price-holder]');
-    const upsellHolder = document.querySelector('[data-upsell-holder]');
-    const cartCountElement = document.querySelector('[data-cart-count]');
+  // Étape 2 : Vérification et mise à jour
+  const itemsHolder = document.querySelector('[data-cart-items-holder]');
+  const priceHolder = document.querySelector('[data-cart-price-holder]');
+  const upsellHolder = document.querySelector('[data-upsell-holder]');
+  const cartCountElement = document.querySelector('[data-cart-count]');
 
-    if (priceHolder && priceData) {
-      console.log('💰 Mise à jour du prix total.');
-      priceHolder.innerHTML = priceData.innerHTML;
-    }
-
-    if (cartItemsData) {
-      console.log('🛍️ Mise à jour des articles dans le panier.');
-      itemsHolder.innerHTML = cartItemsData.innerHTML;
-    }
-
-    if (upsellItemsData && upsellHolder) {
-      console.log('📈 Mise à jour des produits associés (upsells).');
-      upsellHolder.innerHTML = upsellItemsData.innerHTML;
-    }
-
-    if (cartTotal) {
-      const newCartCount = cartItemsData.querySelectorAll('[data-cart-item]').length || 0;
-      console.log('🔢 Nombre d\'articles dans le panier :', newCartCount);
-      cartCountElement.textContent = newCartCount;
-
-      const subtotal = cartTotal.getAttribute('data-cart-total') || '0';
-      console.log('💳 Sous-total du panier :', subtotal);
-
-      document.querySelector('[data-cart-total-price]').innerHTML = themeCurrency.formatMoney(
-        parseInt(subtotal, 10),
-        theme.moneyWithCurrencyFormat
-      );
-    }
-
-    console.log('✅ Mise à jour de l\'UI du panier terminée.');
+  if (itemsHolder && cartItemsData) {
+    console.log('🛍️ Mise à jour des articles du panier.');
+    itemsHolder.innerHTML = cartItemsData.innerHTML;
   }
+
+  if (priceHolder && priceData) {
+    console.log('💰 Mise à jour du prix total.');
+    priceHolder.innerHTML = priceData.innerHTML;
+  }
+
+  if (upsellItemsData && upsellHolder) {
+    console.log('📈 Mise à jour des produits associés (upsells).');
+    upsellHolder.innerHTML = upsellItemsData.innerHTML;
+  }
+
+  if (cartTotal && cartCountElement) {
+    const itemCount = cartItemsData?.querySelectorAll('[data-cart-item]').length || 0;
+    console.log('🔢 Nombre d\'articles mis à jour :', itemCount);
+    cartCountElement.textContent = itemCount;
+
+    const subtotal = cartTotal.getAttribute('data-cart-total') || '0';
+    console.log('💳 Sous-total du panier :', subtotal);
+
+    document.querySelector('[data-cart-total-price]').innerHTML = themeCurrency.formatMoney(
+      parseInt(subtotal, 10),
+      theme.moneyWithCurrencyFormat
+    );
+  }
+
+  console.log('✅ Mise à jour de l\'UI du panier terminée.');
+}
+
 });
 </script>
 
