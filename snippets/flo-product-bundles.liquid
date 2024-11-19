@@ -52,7 +52,7 @@
         }
 
         // Fetching the updated cart data
-        const cartResponse = await fetch('/cart?section_id=api-cart-items');
+        const cartResponse = await fetch('/cart.js');
         const cartData = await cartResponse.json();
         console.log('Cart updated:', cartData);
 
