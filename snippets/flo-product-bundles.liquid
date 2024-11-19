@@ -11,7 +11,7 @@
         <p class="flo_bundle_price_after">{{ offer.bundle_price.value | money }}</p>
         <p class="flo_bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
       </div>
-      {% for product in bundle_products.value %}
+      {% for product in offer.bundle_products.value %}
         {{ product | json }}
         {% assign quantity = product.variant_quantity | times: 1 %}
       {% endfor %}
