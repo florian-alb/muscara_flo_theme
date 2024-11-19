@@ -1,13 +1,17 @@
 {% assign bundle = product.metafields.flo_product_bundle.product_bundle.value %}
 
-{{ bundle | json }}
+<div>
+  {{ bundle | json }}
+</div>
 
-{% for offer in bundle %}
-  <ul>
-    <li>{{ offer.value | json }}</li>
-    <li>{{ offer | json }}</li>
-  </ul>
-{% endfor %}
+<div>
+  {% for offer in bundle %}
+    <ul>
+      <li>{{ offer.value | json }}</li>
+      <li>{{ offer | json }}</li>
+    </ul>
+  {% endfor %}
+</div>
 
 <form id="bundle-form">
   <div class="flo_bundles">
