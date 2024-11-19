@@ -19571,7 +19571,7 @@
   });
   // flo bundle creator
   document.addEventListener("DOMContentLoaded", function () {
-    console.log("🚀 Initialisation du créateur de bundle.", cartDrawer.onLoad);
+    console.log("🚀 Initialisation du créateur de bundle.", window.cart);
     const bundleForm = document.getElementById("bundle-form");
     bundleForm.addEventListener("submit", async function (event) {
       event.preventDefault();
