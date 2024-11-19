@@ -27,7 +27,11 @@
   <button type="submit" id="add-bundle-button">Add Bundle to Cart</button>
   v-3
 </form>
-<script></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('✅ window.cart', window.cart);
+  });
+</script>
 
 {% style %}
   .flo_bundles {

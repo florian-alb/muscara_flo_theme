@@ -19571,7 +19571,6 @@
   });
   // flo bundle creator
   document.addEventListener("DOMContentLoaded", function () {
-    console.log("🚀 Initialisation du créateur de bundle.", window.cart);
     const bundleForm = document.getElementById("bundle-form");
     bundleForm.addEventListener("submit", async function (event) {
       event.preventDefault();
@@ -19600,8 +19599,8 @@
       } catch (error) {
         console.error("❌ Erreur lors de la mise à jour du panier :", error);
       }
-      cartDrawer.getCart(); // Appelle la méthode getCart
-      cartDrawer.openCartDrawer(); // Appelle la méthode open
+      window.cart.getCart(); // Appelle la méthode getCart
+      window.cart.openCartDrawer(); // Appelle la méthode open
     });
   });
 })(
