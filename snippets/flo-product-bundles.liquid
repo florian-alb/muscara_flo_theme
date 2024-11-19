@@ -28,6 +28,27 @@
   v-3
 </form>
 <script>
+
+function     getCart() {
+      // Render cart drawer if it exists but it's not loaded yet
+      if (this.cartDrawer && !this.isCartDrawerLoaded) {
+        const alwaysOpen = false;
+        this.renderCartDrawer(alwaysOpen);
+      }
+
+      fetch(theme.routes.cart_url + "?section_id=api-cart-items")
+        .then(this.handleErrors)
+        .then((response) => response.text())
+        .then((response) => {
+          const element = document.createElement("div");
+          element.innerHTML = response;
+
+          const cleanResponse = element.querySelector(selectors$G.apiContent);
+          this.build(cleanResponse);
+        })
+        .catch((error) => console.log(error));
+    }
+  
   document.addEventListener('DOMContentLoaded', function () {
     const bundleForm = document.getElementById('bundle-form');
 
