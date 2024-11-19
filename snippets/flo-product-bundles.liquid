@@ -14,7 +14,7 @@
             {% for variant in metaobject.product_variants.value %}
               {% if variant.available %}
                 <option value="{{ variant.id }}">
-                  {{ variant.title }}
+                  {{ variant | json }}
                 </option>
               {% endif %}
             {% endfor %}
