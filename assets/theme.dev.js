@@ -19617,6 +19617,9 @@
     document.querySelectorAll(".flo_bundle_offer.selected").forEach((el) => {
       el.classList.remove("selected");
       el.querySelector(".bundle_offer_selectors").setAttribute("hidden", true);
+      el.querySelectorAll("select").forEach(
+        (select) => (select.id = "disabled")
+      );
     });
 
     // Ajoute la classe "selected" à l'élément cliqué
