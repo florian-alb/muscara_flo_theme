@@ -5,7 +5,7 @@
       <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
         {% comment %} {% if {{offer.bundle_image }} != "blank" %} {% endcomment %}
         <div class="bundle_img_container">
-          {{ offer.bundle_image }}
+          {{ offer.bundle_image | image_url: width: 600 | image_tag: preload: true }}
         </div>
         {% comment %} {% endif %} {% endcomment %}
         <div class="bundle_text_container">
@@ -106,7 +106,7 @@
   }
 
   .bundle_img_container {
-    width: 60px;
+    width: 100px;
     border-radius: 5px;
   }
 
