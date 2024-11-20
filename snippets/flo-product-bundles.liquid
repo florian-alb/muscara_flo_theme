@@ -34,7 +34,7 @@
                     {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
                   </span>
 
-                  {{ forloop.parentloop.first }}
+                  {{ forloop.parentloop.parentloop.first }}
 
                   <select
                     class="custom_select"
