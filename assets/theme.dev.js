@@ -19608,9 +19608,32 @@
     const bundlesOffers = document.querySelectorAll(".flo_bundle_offer");
 
     bundlesOffers.forEach((element, index) => {
-      element.addEventListener("click", () => selectOffer(element));
+      element.addEventListener("click", () => {
+        selectOffer(element);
+        updateProductDisplayPrice(element);
+      });
     });
   });
+
+  function updateProductDisplayPrice(element) {
+    const ogPriceSelector = document.querySelector(
+      "span.product__price--regular.product__price--sale"
+    );
+
+    const ogComparedPriceSelector = document.querySelector(
+      "s.product__price--compare"
+    );
+
+    const newPrice = element.querySelector(
+      "p.bundle_price.bundle_price_after"
+    ).textContent;
+    const newPriceBefore = element.querySelector(
+      "p.bundle_price.bundle_price_after"
+    ).textContent;
+
+    ogPriceSelector.textContent = newPrice;
+    ogComparedPriceSelector.textContent = newPriceBefore;
+  }
 
   function selectOffer(element) {
     // Supprime la classe "selected" de toutes les offres
