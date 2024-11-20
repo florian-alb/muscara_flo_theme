@@ -1,54 +1,53 @@
 {% assign bundle = product.metafields.flo_product_bundle.product_bundle.value %}
+<form id="bundle-form">
+  <div class="flo_bundle_container">
+    {% for offer in bundle %}
+      <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
+        {% comment %} {% if {{offer.bundle_image }} != "blank" %} {% endcomment %}
+        <div class="bundle_img_container">
+          {{ offer.bundle_image }}
+        </div>
+        {% comment %} {% endif %} {% endcomment %}
+        <div class="bundle_text_container">
+          <span class="flo_bundle_offer_title">
+            {{ offer.bundle_offer_title }}
+          </span>
+          <p class="bundle_title">{{ offer.bundle_title }}</p>
+          <div class="bundle_offer_selectors">
+            {% for product in offer.bundle_products.value %}
+              {% assign quantity = product.variant_quantity | times: 1 %}
+              {% for product_quantity in (1..quantity) %}
+                <div class="flo_bundles_offer_selector">
+                  <span class="custom_bundle_product_handle">
+                    {{ product.product_title.value }}
+                    {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
+                  </span>
 
-<div class="flo_bundle_container">
-  {% for offer in bundle %}
-    <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
-      {% comment %} {% if {{offer.bundle_image }} != "blank" %} {% endcomment %}
-      <div class="bundle_img_container">
-        {{ offer.bundle_image }}
-      </div>
-      {% comment %} {% endif %} {% endcomment %}
-      <div class="bundle_text_container">
-        <span class="flo_bundle_offer_title">
-          {{ offer.bundle_offer_title }}
-        </span>
-        <p class="bundle_title">{{ offer.bundle_title }}</p>
-        <div class="bundle_offer_selectors">
-          {% for product in offer.bundle_products.value %}
-            {% assign quantity = product.variant_quantity | times: 1 %}
-            {% for product_quantity in (1..quantity) %}
-              <div class="flo_bundles_offer_selector">
-                <span class="custom_bundle_product_handle">
-                  {{ product.product_title.value }}
-                  {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
-                </span>
-
-                <select class="custom_select" name="id">
-                  {% for variant in product.product_variants.value %}
-                    <option
-                      value="{{ variant.id }}"
-                      {% unless variant.available %}
-                        disabled
-                      {% endunless %}
-                    >
-                      {{ variant.product.title }}
-                    </option>
-                  {% endfor %}
-                </select>
-              </div>
+                  <select class="custom_select" name="id">
+                    {% for variant in product.product_variants.value %}
+                      <option
+                        value="{{ variant.id }}"
+                        {% unless variant.available %}
+                          disabled
+                        {% endunless %}
+                      >
+                        {{ variant.product.title }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
+          </div>
+        </div>
+        <div class="bundle_price_container">
+          <p class="bundle_price_after">{{ offer.bundle_price.value | money }}</p>
+          <p class="bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
         </div>
       </div>
-      <div class="bundle_price_container">
-        <p class="bundle_price_after">{{ offer.bundle_price.value | money }}</p>
-        <p class="bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 
-<form id="bundle-form">
   <div class="flo_bundles">
     {% for metaobject in bundle_1 %}
       {% assign quantity = metaobject.variant_quantity | times: 1 %}
