@@ -19621,7 +19621,7 @@
 
     // Ajoute la classe "selected" à l'élément cliqué
     element.classList.add("selected");
-    offer.querySelector(".bundle_offer_selectors").removeAttribute("hidden");
+    element.querySelector(".bundle_offer_selectors").removeAttribute("hidden");
   }
 })(
   themeVendor.ScrollLock,
