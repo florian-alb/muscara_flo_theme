@@ -19628,7 +19628,7 @@
       "p.bundle_price.bundle_price_after"
     ).textContent;
     const newPriceBefore = element.querySelector(
-      "p.bundle_price.bundle_price_after"
+      "p.bundle_price.bundle_price_before"
     ).textContent;
 
     ogPriceSelector.textContent = newPrice;
