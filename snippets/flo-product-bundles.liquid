@@ -18,14 +18,15 @@
             <p class="bundle_price bundle_price_after">{{ offer.bundle_price.value | money }}</p>
             <p class="bundle_price bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
             <span class="bundle_price_saving"
-              >You save
+              >Je bespaart
               {{
                 offer.bundle_price_before.value
                 | minus: offer.bundle_price.value
                 | times: 100.0
                 | divided_by: offer.bundle_price_before.value
+                | round
               -}}
-              %
+              % ( {{ offer.bundle_price_before.value | minus: offer.bundle_price.value | money | round }}€ )
             </span>
           </div>
 
