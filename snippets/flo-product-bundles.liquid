@@ -2,7 +2,7 @@
 <form id="bundle-form">
   <div class="flo_bundle_container">
     {% for offer in bundle %}
-      <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %} data-index={{ forloop.index }}">
+      <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
         {% comment %} {% if {{offer.bundle_image.src }} != blank %} {% endcomment %}
         <div class="bundle_img_container">
           {{ offer.bundle_image | image_url: width: 600 | image_tag: preload: true }}
@@ -19,7 +19,12 @@
             <p class="bundle_price bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
           </div>
 
-          <div class="bundle_offer_selectors">
+          <div
+            class="bundle_offer_selectors"
+            {% unless forloop.first %}
+              hidden
+            {% endunless %}
+          >
             {% for product in offer.bundle_products.value %}
               {% assign quantity = product.variant_quantity | times: 1 %}
               {% for product_quantity in (1..quantity) %}
