@@ -34,7 +34,7 @@
                     {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
                   </span>
 
-                  <select class="custom_select" name="id">
+                  <select class="custom_select" name="{% if forloop.first %}id{% else %}disabled{% endif %}">
                     {% for variant in product.product_variants.value %}
                       <option
                         value="{{ variant.id }}"
