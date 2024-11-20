@@ -4,6 +4,7 @@
     {% for offer in bundle %}
       <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
         {% comment %} {% if {{offer.bundle_image }} != "blank" %} {% endcomment %}
+        {{ offer | json }}
         <div class="bundle_img_container">
           {{ offer.bundle_image | image_url: width: 600 | image_tag: preload: true }}
         </div>
@@ -108,11 +109,14 @@
   .bundle_img_container {
     width: 100px;
     border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
   }
 
-  img.bundle_img_container {
+  .bundle_img_container img {
     width: 60px;
-    aspect-ratio: auto;
+    height: 60px;
   }
 
   .flo_btn_container {
