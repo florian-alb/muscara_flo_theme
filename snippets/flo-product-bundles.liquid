@@ -38,7 +38,6 @@
           {% endfor %}
         </div>
       </div>
-
       <div class="bundle_price_container">
         <p class="bundle_price_after">{{ offer.bundle_price.value | money }}</p>
         <p class="bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
@@ -95,6 +94,8 @@
 
   .flo_bundle_offer {
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
   }
 
   .flo_bundles {
