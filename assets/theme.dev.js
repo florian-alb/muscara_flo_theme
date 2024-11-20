@@ -19603,6 +19603,17 @@
       window.cart.openCartDrawer(); // Appelle la méthode open
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const bundlesOffers = document.querySelectorAll(".flo_bundle_offer");
+    bundlesOffers.forEach((e, index) =>
+      e.addEventListener("click", selectOffer(e, index))
+    );
+  });
+
+  function selectOffer(element, index) {
+    element.classList.add("selected");
+  }
 })(
   themeVendor.ScrollLock,
   themeVendor.AOS,
