@@ -19625,7 +19625,7 @@
     // Ajoute la classe "selected" à l'élément cliqué
     element.classList.add("selected");
     element.querySelector(".bundle_offer_selectors").removeAttribute("hidden");
-    el.querySelector(".bundle_title").classList.add("selected");
+    element.querySelector(".bundle_title").classList.add("selected");
     const selectors = element.querySelectorAll("select");
     selectors.forEach((select) => (select.name = "id"));
   }
