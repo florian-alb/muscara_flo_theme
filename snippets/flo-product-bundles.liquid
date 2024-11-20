@@ -15,8 +15,8 @@
           <p class="bundle_title">{{ offer.bundle_title }}</p>
 
           <div class="bundle_price_container">
-            <p class="bundle_price_after">{{ offer.bundle_price.value | money }}</p>
-            <p class="bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
+            <p class="bundle_price bundle_price_after">{{ offer.bundle_price.value | money }}</p>
+            <p class="bundle_price bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
           </div>
 
           <div class="bundle_offer_selectors">
@@ -92,7 +92,6 @@
   .flo_bundle_container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     gap: 10px;
   }
 
@@ -110,6 +109,11 @@
     width: 100%;
   }
 
+  .bundle_price {
+    margin: 0;
+    padding: 0 0 5px 0;
+  }
+
   .bundle_price_container {
     display: flex;
     gap: 10px;
@@ -118,6 +122,12 @@
   .flo_bundles {
     display: flex;
     flex-direction: column;
+  }
+
+  .bundle_title {
+    font-size: 19px;
+    padding: 0 0 5px 0;
+    margin: 0;
   }
 
   .bundle_img_container {
