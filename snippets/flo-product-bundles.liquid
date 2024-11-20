@@ -93,14 +93,14 @@
   }
 
   .flo_bundle_offer.selected {
-    border: 2px solid #de9fc2;
-    background: #f6e2ed;
+    border: 2px solid {{section.settings.selected_border_color}};
+    background: {{section.settings.selected_bg_color}};
   }
 
   .flo_bundle_offer {
     cursor: pointer;
-    border: 2px solid #c6c6c6;
-    background: #ffffff;
+    border: 2px solid {{section.settings.unselected_border_color}};
+    background: {{section.settings.unselected_bg_color}};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
