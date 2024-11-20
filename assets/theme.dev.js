@@ -19617,16 +19617,16 @@
     document.querySelectorAll(".flo_bundle_offer.selected").forEach((el) => {
       el.classList.remove("selected");
       el.querySelector(".bundle_offer_selectors").setAttribute("hidden", true);
+      el.querySelector(".bundle_title.selected").classList.remove("selected");
       const selectors = el.querySelectorAll("select");
-      console.log("🚀 ~ document.querySelectorAll ~ selectors:", selectors);
       selectors.forEach((select) => (select.name = "disabled"));
     });
 
     // Ajoute la classe "selected" à l'élément cliqué
     element.classList.add("selected");
     element.querySelector(".bundle_offer_selectors").removeAttribute("hidden");
+    el.querySelector(".bundle_title").classList.add("selected");
     const selectors = element.querySelectorAll("select");
-    console.log("🚀 ~ document.querySelectorAll ~ selectors:", selectors);
     selectors.forEach((select) => (select.name = "id"));
   }
 })(

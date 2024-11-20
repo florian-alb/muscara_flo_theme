@@ -12,7 +12,7 @@
           <span class="flo_bundle_offer_title">
             {{ offer.bundle_offer_title }}
           </span>
-          <p class="bundle_title">{{ offer.bundle_title }}</p>
+          <p class="bundle_title {% if forloop.first %}selected{% endif %}">{{ offer.bundle_title }}</p>
 
           <div class="bundle_price_container">
             <p class="bundle_price bundle_price_after">{{ offer.bundle_price.value | money }}</p>
@@ -116,9 +116,13 @@
   }
 
   .bundle_title {
-    font-size: 19px;
-    padding: 0 0 15px 0;
+    font-size: 20px;
+    padding: 0 0 8px 0;
     margin: 0;
+  }
+
+  .bundle_titl.selected {
+    font-weight: bold;
   }
 
   .bundle_img_container {
@@ -147,11 +151,7 @@
   }
 
   .flo_bundles_offer_selector {
-    border: 2px solid #de9fc2;
-    border-radius: 5px;
-    background-color: #f7e2ed;
     margin-top: 5px;
-    padding: 5px 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -178,6 +178,6 @@
   }
 
   .custom_bundle_product_handle {
-    font-size: 16px;
+    font-size: 14px;
   }
 {% endstyle %}
