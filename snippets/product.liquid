@@ -594,6 +594,7 @@
                   <!-- - flo modif - -->
                   {% if product.metafields.flo_product_bundle.product_bundle != blank %}
                     {% render 'flo-product-bundles', section: section, product: product, unique: unique %}
+
                   {% else %}
                     {%- comment -%} Product Form Partial {%- endcomment -%}
                     <!-- /partials/product-form.liquid -->
@@ -1348,7 +1349,7 @@
 {%- endcapture -%}
 
                       <!-- - flo modif 2 - -->
-                      {% if true %}
+                      {% if product.metafield.flo_product_bundle.product_bundle == blank %}
                         <div class="product__form product__form--onboarding">
                           <div class="product__selectors">
                             <div
