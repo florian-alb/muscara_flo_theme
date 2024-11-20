@@ -34,11 +34,9 @@
                     {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
                   </span>
 
-                  {{ forloop.parentloop.parentloop.index }}
-
                   <select
                     class="custom_select"
-                    {% if forloop.parentloop.first %}
+                    {% if forloop.parentloop.parentloop.first %}
                       name="id"
                     {% else %}
                       name="disabled"
