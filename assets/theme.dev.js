@@ -19619,13 +19619,15 @@
       el.querySelector(".bundle_offer_selectors").setAttribute("hidden", true);
       const selectors = el.querySelectorAll("select");
       console.log("🚀 ~ document.querySelectorAll ~ selectors:", selectors);
-
       selectors.forEach((select) => (select.id = "disabled"));
     });
 
     // Ajoute la classe "selected" à l'élément cliqué
     element.classList.add("selected");
     element.querySelector(".bundle_offer_selectors").removeAttribute("hidden");
+    const selectors = el.querySelectorAll("select");
+    console.log("🚀 ~ document.querySelectorAll ~ selectors:", selectors);
+    selectors.forEach((select) => (select.id = "id"));
   }
 })(
   themeVendor.ScrollLock,
