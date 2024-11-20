@@ -98,9 +98,11 @@
             "show_payment_button": false,
             "enable_subscriptions_selectors": true,
             "selected_bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
-            "selected_text_color": "#000",
+            "selected_border_color": "{{ product.metafields.custom.product_primary_color.value }}",
+            "selected_text_color": "#000000",
             "unselected_bg_color": "#ffffff",
-            "unselected_text_color": "#000",
+            "unselected_border_color": "#c6c6c6",
+            "unselected_text_color": "#000000",
             "padding_bottom": 0
           }
         },
