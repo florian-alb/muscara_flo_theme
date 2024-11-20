@@ -599,152 +599,151 @@
                   {{ block_style }}
                   {{ block.shopify_attributes }}
                 >
-                  {% if false %}
-                    {%- comment -%} Product Form Partial {%- endcomment -%}
-                    <!-- /partials/product-form.liquid -->
+                  {%- comment -%} Product Form Partial {%- endcomment -%}
+                  <!-- /partials/product-form.liquid -->
 
-                    {%- liquid
-                      assign current_variant = product.selected_or_first_available_variant
-                      assign unique = unique | default: ''
-                      assign variants_style = settings.variants_style
+                  {%- liquid
+                    assign current_variant = product.selected_or_first_available_variant
+                    assign unique = unique | default: ''
+                    assign variants_style = settings.variants_style
+                    assign show_payment_button = false
+                    assign gift_card_recipient_feature_active = false
+
+                    if settings.show_gift_card_recipient and product.gift_card?
+                      assign gift_card_recipient_feature_active = true
+                    endif
+
+                    if block.settings.show_payment_button and gift_card_recipient_feature_active == false
+                      assign show_payment_button = true
+                    endif
+
+                    comment
+                      Override buy button setting if there are selling plan groups and cart terms
+                    endcomment
+                    if show_payment_button and product.selling_plan_groups.size < 1 and settings.enable_accept_terms == false
+                      assign show_payment_button = true
+                    else
                       assign show_payment_button = false
-                      assign gift_card_recipient_feature_active = false
+                    endif
 
-                      if settings.show_gift_card_recipient and product.gift_card?
-                        assign gift_card_recipient_feature_active = true
-                      endif
+                    assign product_form_id = 'AddToCartForm--' | append: unique
+                  -%}
+                  {%- comment -%}
+                    Size chart
 
-                      if block.settings.show_payment_button and gift_card_recipient_feature_active == false
-                        assign show_payment_button = true
-                      endif
+                    Inherited variables:
+                      - product: {Object} Product object.
+                      - section: {Object} the current Section this code block belongs to.
+                    Returns variables:
+                      - specific_pages_arr: {Array} Page handles array from product tags
+                      - info_page: {Object} Page object || blank
+                      - show_size_guide: {Boolean}
+                      - size_chart_button_as_label: {Boolean}
+                      - size_chart_button: {String} captured markup of a button that opens the size chart drawer
+                      - size_chart_drawer: {String} captured markup of the size chart drawer
+                  {%- endcomment -%}
 
-                      comment
-                        Override buy button setting if there are selling plan groups and cart terms
-                      endcomment
-                      if show_payment_button and product.selling_plan_groups.size < 1 and settings.enable_accept_terms == false
-                        assign show_payment_button = true
+                  {%- liquid
+                    assign show_size_guide = false
+                    assign size_guide_string = 'general.size_chart.button' | t
+                    assign info_page_title_override = settings.info_page_title_override
+
+                    capture size_chart_button_text
+                      if info_page_title_override != blank
+                        echo info_page_title_override
                       else
-                        assign show_payment_button = false
+                        echo size_guide_string
+                      endif
+                    endcapture
+
+                    assign tags_string = product.tags | join: ','
+                    assign size_separator = '_size_'
+                    assign specific_pages = ''
+                    if tags_string contains size_separator
+                      for tag in product.tags
+                        if tag contains size_separator
+                          assign page_handle = tag | split: size_separator | last | split: ',' | first
+                          assign specific_pages = specific_pages | append: page_handle | append: ','
+                        endif
+                      endfor
+                    endif
+                    assign specific_pages_arr = specific_pages | split: ','
+                    if specific_pages_arr.size > 0
+                      assign show_size_guide = true
+                    endif
+
+                    assign product_size_chart = product.metafields.theme.size_chart.value
+                    assign info_page = settings.info_page
+                    if product_size_chart != blank or info_page != blank
+                      if product_size_chart != blank
+                        assign info_page = product_size_chart
+                      elsif info_page != blank
+                        assign info_page = pages[info_page]
                       endif
 
-                      assign product_form_id = 'AddToCartForm--' | append: unique
-                    -%}
-                    {%- comment -%}
-                      Size chart
+                      assign show_size_guide = true
+                    endif
 
-                      Inherited variables:
-                        - product: {Object} Product object.
-                        - section: {Object} the current Section this code block belongs to.
-                      Returns variables:
-                        - specific_pages_arr: {Array} Page handles array from product tags
-                        - info_page: {Object} Page object || blank
-                        - show_size_guide: {Boolean}
-                        - size_chart_button_as_label: {Boolean}
-                        - size_chart_button: {String} captured markup of a button that opens the size chart drawer
-                        - size_chart_drawer: {String} captured markup of the size chart drawer
-                    {%- endcomment -%}
+                    assign size_chart_button_as_label = false
+                    assign has_size_option = false
+                    unless product.has_only_default_variant
+                      for option in product.options_with_values
+                        assign separator = option.name | handle | prepend: ',' | append: ','
+                        assign size_translation = 'general.size_chart.size' | t
+                        assign translation_string = size_translation | remove: '  ' | replace: ', ', ',' | replace: ' ,', ',' | replace: ',', '____' | handle | replace: '____', ',' | append: ',' | prepend: ','
 
+                        unless translation_string contains separator
+                          continue
+                        endunless
+
+                        assign has_size_option = true
+                      endfor
+                    endunless
+
+                    if has_size_option and show_labels
+                      assign size_chart_button_as_label = true
+                    endif
+                  -%}
+
+                  {%- if show_size_guide -%}
                     {%- liquid
-                      assign show_size_guide = false
-                      assign size_guide_string = 'general.size_chart.button' | t
-                      assign info_page_title_override = settings.info_page_title_override
+                      assign empty_size_guide = true
 
-                      capture size_chart_button_text
-                        if info_page_title_override != blank
-                          echo info_page_title_override
+                      capture drawer_classes
+                        echo 'popup-chart drawer drawer--right'
+                        if section_type == 'quickview'
+                          echo ' popup-chart--quickview'
                         else
-                          echo size_guide_string
+                          echo ' cv-h'
                         endif
                       endcapture
 
-                      assign tags_string = product.tags | join: ','
-                      assign size_separator = '_size_'
-                      assign specific_pages = ''
-                      if tags_string contains size_separator
-                        for tag in product.tags
-                          if tag contains size_separator
-                            assign page_handle = tag | split: size_separator | last | split: ',' | first
-                            assign specific_pages = specific_pages | append: page_handle | append: ','
-                          endif
-                        endfor
-                      endif
-                      assign specific_pages_arr = specific_pages | split: ','
-                      if specific_pages_arr.size > 0
-                        assign show_size_guide = true
-                      endif
-
-                      assign product_size_chart = product.metafields.theme.size_chart.value
-                      assign info_page = settings.info_page
-                      if product_size_chart != blank or info_page != blank
-                        if product_size_chart != blank
-                          assign info_page = product_size_chart
-                        elsif info_page != blank
-                          assign info_page = pages[info_page]
+                      capture drawer_close_icon
+                        if section_type == 'quickview'
+                          render 'icon-chevron-right'
+                        else
+                          render 'icon-close'
                         endif
+                      endcapture
 
-                        assign show_size_guide = true
-                      endif
-
-                      assign size_chart_button_as_label = false
-                      assign has_size_option = false
-                      unless product.has_only_default_variant
-                        for option in product.options_with_values
-                          assign separator = option.name | handle | prepend: ',' | append: ','
-                          assign size_translation = 'general.size_chart.size' | t
-                          assign translation_string = size_translation | remove: '  ' | replace: ', ', ',' | replace: ' ,', ',' | replace: ',', '____' | handle | replace: '____', ',' | append: ',' | prepend: ','
-
-                          unless translation_string contains separator
-                            continue
-                          endunless
-
-                          assign has_size_option = true
-                        endfor
-                      endunless
-
-                      if has_size_option and show_labels
-                        assign size_chart_button_as_label = true
-                      endif
+                      assign show_tabs_nav = false
+                      assign tabs_navigation = ''
+                      assign tabs = ''
+                      assign has_current = false
+                      assign index = 0
+                      assign pages_count = 0
                     -%}
 
-                    {%- if show_size_guide -%}
-                      {%- liquid
-                        assign empty_size_guide = true
+                    {%- for page_handle in specific_pages_arr -%}
+                      {%- assign page_size_chart = pages[page_handle] -%}
 
-                        capture drawer_classes
-                          echo 'popup-chart drawer drawer--right'
-                          if section_type == 'quickview'
-                            echo ' popup-chart--quickview'
-                          else
-                            echo ' cv-h'
-                          endif
-                        endcapture
-
-                        capture drawer_close_icon
-                          if section_type == 'quickview'
-                            render 'icon-chevron-right'
-                          else
-                            render 'icon-close'
-                          endif
-                        endcapture
-
-                        assign show_tabs_nav = false
-                        assign tabs_navigation = ''
-                        assign tabs = ''
-                        assign has_current = false
-                        assign index = 0
-                        assign pages_count = 0
-                      -%}
-
-                      {%- for page_handle in specific_pages_arr -%}
-                        {%- assign page_size_chart = pages[page_handle] -%}
-
-                        {%- if page_size_chart.title != blank -%}
-                          {%- capture tabs_navigation -%}
+                      {%- if page_size_chart.title != blank -%}
+                        {%- capture tabs_navigation -%}
         {{ tabs_navigation }}
         <li class="tabs__link" data-tabs-link="{{ forloop.index0 }}" tabindex="0">{{ page_size_chart.title }}</li>
       {%- endcapture -%}
 
-                          {%- capture tabs -%}
+                        {%- capture tabs -%}
         {{ tabs }}
         <div class="tab{% unless has_current %} current{% endunless %}" data-tab="{{ forloop.index0 }}">
           {%- if page_size_chart.content != blank -%}
@@ -755,22 +754,22 @@
         </div>
       {%- endcapture -%}
 
-                          {%- assign has_current = true -%}
-                          {%- assign pages_count = pages_count | plus: 1 -%}
-                        {%- endif -%}
-                      {%- endfor -%}
+                        {%- assign has_current = true -%}
+                        {%- assign pages_count = pages_count | plus: 1 -%}
+                      {%- endif -%}
+                    {%- endfor -%}
 
-                      {%- if info_page != blank -%}
-                        {%- assign index = specific_pages_arr.size -%}
+                    {%- if info_page != blank -%}
+                      {%- assign index = specific_pages_arr.size -%}
 
-                        {%- capture tabs_navigation -%}
+                      {%- capture tabs_navigation -%}
       {{ tabs_navigation }}
       {%- if info_page.title != blank -%}
         <li class="tabs__link" data-tabs-link="{{ index }}" data-lock-scroll tabindex="0">{{ info_page.title }}</li>
       {%- endif -%}
     {%- endcapture -%}
 
-                        {%- capture tabs -%}
+                      {%- capture tabs -%}
       {{ tabs }}
       <div class="tab{% unless has_current %} current{% endunless %}" data-tab="{{ index }}">
         {%- if info_page.content != blank -%}
@@ -781,20 +780,20 @@
       </div>
     {%- endcapture -%}
 
-                        {%- assign has_current = true -%}
-                        {%- assign pages_count = pages_count | plus: 1 -%}
-                      {%- endif -%}
+                      {%- assign has_current = true -%}
+                      {%- assign pages_count = pages_count | plus: 1 -%}
+                    {%- endif -%}
 
-                      {%- liquid
-                        if tabs != blank
-                          assign empty_size_guide = false
-                        endif
-                        if pages_count > 1 and tabs_navigation != blank
-                          assign show_tabs_nav = true
-                        endif
-                      -%}
+                    {%- liquid
+                      if tabs != blank
+                        assign empty_size_guide = false
+                      endif
+                      if pages_count > 1 and tabs_navigation != blank
+                        assign show_tabs_nav = true
+                      endif
+                    -%}
 
-                      {%- capture size_chart_drawer -%}
+                    {%- capture size_chart_drawer -%}
     {%- unless empty_size_guide -%}
       <div class="{{ drawer_classes }}" id="size-chart--{{ unique }}" aria-hidden="true" role="dialog" data-drawer>
         <button type="button" class="drawer__close-button" aria-controls="size-chart--{{ unique }}" data-drawer-toggle>
@@ -833,7 +832,7 @@
     {%- endunless -%}
   {%- endcapture -%}
 
-                      {%- capture size_chart_button -%}
+                    {%- capture size_chart_button -%}
     {%- unless empty_size_guide -%}
       <button type="button" class="product__popup__link" href="{{ info_page.url | default: '#!' }}" aria-controls="size-chart--{{ unique }}" data-drawer-toggle>
         {% render 'icon-ruler' %}
@@ -841,38 +840,24 @@
       </button>
     {%- endunless -%}
   {%- endcapture -%}
-                    {%- endif -%}
-                    {%- form 'product',
-                      product,
-                      class: 'product__form',
-                      data-product-form: '',
-                      id: product_form_id,
-                      data-recipient-errors: gift_card_recipient_feature_active
-                    -%}
-                      {% comment %} The input with name="id" submits to cart {% endcomment %}
-                      <input type="hidden" name="id" value="{{ current_variant.id }}" data-product-select>
+                  {%- endif -%}
+                  {%- form 'product',
+                    product,
+                    class: 'product__form',
+                    data-product-form: '',
+                    id: product_form_id,
+                    data-recipient-errors: gift_card_recipient_feature_active
+                  -%}
+                    {% comment %} The input with name="id" submits to cart {% endcomment %}
+                    <input type="hidden" name="id" value="{{ current_variant.id }}" data-product-select>
 
-                      {%- unless show_quantity -%}
-                        <input type="hidden" name="quantity" value="1">
-                      {%- endunless -%}
+                    {%- unless show_quantity -%}
+                      <input type="hidden" name="quantity" value="1">
+                    {%- endunless -%}
 
-                      {%- unless size_chart_button_as_label or size_chart_button == blank -%}
-                        <div
-                          class="product__form__size-chart"
-                          {% if animations_enabled %}
-                            data-aos="hero"
-                            data-aos-anchor="{{ animation_anchor }}"
-                            data-aos-order="{{ animation_order }}"
-                            {%- assign animation_order = animation_order | plus: 1 -%}
-                          {% endif %}
-                        >
-                          {{- size_chart_button -}}
-                        </div>
-                      {%- endunless -%}
-
-                      {% comment %} Shop pay split payment terms {% endcomment %}
+                    {%- unless size_chart_button_as_label or size_chart_button == blank -%}
                       <div
-                        class="shop-pay-terms"
+                        class="product__form__size-chart"
                         {% if animations_enabled %}
                           data-aos="hero"
                           data-aos-anchor="{{ animation_anchor }}"
@@ -880,12 +865,26 @@
                           {%- assign animation_order = animation_order | plus: 1 -%}
                         {% endif %}
                       >
-                        {{ form | payment_terms }}
+                        {{- size_chart_button -}}
                       </div>
+                    {%- endunless -%}
 
-                      {%- assign quantity_position_bottom = true -%}
+                    {% comment %} Shop pay split payment terms {% endcomment %}
+                    <div
+                      class="shop-pay-terms"
+                      {% if animations_enabled %}
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="{{ animation_order }}"
+                        {%- assign animation_order = animation_order | plus: 1 -%}
+                      {% endif %}
+                    >
+                      {{ form | payment_terms }}
+                    </div>
 
-                      {%- capture quantity_selector -%}
+                    {%- assign quantity_position_bottom = true -%}
+
+                    {%- capture quantity_selector -%}
     <div class="select__fieldset">
       <span class="select__label" id="{{ unique }}-select-quantity-label">{{ 'products.product.quantity' | t }}</span>
 
@@ -926,7 +925,7 @@
     </div>
   {%- endcapture -%}
 
-                      {%- capture form_fields -%}
+                    {%- capture form_fields -%}
     {%- unless product.has_only_default_variant -%}
       {%- assign selects_counter = 0 -%}
       <div class="product__selectors">
@@ -1155,57 +1154,78 @@
     {%- endunless -%}
   {%- endcapture -%}
 
-                      {{- form_fields -}}
+                    {{- form_fields -}}
 
-                      <noscript>
-                        <select
-                          name="id"
-                          class="product__form__select"
-                          aria-label="{{ product.options_with_values | map: 'name' | uniq | join: ', ' }}"
-                        >
-                          {%- for variant in product.variants -%}
-                            <option
-                              {% if variant == current_variant %}
-                                selected="selected"
-                              {% endif %}
-                              {% unless variant.available %}
-                                disabled="disabled"
-                              {% endunless %}
-                              value="{{ variant.id }}"
-                            >
-                              {{- variant.title -}}
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                      </noscript>
+                    <noscript>
+                      <select
+                        name="id"
+                        class="product__form__select"
+                        aria-label="{{ product.options_with_values | map: 'name' | uniq | join: ', ' }}"
+                      >
+                        {%- for variant in product.variants -%}
+                          <option
+                            {% if variant == current_variant %}
+                              selected="selected"
+                            {% endif %}
+                            {% unless variant.available %}
+                              disabled="disabled"
+                            {% endunless %}
+                            value="{{ variant.id }}"
+                          >
+                            {{- variant.title -}}
+                          </option>
+                        {%- endfor -%}
+                      </select>
+                    </noscript>
 
-                      {%- if gift_card_recipient_feature_active -%}
-                        {%- render 'gift-card-recipient-form',
+                    {%- if gift_card_recipient_feature_active -%}
+                      {%- render 'gift-card-recipient-form',
+                        product: product,
+                        form: form,
+                        section: section,
+                        animation_order: animation_order,
+                        animation_anchor: animation_anchor
+                      -%}
+                    {%- endif -%}
+
+                    {%- if product.selling_plan_groups.size > 0 -%}
+                      {%- if enable_subscriptions_selectors -%}
+                        {%- render 'subscription-form',
                           product: product,
-                          form: form,
-                          section: section,
-                          animation_order: animation_order,
-                          animation_anchor: animation_anchor
+                          animations_enabled: animations_enabled,
+                          animation_anchor: animation_anchor,
+                          animation_order: animation_order
                         -%}
                       {%- endif -%}
+                      {%- assign animation_order = animation_order | plus: 1 -%}
+                      {%- comment -%} Delete the following line to block the theme from updating subscription prices {%- endcomment -%}
+                      <span data-subscription-watch-price></span>
+                    {%- endif -%}
 
-                      {%- if product.selling_plan_groups.size > 0 -%}
-                        {%- if enable_subscriptions_selectors -%}
-                          {%- render 'subscription-form',
-                            product: product,
-                            animations_enabled: animations_enabled,
-                            animation_anchor: animation_anchor,
-                            animation_order: animation_order
-                          -%}
-                        {%- endif -%}
-                        {%- assign animation_order = animation_order | plus: 1 -%}
-                        {%- comment -%} Delete the following line to block the theme from updating subscription prices {%- endcomment -%}
-                        <span data-subscription-watch-price></span>
-                      {%- endif -%}
+                    {%- if quantity_position_bottom and show_quantity -%}
+                      <div
+                        class="selector-wrapper selector-wrapper--qty"
+                        {% if animations_enabled %}
+                          data-aos="hero"
+                          data-aos-anchor="{{ animation_anchor }}"
+                          data-aos-order="{{ animation_order }}"
+                          {%- assign animation_order = animation_order | plus: 1 -%}
+                        {% endif %}
+                      >
+                        {{ quantity_selector }}
+                      </div>
+                    {%- endif -%}
 
-                      {%- if quantity_position_bottom and show_quantity -%}
+                    {%- assign sold_out_text = 'products.product.sold_out' | t -%}
+                    {%- if show_newsletter -%}
+                      {%- assign newsletter_text = 'general.newsletter_form.newsletter_product_availability' | t -%}
+                      {%- assign sold_out_text = sold_out_text | append: ' - ' | append: newsletter_text -%}
+                    {%- endif -%}
+
+                    <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %}{% if show_newsletter %} product__submit__holder--notification{% endif %}">
+                      <div class="product__submit__buttons">
                         <div
-                          class="selector-wrapper selector-wrapper--qty"
+                          class="product__submit__item"
                           {% if animations_enabled %}
                             data-aos="hero"
                             data-aos-anchor="{{ animation_anchor }}"
@@ -1213,20 +1233,34 @@
                             {%- assign animation_order = animation_order | plus: 1 -%}
                           {% endif %}
                         >
-                          {{ quantity_selector }}
+                          <button
+                            type="submit"
+                            name="add"
+                            id="AddToCart--{{ unique }}"
+                            class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
+                            data-add-to-cart
+                            {% if show_newsletter %}
+                              data-notification-popup="{%- render 'notification-form', product_title: product.title, product_subtitle: current_variant.title, product_id: current_variant.id -%}"
+                            {% endif %}
+                          >
+                            <span data-add-to-cart-text>
+                              {%- if current_variant.available and product.tags contains '_preorder' -%}
+                                {{ 'products.product.preorder' | t }}
+                              {%- elsif current_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                              {%- else -%}
+                                {{ sold_out_text }}
+                              {%- endif -%}
+                            </span>
+
+                            <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
+                          </button>
                         </div>
-                      {%- endif -%}
 
-                      {%- assign sold_out_text = 'products.product.sold_out' | t -%}
-                      {%- if show_newsletter -%}
-                        {%- assign newsletter_text = 'general.newsletter_form.newsletter_product_availability' | t -%}
-                        {%- assign sold_out_text = sold_out_text | append: ' - ' | append: newsletter_text -%}
-                      {%- endif -%}
-
-                      <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %}{% if show_newsletter %} product__submit__holder--notification{% endif %}">
-                        <div class="product__submit__buttons">
+                        {%- if show_payment_button -%}
                           <div
-                            class="product__submit__item"
+                            class="product__submit__item{% if sold_out %} hidden{% endif %} {{ buynow_btn_color }} {{ buynow_btn_style }}"
+                            data-buy-it-now
                             {% if animations_enabled %}
                               data-aos="hero"
                               data-aos-anchor="{{ animation_anchor }}"
@@ -1234,84 +1268,49 @@
                               {%- assign animation_order = animation_order | plus: 1 -%}
                             {% endif %}
                           >
-                            <button
-                              type="submit"
-                              name="add"
-                              id="AddToCart--{{ unique }}"
-                              class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
-                              data-add-to-cart
-                              {% if show_newsletter %}
-                                data-notification-popup="{%- render 'notification-form', product_title: product.title, product_subtitle: current_variant.title, product_id: current_variant.id -%}"
-                              {% endif %}
-                            >
-                              <span data-add-to-cart-text>
-                                {%- if current_variant.available and product.tags contains '_preorder' -%}
-                                  {{ 'products.product.preorder' | t }}
-                                {%- elsif current_variant.available -%}
-                                  {{ 'products.product.add_to_cart' | t }}
-                                {%- else -%}
-                                  {{ sold_out_text }}
-                                {%- endif -%}
-                              </span>
-
-                              <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
-                            </button>
+                            {{ form | payment_button }}
                           </div>
-
-                          {%- if show_payment_button -%}
-                            <div
-                              class="product__submit__item{% if sold_out %} hidden{% endif %} {{ buynow_btn_color }} {{ buynow_btn_style }}"
-                              data-buy-it-now
-                              {% if animations_enabled %}
-                                data-aos="hero"
-                                data-aos-anchor="{{ animation_anchor }}"
-                                data-aos-order="{{ animation_order }}"
-                                {%- assign animation_order = animation_order | plus: 1 -%}
-                              {% endif %}
-                            >
-                              {{ form | payment_button }}
-                            </div>
-                          {%- endif -%}
-                        </div>
-
-                        <div data-cart-errors-container role="alert" class="product__form__errors"></div>
+                        {%- endif -%}
                       </div>
-                    {%- endform -%}
+
+                      <div data-cart-errors-container role="alert" class="product__form__errors"></div>
                     </div>
-                  {%- else -%}
-                    <div
-                      class="product__block product__form__wrapper{{ hide_labels_class }}"
-                      {{ block_style }}
-                      {{ block.shopify_attributes }}
-                    >
-                      {%- liquid
-                        assign enable_color_swatches = settings.enable_color_swatches_product
-                        assign variants_style = settings.variants_style
-                        assign show_quantity = block.settings.show_quantity
-                        assign show_payment_button = false
-                        if block.settings.show_payment_button and settings.enable_accept_terms == false
-                          assign show_payment_button = true
-                        endif
-                        assign quantity_position_bottom = true
+                  {%- endform -%}
+                </div>
+              {%- else -%}
+                <div
+                  class="product__block product__form__wrapper{{ hide_labels_class }}"
+                  {{ block_style }}
+                  {{ block.shopify_attributes }}
+                >
+                  {%- liquid
+                    assign enable_color_swatches = settings.enable_color_swatches_product
+                    assign variants_style = settings.variants_style
+                    assign show_quantity = block.settings.show_quantity
+                    assign show_payment_button = false
+                    if block.settings.show_payment_button and settings.enable_accept_terms == false
+                      assign show_payment_button = true
+                    endif
+                    assign quantity_position_bottom = true
 
-                        assign enable_variant_boxes = false
-                        if variants_style == 'boxes' or variants_style == 'auto'
-                          assign enable_variant_boxes = true
-                        endif
+                    assign enable_variant_boxes = false
+                    if variants_style == 'boxes' or variants_style == 'auto'
+                      assign enable_variant_boxes = true
+                    endif
 
-                        capture selector_wrapper_class
-                          echo 'selector-wrapper'
-                          if enable_variant_boxes
-                            echo ' selector-wrapper--boxes'
-                          endif
+                    capture selector_wrapper_class
+                      echo 'selector-wrapper'
+                      if enable_variant_boxes
+                        echo ' selector-wrapper--boxes'
+                      endif
 
-                          if enable_color_swatches
-                            echo ' selector-wrapper--swatches'
-                          endif
-                        endcapture
-                      -%}
+                      if enable_color_swatches
+                        echo ' selector-wrapper--swatches'
+                      endif
+                    endcapture
+                  -%}
 
-                      {%- capture quantity_selector -%}
+                  {%- capture quantity_selector -%}
 <div class="select__fieldset">
   <span class="select__label" id="{{ section.id }}-select-quantity-label">{{ 'products.product.quantity' | t }}</span>
 
@@ -1352,234 +1351,218 @@
 </div>
 {%- endcapture -%}
 
-                      <!-- - flo modif - -->
-                      {% if false %}
-                        <div class="product__form product__form--onboarding">
-                          <div class="product__selectors">
-                            <div
-                              class="{{ selector_wrapper_class }}"
-                              data-option-position="1"
-                              {% if animations_enabled %}
-                                data-aos="hero"
-                                data-aos-anchor="{{ animation_anchor }}"
-                                data-aos-order="{{ animation_order }}"
-                                {%- assign animation_order = animation_order | plus: 1 -%}
-                              {% endif %}
-                            >
-                              {%- if enable_variant_boxes or enable_color_swatches -%}
-                                <fieldset class="radio__fieldset">
-                                  <legend class="radio__legend">
-                                    <span class="radio__legend__label">{{- 'homepage.onboarding.color' | t -}}</span>
-                                  </legend>
+                  <!-- - flo modif - -->
+                  {% if false %}
+                    <div class="product__form product__form--onboarding">
+                      <div class="product__selectors">
+                        <div
+                          class="{{ selector_wrapper_class }}"
+                          data-option-position="1"
+                          {% if animations_enabled %}
+                            data-aos="hero"
+                            data-aos-anchor="{{ animation_anchor }}"
+                            data-aos-order="{{ animation_order }}"
+                            {%- assign animation_order = animation_order | plus: 1 -%}
+                          {% endif %}
+                        >
+                          {%- if enable_variant_boxes or enable_color_swatches -%}
+                            <fieldset class="radio__fieldset">
+                              <legend class="radio__legend">
+                                <span class="radio__legend__label">{{- 'homepage.onboarding.color' | t -}}</span>
+                              </legend>
 
-                                  {%- if enable_color_swatches -%}
-                                    {%- render 'product-swatch--onboarding' -%}
+                              {%- if enable_color_swatches -%}
+                                {%- render 'product-swatch--onboarding' -%}
 
-                                    {%- unless enable_variant_boxes -%}
-                                      {%- assign quantity_position_bottom = false -%}
-                                    {%- endunless -%}
-                                  {%- else -%}
-                                    {%- for i in (1..3) -%}
-                                      {%- capture value -%}{%- cycle 'White', 'Grey', 'Black' -%}{%- endcapture -%}
-                                      <span class="radio__button">
-                                        <input
-                                          type="radio"
-                                          class="radio__input"
-                                          data-single-option-selector
-                                          data-index="option1"
-                                          name="color--{{ section.id }}"
-                                          value="{{ value | escape_once }}"
-                                          id="option-{{ value }}-0-{{ section.id }}"
-                                          {% if forloop.index == 1 %}
-                                            checked
-                                          {% endif %}
-                                        >
-                                        <label for="option-{{ value }}-0-{{ section.id }}" class="radio__label">
-                                          <span>{{ value | escape_once }}</span>
-                                        </label>
-                                      </span>
-                                    {%- endfor -%}
-                                  {%- endif -%}
-                                </fieldset>
+                                {%- unless enable_variant_boxes -%}
+                                  {%- assign quantity_position_bottom = false -%}
+                                {%- endunless -%}
                               {%- else -%}
-                                <div class="select__fieldset">
-                                  <span class="radio__legend">
-                                    <span class="radio__legend__label" id="onboarding-{{ section.id }}-option-0-label">
-                                      {{- 'homepage.onboarding.color' | t -}}
-                                    </span>
-                                  </span>
-
-                                  <div class="select-popout" data-popout data-popout-prevent="true">
-                                    <button
-                                      type="button"
-                                      class="select-popout__toggle"
-                                      aria-expanded="false"
-                                      aria-controls="onboarding-{{ section.id }}-option-0-list"
-                                      aria-labelledby="onboarding-{{ section.id }}-option-0-label"
-                                      data-popout-toggle
-                                    >
-                                      <span class="select-popout__value" data-popout-text>White</span>
-                                      {%- render 'icon-select' -%}
-                                    </button>
-
-                                    <div
-                                      id="onboarding-{{ section.id }}-option-0-list"
-                                      class="select-popout__list"
-                                      data-popout-list
-                                    >
-                                      <ul class="select-popout__list__scroll">
-                                        {%- for i in (1..3) -%}
-                                          {%- capture value -%}{%- cycle 'White', 'Grey', 'Black' -%}{%- endcapture -%}
-                                          <li class="select-popout__item{% if forloop.index == 1 %} select-popout__item--current{% endif %}">
-                                            <a
-                                              class="select-popout__option"
-                                              href="#"
-                                              {% if forloop.index == 1 %}
-                                                aria-current="true"
-                                              {% endif %}
-                                              data-value="{{ value | escape_once }}"
-                                              data-popout-option
-                                            >
-                                              <span>
-                                                {{ value | escape_once }}
-                                              </span>
-                                            </a>
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-                                    </div>
+                                {%- for i in (1..3) -%}
+                                  {%- capture value -%}{%- cycle 'White', 'Grey', 'Black' -%}{%- endcapture -%}
+                                  <span class="radio__button">
                                     <input
-                                      type="hidden"
-                                      name="options[Color]"
-                                      id="onboarding-{{ section.id }}-option-0"
-                                      value="White"
-                                      data-popout-input
+                                      type="radio"
+                                      class="radio__input"
                                       data-single-option-selector
                                       data-index="option1"
+                                      name="color--{{ section.id }}"
+                                      value="{{ value | escape_once }}"
+                                      id="option-{{ value }}-0-{{ section.id }}"
+                                      {% if forloop.index == 1 %}
+                                        checked
+                                      {% endif %}
                                     >
-                                  </div>
-                                </div>
-                              {%- endif -%}
-                            </div>
-
-                            <div
-                              class="selector-wrapper{% if enable_variant_boxes %} selector-wrapper--boxes{% endif %}"
-                              data-option-position="2"
-                              {% if animations_enabled %}
-                                data-aos="hero"
-                                data-aos-anchor="{{ animation_anchor }}"
-                                data-aos-order="{{ animation_order }}"
-                                {%- assign animation_order = animation_order | plus: 1 -%}
-                              {% endif %}
-                            >
-                              {%- if enable_variant_boxes -%}
-                                <fieldset class="radio__fieldset">
-                                  <legend class="radio__legend">
-                                    <span class="radio__legend__label">{{- 'homepage.onboarding.size' | t -}}</span>
-                                  </legend>
-
-                                  {%- for i in (1..3) -%}
-                                    {%- capture value -%}{%- cycle 'Small', 'Medium', 'Large' -%}{%- endcapture -%}
-                                    <span class="radio__button">
-                                      <input
-                                        type="radio"
-                                        class="radio__input"
-                                        data-single-option-selector
-                                        data-index="option2"
-                                        name="size--{{ section.id }}"
-                                        value="{{ value | escape_once }}"
-                                        id="option-{{ value }}-1-{{ section.id }}"
-                                        {% if forloop.index == 1 %}
-                                          checked
-                                        {% endif %}
-                                      >
-                                      <label for="option-{{ value }}-1-{{ section.id }}" class="radio__label">
-                                        <span>{{ value | escape_once }}</span>
-                                      </label>
-                                    </span>
-                                  {%- endfor -%}
-                                </fieldset>
-                              {%- else -%}
-                                <div class="select__fieldset">
-                                  <span class="radio__legend">
-                                    <span class="radio__legend__label" id="onboarding-{{ section.id }}-option-1-label">
-                                      {{- 'homepage.onboarding.size' | t -}}
-                                    </span>
+                                    <label for="option-{{ value }}-0-{{ section.id }}" class="radio__label">
+                                      <span>{{ value | escape_once }}</span>
+                                    </label>
                                   </span>
-
-                                  <div class="select-popout" data-popout data-popout-prevent="true">
-                                    <button
-                                      type="button"
-                                      class="select-popout__toggle"
-                                      aria-expanded="false"
-                                      aria-controls="onboarding-{{ section.id }}-option-1-list"
-                                      aria-labelledby="onboarding-{{ section.id }}-option-1-label"
-                                      data-popout-toggle
-                                    >
-                                      <span class="select-popout__value" data-popout-text>Small</span>
-                                      {%- render 'icon-select' -%}
-                                    </button>
-
-                                    <div
-                                      id="onboarding-{{ section.id }}-option-1-list"
-                                      class="select-popout__list"
-                                      data-popout-list
-                                    >
-                                      <ul class="select-popout__list__scroll">
-                                        {%- for i in (1..3) -%}
-                                          {%- capture value -%}{%- cycle 'Small', 'Medium', 'Large' -%}{%- endcapture -%}
-                                          <li class="select-popout__item{% if forloop.index == 1 %} select-popout__item--current{% endif %}">
-                                            <a
-                                              class="select-popout__option"
-                                              href="#"
-                                              {% if forloop.index == 1 %}
-                                                aria-current="true"
-                                              {% endif %}
-                                              data-value="{{ value | escape_once }}"
-                                              data-popout-option
-                                            >
-                                              <span>
-                                                {{ value | escape_once }}
-                                              </span>
-                                            </a>
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-                                    </div>
-                                    <input
-                                      type="hidden"
-                                      name="options[Size]"
-                                      id="onboarding-{{ section.id }}-option-1"
-                                      value="White"
-                                      data-popout-input
-                                      data-single-option-selector
-                                      data-index="option2"
-                                    >
-                                  </div>
-                                </div>
+                                {%- endfor -%}
                               {%- endif -%}
-                            </div>
+                            </fieldset>
+                          {%- else -%}
+                            <div class="select__fieldset">
+                              <span class="radio__legend">
+                                <span class="radio__legend__label" id="onboarding-{{ section.id }}-option-0-label">
+                                  {{- 'homepage.onboarding.color' | t -}}
+                                </span>
+                              </span>
 
-                            {%- if show_quantity -%}
-                              {%- unless quantity_position_bottom -%}
-                                <div
-                                  class="selector-wrapper"
-                                  {% if animations_enabled %}
-                                    data-aos="hero"
-                                    data-aos-anchor="{{ animation_anchor }}"
-                                    data-aos-order="{{ animation_order }}"
-                                    {%- assign animation_order = animation_order | plus: 1 -%}
-                                  {% endif %}
+                              <div class="select-popout" data-popout data-popout-prevent="true">
+                                <button
+                                  type="button"
+                                  class="select-popout__toggle"
+                                  aria-expanded="false"
+                                  aria-controls="onboarding-{{ section.id }}-option-0-list"
+                                  aria-labelledby="onboarding-{{ section.id }}-option-0-label"
+                                  data-popout-toggle
                                 >
-                                  {{ quantity_selector }}
-                                </div>
-                              {%- endunless -%}
-                            {%- endif -%}
-                          </div>
+                                  <span class="select-popout__value" data-popout-text>White</span>
+                                  {%- render 'icon-select' -%}
+                                </button>
 
-                          {%- if show_quantity and quantity_position_bottom -%}
+                                <div
+                                  id="onboarding-{{ section.id }}-option-0-list"
+                                  class="select-popout__list"
+                                  data-popout-list
+                                >
+                                  <ul class="select-popout__list__scroll">
+                                    {%- for i in (1..3) -%}
+                                      {%- capture value -%}{%- cycle 'White', 'Grey', 'Black' -%}{%- endcapture -%}
+                                      <li class="select-popout__item{% if forloop.index == 1 %} select-popout__item--current{% endif %}">
+                                        <a
+                                          class="select-popout__option"
+                                          href="#"
+                                          {% if forloop.index == 1 %}
+                                            aria-current="true"
+                                          {% endif %}
+                                          data-value="{{ value | escape_once }}"
+                                          data-popout-option
+                                        >
+                                          <span>
+                                            {{ value | escape_once }}
+                                          </span>
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                                <input
+                                  type="hidden"
+                                  name="options[Color]"
+                                  id="onboarding-{{ section.id }}-option-0"
+                                  value="White"
+                                  data-popout-input
+                                  data-single-option-selector
+                                  data-index="option1"
+                                >
+                              </div>
+                            </div>
+                          {%- endif -%}
+                        </div>
+
+                        <div
+                          class="selector-wrapper{% if enable_variant_boxes %} selector-wrapper--boxes{% endif %}"
+                          data-option-position="2"
+                          {% if animations_enabled %}
+                            data-aos="hero"
+                            data-aos-anchor="{{ animation_anchor }}"
+                            data-aos-order="{{ animation_order }}"
+                            {%- assign animation_order = animation_order | plus: 1 -%}
+                          {% endif %}
+                        >
+                          {%- if enable_variant_boxes -%}
+                            <fieldset class="radio__fieldset">
+                              <legend class="radio__legend">
+                                <span class="radio__legend__label">{{- 'homepage.onboarding.size' | t -}}</span>
+                              </legend>
+
+                              {%- for i in (1..3) -%}
+                                {%- capture value -%}{%- cycle 'Small', 'Medium', 'Large' -%}{%- endcapture -%}
+                                <span class="radio__button">
+                                  <input
+                                    type="radio"
+                                    class="radio__input"
+                                    data-single-option-selector
+                                    data-index="option2"
+                                    name="size--{{ section.id }}"
+                                    value="{{ value | escape_once }}"
+                                    id="option-{{ value }}-1-{{ section.id }}"
+                                    {% if forloop.index == 1 %}
+                                      checked
+                                    {% endif %}
+                                  >
+                                  <label for="option-{{ value }}-1-{{ section.id }}" class="radio__label">
+                                    <span>{{ value | escape_once }}</span>
+                                  </label>
+                                </span>
+                              {%- endfor -%}
+                            </fieldset>
+                          {%- else -%}
+                            <div class="select__fieldset">
+                              <span class="radio__legend">
+                                <span class="radio__legend__label" id="onboarding-{{ section.id }}-option-1-label">
+                                  {{- 'homepage.onboarding.size' | t -}}
+                                </span>
+                              </span>
+
+                              <div class="select-popout" data-popout data-popout-prevent="true">
+                                <button
+                                  type="button"
+                                  class="select-popout__toggle"
+                                  aria-expanded="false"
+                                  aria-controls="onboarding-{{ section.id }}-option-1-list"
+                                  aria-labelledby="onboarding-{{ section.id }}-option-1-label"
+                                  data-popout-toggle
+                                >
+                                  <span class="select-popout__value" data-popout-text>Small</span>
+                                  {%- render 'icon-select' -%}
+                                </button>
+
+                                <div
+                                  id="onboarding-{{ section.id }}-option-1-list"
+                                  class="select-popout__list"
+                                  data-popout-list
+                                >
+                                  <ul class="select-popout__list__scroll">
+                                    {%- for i in (1..3) -%}
+                                      {%- capture value -%}{%- cycle 'Small', 'Medium', 'Large' -%}{%- endcapture -%}
+                                      <li class="select-popout__item{% if forloop.index == 1 %} select-popout__item--current{% endif %}">
+                                        <a
+                                          class="select-popout__option"
+                                          href="#"
+                                          {% if forloop.index == 1 %}
+                                            aria-current="true"
+                                          {% endif %}
+                                          data-value="{{ value | escape_once }}"
+                                          data-popout-option
+                                        >
+                                          <span>
+                                            {{ value | escape_once }}
+                                          </span>
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                                <input
+                                  type="hidden"
+                                  name="options[Size]"
+                                  id="onboarding-{{ section.id }}-option-1"
+                                  value="White"
+                                  data-popout-input
+                                  data-single-option-selector
+                                  data-index="option2"
+                                >
+                              </div>
+                            </div>
+                          {%- endif -%}
+                        </div>
+
+                        {%- if show_quantity -%}
+                          {%- unless quantity_position_bottom -%}
                             <div
-                              class="selector-wrapper{% if variants_style == 'boxes' %} selector-wrapper--qty{% endif %}"
+                              class="selector-wrapper"
                               {% if animations_enabled %}
                                 data-aos="hero"
                                 data-aos-anchor="{{ animation_anchor }}"
@@ -1589,49 +1572,64 @@
                             >
                               {{ quantity_selector }}
                             </div>
-                          {%- endif -%}
+                          {%- endunless -%}
+                        {%- endif -%}
+                      </div>
 
-                          <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %}">
-                            <div class="product__submit__buttons">
-                              <div
-                                class="product__submit__item"
-                                {% if animations_enabled %}
-                                  data-aos="hero"
-                                  data-aos-anchor="{{ animation_anchor }}"
-                                  data-aos-order="{{ animation_order }}"
-                                  {%- assign animation_order = animation_order | plus: 1 -%}
-                                {% endif %}
-                              >
-                                <button
-                                  type="button"
-                                  class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
-                                >
-                                  <span>{{ 'products.product.add_to_cart' | t }}</span>
+                      {%- if show_quantity and quantity_position_bottom -%}
+                        <div
+                          class="selector-wrapper{% if variants_style == 'boxes' %} selector-wrapper--qty{% endif %}"
+                          {% if animations_enabled %}
+                            data-aos="hero"
+                            data-aos-anchor="{{ animation_anchor }}"
+                            data-aos-order="{{ animation_order }}"
+                            {%- assign animation_order = animation_order | plus: 1 -%}
+                          {% endif %}
+                        >
+                          {{ quantity_selector }}
+                        </div>
+                      {%- endif -%}
+
+                      <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %}">
+                        <div class="product__submit__buttons">
+                          <div
+                            class="product__submit__item"
+                            {% if animations_enabled %}
+                              data-aos="hero"
+                              data-aos-anchor="{{ animation_anchor }}"
+                              data-aos-order="{{ animation_order }}"
+                              {%- assign animation_order = animation_order | plus: 1 -%}
+                            {% endif %}
+                          >
+                            <button
+                              type="button"
+                              class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add"
+                            >
+                              <span>{{ 'products.product.add_to_cart' | t }}</span>
+                            </button>
+                          </div>
+                          {% if show_payment_button %}
+                            <div
+                              class="product__submit__item"
+                              {% if animations_enabled %}
+                                data-aos="hero"
+                                data-aos-anchor="{{ animation_anchor }}"
+                                data-aos-order="{{ animation_order }}"
+                                {%- assign animation_order = animation_order | plus: 1 -%}
+                              {% endif %}
+                            >
+                              <div class="shopify-payment-button">
+                                <button class="{{ buynow_btn_color }} {{ buynow_btn_style }} shopify-payment-button__button shopify-payment-button__button--unbranded">
+                                  Buy it now
                                 </button>
                               </div>
-                              {% if show_payment_button %}
-                                <div
-                                  class="product__submit__item"
-                                  {% if animations_enabled %}
-                                    data-aos="hero"
-                                    data-aos-anchor="{{ animation_anchor }}"
-                                    data-aos-order="{{ animation_order }}"
-                                    {%- assign animation_order = animation_order | plus: 1 -%}
-                                  {% endif %}
-                                >
-                                  <div class="shopify-payment-button">
-                                    <button class="{{ buynow_btn_color }} {{ buynow_btn_style }} shopify-payment-button__button shopify-payment-button__button--unbranded">
-                                      Buy it now
-                                    </button>
-                                  </div>
-                                </div>
-                              {% endif %}
                             </div>
-                          </div>
+                          {% endif %}
                         </div>
-                      {% endif %}
-                      <!-- - end flo modif - -->
+                      </div>
+                    </div>
                   {% endif %}
+                  <!-- - end flo modif - -->
                 </div>
               {%- endunless -%}
 
