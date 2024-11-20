@@ -90,12 +90,6 @@
             "padding_bottom": 0
           }
         },
-        "flo_bundle_3HTbiP": {
-          "type": "flo_bundle",
-          "settings": {
-            "bg_color": "#f7e2ed"
-          }
-        },
         "form": {
           "type": "form",
           "settings": {
@@ -103,6 +97,10 @@
             "show_quantity": false,
             "show_payment_button": false,
             "enable_subscriptions_selectors": true,
+            "selected_bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
+            "selected_text_color": "#000",
+            "unselected_bg_color": "#ffffff",
+            "unselected_text_color": "#000",
             "padding_bottom": 0
           }
         },
@@ -174,7 +172,6 @@
         "icon_8PdQjF",
         "icon_nYCiTL",
         "flo_product_countdown_ybrwMt",
-        "flo_bundle_3HTbiP",
         "form",
         "flo_stock_scarcity_Mj4TRX",
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb",
