@@ -5,7 +5,7 @@
       <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
         {% if {{offer.bundle_image }} != blank %}
           <div class="bundle_img_container">
-            {{ offer.bundle_image | image_url: width: 600 | image_tag: preload: true }}
+            {{ offer.bundle_image.value | image_url: width: 600 | image_tag: preload: true }}
           </div>
         {% endif %}
         <div class="bundle_text_container">
