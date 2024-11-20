@@ -3,11 +3,11 @@
 <div class="flo_bundle_container">
   {% for offer in bundle %}
     <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
-      {% if {{offer.bundle_image }} != "blank" %}
-        <div class="bundle_img_container">
-          {{ offer.bundle_image }}
-        </div>
-      {% endif %}
+      {% comment %} {% if {{offer.bundle_image }} != "blank" %} {% endcomment %}
+      <div class="bundle_img_container">
+        {{ offer.bundle_image }}
+      </div>
+      {% comment %} {% endif %} {% endcomment %}
       <div class="bundle_text_container">
         <span class="flo_bundle_offer_title">
           {{ offer.bundle_offer_title }}
