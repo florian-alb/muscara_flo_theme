@@ -19606,13 +19606,22 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const bundlesOffers = document.querySelectorAll(".flo_bundle_offer");
-    bundlesOffers.forEach((e, index) =>
-      e.addEventListener("click", selectOffer(e, index))
-    );
+
+    bundlesOffers.forEach((element, index) => {
+      element.addEventListener("click", () => selectOffer(element, index));
+    });
   });
 
   function selectOffer(element, index) {
+    // Supprime la classe "selected" de toutes les offres
+    document.querySelectorAll(".flo_bundle_offer.selected").forEach((el) => {
+      el.classList.remove("selected");
+    });
+
+    // Ajoute la classe "selected" à l'élément cliqué
     element.classList.add("selected");
+
+    console.log(`Offer at index ${index} selected.`);
   }
 })(
   themeVendor.ScrollLock,
