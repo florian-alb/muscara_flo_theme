@@ -26,7 +26,8 @@
                 | divided_by: offer.bundle_price_before.value
                 | round
               -}}
-              % ( {{ offer.bundle_price_before.value | minus: offer.bundle_price.value | divided_by: 1000 | round }}€ )
+              % (
+              {{ offer.bundle_price_before.value | minus: offer.bundle_price.value | money_without_trailing_zeros }} )
             </span>
           </div>
 
