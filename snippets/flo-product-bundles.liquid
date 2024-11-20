@@ -2,7 +2,7 @@
 <form id="bundle-form">
   <div class="flo_bundle_container">
     {% for offer in bundle %}
-      <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %}">
+      <div class="flo_bundle_offer {% if forloop.first %}selected{% endif %} data-index={{ forloop.index }}">
         {% comment %} {% if {{offer.bundle_image.src }} != blank %} {% endcomment %}
         <div class="bundle_img_container">
           {{ offer.bundle_image | image_url: width: 600 | image_tag: preload: true }}
@@ -48,43 +48,16 @@
         </div>
       </div>
     {% endfor %}
-  </div>
 
-  <div class="flo_bundles">
-    {% for metaobject in bundle_1 %}
-      {% assign quantity = metaobject.variant_quantity | times: 1 %}
-      {% for product_quantity in (1..quantity) %}
-        <div class="flo_bundles_offer_selector">
-          <span class="custom_bundle_product_handle">
-            {{ metaobject.product_title.value }}
-            {% if forloop.length > 1 %}{{ forloop.index }}{% endif %}
-          </span>
-
-          <select class="custom_select" name="id">
-            {% for variant in metaobject.product_variants.value %}
-              <option
-                value="{{ variant.id }}"
-                {% unless variant.available %}
-                  disabled
-                {% endunless %}
-              >
-                {{ variant.product.title }}
-              </option>
-            {% endfor %}
-          </select>
-        </div>
-      {% endfor %}
-    {% endfor %}
-  </div>
-
-  <div class="flo_btn_container">
-    <button
-      type="submit"
-      id="add-bundle-button"
-      class="btn btn--primary btn--solid btn--large btn--submit product__submit__add flo_atc_btn"
-    >
-      {{ 'products.product.add_to_cart' | t }}
-    </button>
+    <div class="flo_btn_container">
+      <button
+        type="submit"
+        id="add-bundle-button"
+        class="btn btn--primary btn--solid btn--large btn--submit product__submit__add flo_atc_btn"
+      >
+        {{ 'products.product.add_to_cart' | t }}
+      </button>
+    </div>
   </div>
 </form>
 
