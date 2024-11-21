@@ -58,49 +58,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "image_x7zqzy": {
-          "type": "image",
-          "settings": {
-            "position": "3",
-            "aspect_ratio": 1,
-            "wide_image": false,
-            "title": "",
-            "heading_size": 100,
-            "link_text": "",
-            "link": ""
-          }
-        },
-        "image_x7UxkM": {
-          "type": "image",
-          "settings": {
-            "position": "3",
-            "aspect_ratio": 1,
-            "wide_image": false,
-            "title": "",
-            "heading_size": 100,
-            "link_text": "",
-            "link": ""
-          }
-        },
-        "image_pEiMhM": {
-          "type": "image",
-          "settings": {
-            "position": "3",
-            "aspect_ratio": 1,
-            "wide_image": false,
-            "title": "",
-            "heading_size": 100,
-            "link_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_x7zqzy",
-        "image_x7UxkM",
-        "image_pEiMhM"
-      ],
       "settings": {
         "sticky_header": true,
         "header_border": false,
