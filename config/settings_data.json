@@ -63,7 +63,7 @@
     "enable_gift_notes": false,
     "show_empty_cart_buttons": true,
     "empty_cart_buttons": "menu-bar-3",
-    "continue_shopping_link": "shopify://collections/stimul-body",
+    "continue_shopping_link": "",
     "show_free_shipping_message": false,
     "message": "Spend ||amount|| more for FREE UK postage.",
     "free_shipping_limit": "30",
