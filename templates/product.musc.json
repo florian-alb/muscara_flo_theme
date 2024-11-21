@@ -30,7 +30,7 @@
         "text_8Nkzpf": {
           "type": "text",
           "settings": {
-            "title": "<p>Verrijk je intimiteit met een frisheid die tot 48 uur aanhoudt met onze Muscara intieme musk.</p>",
+            "title": "<p>Enrichissez votre intimité d'une fraîcheur qui dure jusqu'à 48 heures avec notre musc intime Muscara.</p>",
             "text_alignment": "left",
             "padding_bottom": 10
           }
@@ -41,7 +41,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
+            "icon_text": "Absorbe les odeurs désagréables",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -55,7 +55,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Parfumeer je intimiteit",
+            "icon_text": "Parfumez votre intimité",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -69,7 +69,7 @@
             "icon_name": "heart",
             "icon_color": "#000000",
             "icon_width": 20,
-            "icon_text": "Getest in laboratorium",
+            "icon_text": "Testé en laboratoire",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -81,8 +81,8 @@
           "type": "flo-product-countdown",
           "settings": {
             "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
-            "text_before": "Nog maar",
-            "text_after": "om van de aanbieding te profiteren!",
+            "text_before": "Encore seulement",
+            "text_after": "Pour profiter de l'offre !",
             "timer_duration": 3,
             "hours": "u",
             "minutes": "m",
@@ -97,6 +97,12 @@
             "show_quantity": false,
             "show_payment_button": false,
             "enable_subscriptions_selectors": true,
+            "selected_bg_color": "#f7e2ed",
+            "selected_border_color": "#de9fc2",
+            "selected_text_color": "#000",
+            "unselected_bg_color": "#f7e2ed",
+            "unselected_border_color": "#c6c6c6",
+            "unselected_text_color": "#000",
             "padding_bottom": 0
           }
         },
@@ -105,14 +111,14 @@
           "settings": {
             "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
             "icon_color": "#d43747",
-            "text": "Beperkt op voorraad  Koop nu de jouwe!",
+            "text": "Stock limité Achetez le vôtre maintenant !",
             "padding_bottom": 20
           }
         },
         "267af941-f89f-4b8d-b97d-deb18ab3f3cb": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Samenstelling",
+            "accordion_heading": "Composition",
             "heading_style": "font-body",
             "accordion_text": "<p>Parfum, tricyclodecaan-4,8-dimethanol, glycerine, benzylsalicylaat, alfa-Isomethylionon, geraniol, cumarine, hydroxycitronellal, water</p>",
             "accordion_page": "",
@@ -122,9 +128,9 @@
         "e50c5bee-4feb-45c5-b222-cf535a25401d": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Belangrijke veiligheidsaanwijzingen",
+            "accordion_heading": "Consignes de sécurité importantes",
             "heading_style": "font-body",
-            "accordion_text": "<p>Vraag uw arts om advies (zwangere vrouwen of vrouwen die zwanger willen worden - vrouwen die borstvoeding geven - vrouwen in de menopauze).</p><p>Niet aanbrengen op of aan de binnenkant van slijmvliezen, maar rond warme lichaamsdelen.</p><p>Zoals met alle cosmetische producten moet je het product voor elk gebruik op je pols testen om te controleren of er geen reacties zijn.</p>",
+            "accordion_text": "<p><strong>Consultez votre médecin pour des conseils spécifiques</strong><br/>(Cela concerne les femmes enceintes, celles qui souhaitent le devenir, les femmes allaitantes ou ménopausées.)</p><p>Ne pas appliquer sur les muqueuses ou à l’intérieur de celles-ci, mais uniquement autour des zones chaudes du corps. Comme pour tous les produits cosmétiques, testez-le préalablement sur votre poignet pour vérifier l’absence de réactions.</p>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -132,9 +138,9 @@
         "product_accordion_6PRWiY": {
           "type": "product_accordion",
           "settings": {
-            "accordion_heading": "Levering",
+            "accordion_heading": "Livraison",
             "heading_style": "font-body",
-            "accordion_text": "<p>De verzending is volledig gratis voor alle bestellingen die in het Verenigd Koninkrijk of Europa worden verzonden.</p><p>Het duurt 1-3 werkdagen voordat bestellingen worden verwerkt en verzonden.</p><p>Zodra uw artikel(en) zijn verzonden, is de geschatte levertijd:</p><p>- USA: 5-10 Werkdagen<br/>- UK: 5-10 Werkdagen<br/>- Australië: 5-10 werkdagen<br/>- Canada: 7-10 werkdagen<br/>- Europa: 2-4 werkdagen<br/>- Rest van de wereld: 14-2 werkdagen</p>",
+            "accordion_text": "<p><strong>Délais de traitement</strong> : Les commandes sont préparées et expédiées sous 1 à 3 jours ouvrés.</p><p><strong>Délais de livraison estimés une fois expédiés</strong> :</p><ul><li><strong>États-Unis</strong> : 5 à 10 jours ouvrés</li><li><strong>Royaume-Uni</strong> : 5 à 10 jours ouvrés</li><li><strong>Australie</strong> : 5 à 10 jours ouvrés</li><li><strong>Canada</strong> : 7 à 10 jours ouvrés</li><li><strong>Europe</strong> : 2 à 4 jours ouvrés</li><li><strong>Reste du monde</strong> : 14 à 20 jours ouvrés</li></ul>",
             "accordion_page": "",
             "padding_bottom": 20
           }
@@ -210,7 +216,7 @@
         "columns": 3,
         "icons_width": 100,
         "icons_width_mobile": 100,
-        "heading": "De hele dag door een betoverende geur",
+        "heading": "Parfum envoûtant tout au long de la journée",
         "subheading": "",
         "bg_color": "",
         "text_color": "#333333",
@@ -233,8 +239,8 @@
           "settings": {
             "icon_name": "truck",
             "icon_image": "shopify://shop_images/step-1-muscara.png",
-            "title": "Open de doos en pak de muskus",
-            "text": "<p>Een kleine hoeveelheid is alles wat je nodig hebt om de hele dag de juiste geur te hebben.</p>"
+            "title": "Ouvrez la boîte et prenez le musc",
+            "text": "<p>Une petite touche suffit pour profiter d’un parfum subtil et durable tout au long de la journée.</p>"
           }
         },
         "text_6dRMKi": {
@@ -242,8 +248,8 @@
           "settings": {
             "icon_name": "truck",
             "icon_image": "shopify://shop_images/step-2-muscara.png",
-            "title": "Breng de gel aan op je intieme plekken",
-            "text": "<p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>"
+            "title": "Appliquez le gel sur vos parties intimes",
+            "text": "<p>Appliquez dans les plis de l’aine (en évitant les parties intimes), sur le cou, la nuque, les poignets, les coudes et la poitrine.</p>"
           }
         },
         "text_NNi3Yw": {
@@ -251,8 +257,8 @@
           "settings": {
             "icon_name": "truck",
             "icon_image": "shopify://shop_images/step-3-muscara.png",
-            "title": "Voel je schoon, mooi en begeerlijk",
-            "text": "<p>Je kunt met een gerust hart naar buiten gaan, Muscara musk is ontworpen om 48 uur te blijven zitten.</p>"
+            "title": "Sentez vous propre, belle et désirable",
+            "text": "<p>Sortez l'esprit tranquille : le musc Muscara est conçu pour durer jusqu'à 48 heures.</p>"
           }
         }
       },
@@ -266,7 +272,7 @@
         "columns": 3,
         "icons_width": 200,
         "icons_width_mobile": 150,
-        "heading": "Drie eenvoudige stappen voor een frisse, geurige dag in de privacy van je eigen huis",
+        "heading": "Trois étapes simples pour une journée fraîche et parfumée dans l'intimité de votre maison",
         "subheading": "",
         "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
         "text_color": "#333333",
@@ -290,7 +296,7 @@
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Absorbeert onaangename geurtjes",
+            "icon_text": "Absorbe les odeurs désagréables",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -304,7 +310,7 @@
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Parfumeer je huid 48 uur non-stop",
+            "icon_text": "Parfume votre peau 48 heures non-stop",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -318,7 +324,7 @@
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Een onmiddellijk fris gevoel",
+            "icon_text": "Une sensation de fraîcheur instantanée",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -332,7 +338,7 @@
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Hydrateert de huid",
+            "icon_text": "Hydrate la peau",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -346,7 +352,7 @@
             "icon_name": "heart",
             "icon_color": "",
             "icon_width": 20,
-            "icon_text": "Geschikt voor alle huidtypes, zelfs de meest gevoelige",
+            "icon_text": "Convient à tous les types de peau, même les plus sensibles",
             "text_size": 90,
             "width": "full",
             "text_alignment": "left",
@@ -369,12 +375,12 @@
         "image_width": "standard",
         "image": "shopify://shop_images/gird-4_4d9b1423-ad33-4717-a6e2-be6ac80bf04c.jpg",
         "subheading": "",
-        "title": "<p>De hele dag door een betoverende geur</p>",
+        "title": "<p>Parfum envoûtant tout au long de la journée</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Onze beroemde intieme gel met witte muskus, een onweerstaanbare geur die je de hele dag een fris en schoon gevoel geeft.</p>",
+        "content": "<p>Notre célèbre gel intime au musc blanc, un parfum irrésistible qui vous laisse une sensation de fraîcheur et de propreté tout au long de la journée.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -399,12 +405,12 @@
         "image_width": "standard",
         "image": "shopify://shop_images/gird-3.jpg",
         "subheading": "",
-        "title": "<p>Geef uiting aan je sensualiteit</p>",
+        "title": "<p>Exprimez votre sensualité</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Krijg zelfvertrouwen met onze Muscara Musk. Gebruik onze geur als je geheim van verleiding en onthul je sensuele en aantrekkelijke kant.Assertief en vastberaden, La Sensuelle is niet bang om haar verlangens te laten gelden en blijft nooit onopgemerkt...</p>",
+        "content": "<p>Laissez ce parfum être votre secret de séduction et révélez votre côté sensuel et irrésistible. Audacieuse et déterminée, <strong>La Sensuelle</strong> n'a pas peur d'exprimer ses désirs et ne passe jamais inaperçue...</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -428,8 +434,8 @@
           "settings": {
             "icon_name": "truck",
             "icon_image": "shopify://shop_images/madeInFrance_097db484-2af5-4bea-bfa7-6019aae77c1d.svg",
-            "title": "Gemaakt in Frankrijk",
-            "text": "<p>Gemaakt in Frankrijk in ons kleine familielaboratorium</p>"
+            "title": "Fabriqué en France",
+            "text": "<p>Fabriqué en France dans notre petit laboratoire familial</p>"
           }
         },
         "text_TbDyEG": {
@@ -437,8 +443,8 @@
           "settings": {
             "icon_name": "check",
             "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
-            "title": "Langdurige Geur",
-            "text": "<p>Een betoverende geur die de hele dag blijft hangen</p>"
+            "title": "Parfum longue durée",
+            "text": "<p>Un parfum envoûtant qui persiste toute la journée</p>"
           }
         },
         "text_CX9jAE": {
@@ -446,8 +452,8 @@
           "settings": {
             "icon_name": "eco-friendly",
             "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
-            "title": "Andocrien verstoringsmiddelvrij",
-            "text": "<p>Muscara intieme muskus is 100% veilig voor de huid.</p>"
+            "title": "Sans perturbateurs andocriniens",
+            "text": "<p>Le musc intime Muscara est 100% sûr pour la peau.</p>"
           }
         },
         "text_bed4yH": {
@@ -455,8 +461,8 @@
           "settings": {
             "icon_name": "clock",
             "icon_image": "shopify://shop_images/safe_ff1821fc-970c-46fe-8d92-ce4a01cde188.svg",
-            "title": "Veilig voor de huid",
-            "text": "<p>Muscara is dermatologisch getest</p>"
+            "title": "Sans danger pour la peau",
+            "text": "<p>Muscara est testé sous contrôle dermatologique</p>"
           }
         }
       },
@@ -495,12 +501,12 @@
         "image_width": "standard",
         "image": "shopify://shop_images/ou_utiliser_d3948dbe-ba65-4c98-b73a-d7dec6a07bd4.jpg",
         "subheading": "",
-        "title": "<p>Of breng je Muscara muskus aan</p>",
+        "title": "<p>Ou appliquer le musc de Muscara</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Breng de muskus aan op de warme delen van je lichaam om de hele dag een zachte, lichte geur te verspreiden.</p><p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>",
+        "content": "<p>Appliquez le musc sur les zones chaudes de votre corps pour diffuser une douce et légère fragrance tout au long de la journée.<br/><br/>Concentrez-vous sur les plis de l’aine (en évitant les parties intimes), le cou, la nuque, les poignets, les coudes et la poitrine.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
@@ -525,12 +531,12 @@
         "image_width": "standard",
         "image": "shopify://shop_images/gird-5_1dc3969c-9a77-4805-9dcd-0859e029d3bd.jpg",
         "subheading": "",
-        "title": "<p>30 dagen geld-terug-garantie</p>",
+        "title": "<p>Garantie de remboursement de 30 jours</p>",
         "heading_highlight_type": "circle",
         "highlight_color": "#d43747",
         "highlight_text_color": "#000000",
         "heading_size": 130,
-        "content": "<p>Bij Muscara zijn we zo overtuigd van de kwaliteit van onze muskus dat we u een volledige tevredenheidsgarantie bieden.</p><p>Als u om welke reden dan ook niet volledig tevreden bent met uw aankoop, heeft u tot 30 dagen de tijd om het aan ons te retourneren en een volledige terugbetaling aan te vragen.</p>",
+        "content": "<p><strong>Chez Muscara, nous avons une confiance absolue en la qualité de nos produits.<br/><br/></strong>C'est pourquoi nous vous offrons une garantie de satisfaction totale. Si, pour une raison quelconque, vous n’êtes pas entièrement satisfait(e) de votre achat, vous disposez de 30 jours pour nous le retourner et demander un remboursement complet.</p>",
         "text_alignment": "left",
         "button_text": "",
         "button_link": "",
