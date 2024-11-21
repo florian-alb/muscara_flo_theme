@@ -97,6 +97,12 @@
             "show_quantity": false,
             "show_payment_button": false,
             "enable_subscriptions_selectors": true,
+            "selected_bg_color": "#f7e2ed",
+            "selected_border_color": "#de9fc2",
+            "selected_text_color": "#000",
+            "unselected_bg_color": "#f7e2ed",
+            "unselected_border_color": "#c6c6c6",
+            "unselected_text_color": "#000",
             "padding_bottom": 0
           }
         },
@@ -205,6 +211,7 @@
         "text_LFweLH",
         "text_XjRXC8"
       ],
+      "disabled": true,
       "settings": {
         "alignment": "center",
         "columns": 3,
@@ -221,62 +228,6 @@
         "button_style": "btn--solid",
         "button_size": "btn--small",
         "enable_slider_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "section_icons_row_cHh738": {
-      "type": "section-icons-row",
-      "blocks": {
-        "text_9jHJmF": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-1-muscara.png",
-            "title": "Open de doos en pak de muskus",
-            "text": "<p>Een kleine hoeveelheid is alles wat je nodig hebt om de hele dag de juiste geur te hebben.</p>"
-          }
-        },
-        "text_6dRMKi": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-2-muscara.png",
-            "title": "Breng de gel aan op je intieme plekken",
-            "text": "<p>De plooien van de liezen (intieme delen vermijden), de nek, de nek, de polsen, de ellebogen en de borstholte.</p>"
-          }
-        },
-        "text_NNi3Yw": {
-          "type": "text",
-          "settings": {
-            "icon_name": "truck",
-            "icon_image": "shopify://shop_images/step-3-muscara.png",
-            "title": "Voel je schoon, mooi en begeerlijk",
-            "text": "<p>Je kunt met een gerust hart naar buiten gaan, Muscara musk is ontworpen om 48 uur te blijven zitten.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_9jHJmF",
-        "text_6dRMKi",
-        "text_NNi3Yw"
-      ],
-      "settings": {
-        "alignment": "center",
-        "columns": 3,
-        "icons_width": 200,
-        "icons_width_mobile": 150,
-        "heading": "Drie eenvoudige stappen voor een frisse, geurige dag in de privacy van je eigen huis",
-        "subheading": "",
-        "bg_color": "{{ product.metafields.custom.product_bg_color.value }}",
-        "text_color": "#333333",
-        "box_color": "",
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--black",
-        "button_style": "btn--solid",
-        "button_size": "btn--small",
-        "enable_slider_mobile": false,
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -647,7 +598,6 @@
   "order": [
     "main",
     "section_icons_row_FLKCNP",
-    "section_icons_row_cHh738",
     "section_image_with_text_EBF9Mp",
     "section_image_with_text_XK9Vib",
     "section_icons_row_tbFKHV",
