@@ -19,8 +19,8 @@
           "settings": {
             "icon_name": "eco-friendly",
             "icon_image": "shopify://shop_images/Group_4839.svg",
-            "title": "Gemaakt in Frankrijk",
-            "text": "<p>Geuren ontworpen en geproduceerd in ons laboratorium.</p>"
+            "title": "Fabriqué en France",
+            "text": "<p>Des parfums conçus et produits dans notre laboratoire.</p>"
           }
         },
         "text_zhVgp8": {
@@ -28,8 +28,8 @@
           "settings": {
             "icon_name": "shield",
             "icon_image": "shopify://shop_images/icone-secure_1d9b3acf-feac-4832-bbed-c46c3185c5d4.svg",
-            "title": "100% veilig",
-            "text": "<p>Betaling mogelijk met Mastercard, Apple pay, Visa, Paypal en Klarna.</p>"
+            "title": "100% sécurisé",
+            "text": "<p>Paiement possible avec Mastercard, Apple pay, Visa, Paypal et Klarna.</p>"
           }
         },
         "text_DTqrAK": {
@@ -37,8 +37,8 @@
           "settings": {
             "icon_name": "clock",
             "icon_image": "shopify://shop_images/icone-sav_e445e82e-9ba5-4b6e-b581-d4a979a2502a.svg",
-            "title": "Klantenservice",
-            "text": "<p>Onze teams staan klaar om je vragen te beantwoorden.</p>"
+            "title": "Service client",
+            "text": "<p>Nos équipes sont prêtes à répondre à vos questions.</p>"
           }
         }
       },
@@ -85,7 +85,7 @@
           "type": "text",
           "settings": {
             "alignment": "text-left",
-            "title": "Contactgegevens",
+            "title": "Informations de contact",
             "footer_text": "<p>info@muscara.co</p><p>31-75 Shelton Street Covent Garden London United Kingdom</p>",
             "column_width": "25"
           }
@@ -113,7 +113,7 @@
           "settings": {
             "alignment": "text-left",
             "title": "Newsletter",
-            "text": "<p>Erhalte aktuelle Infos über unsere neuen Kollektionen, Produkte und exklusiven Angebote.</p>",
+            "text": "<p>Reçois les dernières informations sur nos nouvelles collections, nos produits et nos offres exclusives.</p>",
             "column_width": "25"
           }
         }
