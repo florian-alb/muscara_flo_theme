@@ -150,7 +150,7 @@
           "type": "collection",
           "settings": {
             "title": "Timeless Allure",
-            "tab_collection": "collection-timeless-allure-monoi",
+            "tab_collection": "collection-timeless-allure",
             "number_of_products": 4,
             "show_pills": true,
             "pill_color": "{{ block.settings.tab_collection.metafields.custom.collection_color.value }}",
