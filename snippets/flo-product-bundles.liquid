@@ -15,8 +15,10 @@
           <p class="bundle_title {% if forloop.first %}selected{% endif %}">{{ offer.bundle_title }}</p>
 
           <div class="bundle_price_container">
-            <p class="bundle_price bundle_price_after">{{ offer.bundle_price.value | money }}</p>
-            <p class="bundle_price bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
+            <div class="bundle_price_container_price">
+              <p class="bundle_price bundle_price_after">{{ offer.bundle_price.value | money }}</p>
+              <p class="bundle_price bundle_price_before">{{ offer.bundle_price_before.value | money }}</p>
+            </div>
             <span class="bundle_price_saving"
               >Je bespaart
               {{
@@ -208,6 +210,11 @@
 
   @media (max-width: 768px) {
     .flo_bundles_offer_selector {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .bundle_price_container{
       flex-direction: column;
       align-items: flex-start;
     }
