@@ -230,7 +230,7 @@
           "type": "text",
           "settings": {
             "icon_name": "truck",
-            "icon_image": "shopify://shop_images/madeInFrance_097db484-2af5-4bea-bfa7-6019aae77c1d.svg",
+            "icon_image": "{{ localization.market.metafields.flodev.featured_icon_1.value }}",
             "title": "",
             "text": "<p>Fabriqué en France dans notre petit laboratoire familial</p>"
           }
@@ -239,7 +239,7 @@
           "type": "text",
           "settings": {
             "icon_name": "check",
-            "icon_image": "shopify://shop_images/longLasting_8f8f7bd5-9d0e-42da-a431-c4742426cb36.svg",
+            "icon_image": "{{ localization.market.metafields.flodev.featured_icon_2.value }}",
             "title": "",
             "text": "<p>Un parfum envoûtant qui persiste toute la journée</p>"
           }
@@ -248,7 +248,7 @@
           "type": "text",
           "settings": {
             "icon_name": "eco-friendly",
-            "icon_image": "shopify://shop_images/sansPertubateurs_0bdeaf0c-a600-405a-ab7f-d378b5d79f4b.svg",
+            "icon_image": "{{ localization.market.metafields.flodev.featured_icon_3.value }}",
             "title": "",
             "text": "<p>Le musc intime Muscara est 100% sûr pour la peau.</p>"
           }
@@ -257,7 +257,7 @@
           "type": "text",
           "settings": {
             "icon_name": "clock",
-            "icon_image": "shopify://shop_images/safe_ff1821fc-970c-46fe-8d92-ce4a01cde188.svg",
+            "icon_image": "{{ localization.market.metafields.flodev.featured_icon_4.value }}",
             "title": "",
             "text": "<p>Muscara est testé sous contrôle dermatologique</p>"
           }
