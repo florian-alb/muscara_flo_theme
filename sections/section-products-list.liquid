@@ -231,16 +231,7 @@ assign flo_bg_color = section.settings.flo_bg_color
                         {% endif %}>
 
                         {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                        {%- render 'circle-text' with
-                          unique_id: unique_id,
-                          show: block.settings.show_circle,
-                          hide_on_mobile: block.settings.hide_on_mobile,
-                          text: block.settings.circle_text,
-                          color: block.settings.circle_text_color,
-                          image: block.settings.circle_image,
-                          rotate_animation: block.settings.circle_rotate_animation,
-                          size: block.settings.circle_size,
-                          word_spacing: block.settings.circle_word_spacing -%}
+                        {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                       </div>
 
                       {% if animations_enabled %}
@@ -374,16 +365,7 @@ assign flo_bg_color = section.settings.flo_bg_color
                           {% endif %}>
 
                           {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                          {%- render 'circle-text' with
-                            unique_id: unique_id,
-                            show: block.settings.show_circle,
-                            hide_on_mobile: block.settings.hide_on_mobile,
-                            text: block.settings.circle_text,
-                            color: block.settings.circle_text_color,
-                            image: block.settings.circle_image,
-                            rotate_animation: block.settings.circle_rotate_animation,
-                            size: block.settings.circle_size,
-                            word_spacing: block.settings.circle_word_spacing -%}
+                          {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                         </div>
 
                         {% if animations_enabled %}
@@ -588,16 +570,7 @@ assign flo_bg_color = section.settings.flo_bg_color
                               {% endif %}>
 
                               {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                              {%- render 'circle-text' with
-                                unique_id: unique_id,
-                                show: block.settings.show_circle,
-                                hide_on_mobile: block.settings.hide_on_mobile,
-                                text: block.settings.circle_text,
-                                color: block.settings.circle_text_color,
-                                image: block.settings.circle_image,
-                                rotate_animation: block.settings.circle_rotate_animation,
-                                size: block.settings.circle_size,
-                                word_spacing: block.settings.circle_word_spacing -%}
+                              {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                             </div>
 
                             {% if animations_enabled %}
@@ -1123,3 +1096,61 @@ assign flo_bg_color = section.settings.flo_bg_color
   }
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%- render 'circle-text' with
+                              unique_id: unique_id,
+                              show: block.settings.show_circle,
+                              hide_on_mobile: block.settings.hide_on_mobile,
+                              text: block.settings.circle_text,
+                              color: block.settings.circle_text_color,
+                              image: block.settings.circle_image,
+                              rotate_animation: block.settings.circle_rotate_animation,
+                              size: block.settings.circle_size,
+                              word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 10477..10876
+- from: |-
+    {%- render 'circle-text' with
+                                unique_id: unique_id,
+                                show: block.settings.show_circle,
+                                hide_on_mobile: block.settings.hide_on_mobile,
+                                text: block.settings.circle_text,
+                                color: block.settings.circle_text_color,
+                                image: block.settings.circle_image,
+                                rotate_animation: block.settings.circle_rotate_animation,
+                                size: block.settings.circle_size,
+                                word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 17672..18071
+- from: |-
+    {%- render 'circle-text' with
+                                    unique_id: unique_id,
+                                    show: block.settings.show_circle,
+                                    hide_on_mobile: block.settings.hide_on_mobile,
+                                    text: block.settings.circle_text,
+                                    color: block.settings.circle_text_color,
+                                    image: block.settings.circle_image,
+                                    rotate_animation: block.settings.circle_rotate_animation,
+                                    size: block.settings.circle_size,
+                                    word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 29011..29410
+{% endcomment %}
